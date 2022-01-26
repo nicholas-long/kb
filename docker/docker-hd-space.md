@@ -1,0 +1,17 @@
+# Try to keep logs under control
+
+```json
+{
+	  "log-driver": "local",
+	  "log-opts": {
+		  "max-size": "5m"
+	  }
+}
+```
+
+# Free up space immediately
+
+```bash
+docker system prune -a -f
+```
+
