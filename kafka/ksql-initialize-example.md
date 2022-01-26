@@ -9,7 +9,7 @@ That should make it initialize only once.
 
 Add ksql statements to initialize in here.
 
-```
+```bash
 #/bin/bash
 
 KSQL_SERVER=$1
@@ -21,7 +21,7 @@ echo "This is where initializtion should happen."
 
 ## ksql.sh
 
-```
+```bash
 #!/bin/bash
 
 KSQL_SERVER=$1
@@ -42,7 +42,7 @@ echo
 Configure `$KSQLDB` to point to ksqldb server API.
 TODO: figure out authentication
 
-```
+```bash
 #!/bin/bash
 
 KSQLDB=172.17.0.1:8088
@@ -66,7 +66,7 @@ fi
 
 ## Dockerfile
 
-```
+```Dockerfile
 FROM kalilinux/kali-rolling
 
 WORKDIR /work
@@ -82,4 +82,3 @@ RUN ls -al
 
 ENTRYPOINT /work/entry.sh
 ```
-
