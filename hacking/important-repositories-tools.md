@@ -5,5 +5,5 @@
 
 # Windows
 
-- Compiled versions of .NET tools https://github.com/Flangvik/SharpCollection
+- Compiled versions of .NET enumeration tools https://github.com/Flangvik/SharpCollection
 
