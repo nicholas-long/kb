@@ -2,6 +2,7 @@
 
 - Seclists https://github.com/danielmiessler/SecLists
 - OWASP CheatSheetSeries https://github.com/OWASP/CheatSheetSeries
+- Scanning a system for credentials https://github.com/AlessandroZ/LaZagne
 
 # Windows
 
