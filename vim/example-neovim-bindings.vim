@@ -2,6 +2,7 @@
 " example macros
 " let @q="yyp"
 
+set number
 set relativenumber
 
 " source the file
@@ -19,14 +20,14 @@ tmap <C-w>h <Esc><C-w>h
 " exit insert mode with jj
 imap jj <Esc>
 
-" ctrl w p to paste
+" ctrl w p to paste in terminal
 tmap <C-w>p <C-\><C-N>pi
 
 " exit terminal
 tmap <C-w><C-q> <C-\><C-N>:q!<Enter>
 nmap <C-w><C-q> <C-\><C-N>:q!<Enter>
 
-" exit terminal to normal mode
+" leave terminal mode and go to normal mode
 tmap ;; <Esc>
 
 " split terminal from normal mode
