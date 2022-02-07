@@ -4,6 +4,7 @@
 
 set number
 set relativenumber
+set noerrorbells
 
 " source the file
 nmap <Space>gs :source example-vimrc-bindings.vim <Enter>
