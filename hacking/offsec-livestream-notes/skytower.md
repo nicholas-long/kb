@@ -1,0 +1,18 @@
+- doing a lot of enumeration before opening the web browser
+  - avoid getting "in the weeds"
+
+- login form
+  - default creds
+  - sqli
+  - SSTI
+  - auth bypass
+  - error message username enumeration
+    - forgot password forms - applies as well
+  - brute forcing
+  - nosql injection
+  - xsrf
+    - add self as admin
+  - session attacks
+    - steal session id, maybe xss
+    - clickjacking (if no X frame options set )
+-
