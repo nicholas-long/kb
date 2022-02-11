@@ -1,0 +1,5 @@
+- ftp
+  - `quote PASV` to attempt to get directory list if nothing is returned ?
+- nikto sends a lot of requests
+- manual inspection of web pages initially can yield results with low traffic
+- 
