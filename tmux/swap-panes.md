@@ -1,0 +1,2 @@
+# swap panes
+prefix + `{`
