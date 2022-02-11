@@ -4,6 +4,7 @@
 - login form
   - default creds
   - sqli
+    - sqli filtering
   - SSTI
   - auth bypass
   - error message username enumeration
@@ -15,4 +16,11 @@
   - session attacks
     - steal session id, maybe xss
     - clickjacking (if no X frame options set )
--
+- sqli filtering evasion bypass
+  - use `||` instead of `or`
+  - change case?
+- port filtered
+- squid proxy
+  - proxytunnel tool #################################################
+    - spawn daemon
+
