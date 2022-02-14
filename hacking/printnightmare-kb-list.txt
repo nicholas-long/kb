@@ -1,0 +1,10 @@
+List of PrintNightmare updates released for Windows:
+
+    Version 21H1, 20H1, 2004 – KB5004945 (Build 19043.1083).
+    Version 1909 – KB5004946 (Build 18363.1646).
+    Version 1809 and Windows Server 2019 – KB5004947 (Build 17763.2029).
+    Version 1803 – KB5004949
+    Version 1507 – KB5004950.
+    Windows 8.1 and Windows Server 2012 – KB5004954 and KB5004958 (security only).
+    Windows 7 SP1 and Windows Server 2008 R2 SP1 – KB5004953 and KB5004951 (security only)
+    Windows Server 2008 SP2 – KB5004955 and KB5004959 (security only).
