@@ -130,8 +130,11 @@ END
 - xslt server side injection extensible stylesheet languaje transformations
 - xssi cross site script inclusion
 
-# squid proxy
+# HTTP proxy / squid proxy
 - proxytunnel tool
+- scan for hidden local services - low priority
+- scan local network - lowest priority
+  - docker network interface `172.17.0.1/241` to `172.x/8`
 
 # RDP
 - rdp into machine to see the login screen and get an idea of OS
