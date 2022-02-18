@@ -15,6 +15,9 @@ END
 - debug mode
 - control port, management port, debug port
 
+Web stuff
+====================================================================================================
+
 # HTTP
 - busting
   - directories
@@ -143,11 +146,8 @@ END
 - xslt server side injection extensible stylesheet languaje transformations
 - xssi cross site script inclusion
 
-# HTTP proxy / squid proxy
-- proxytunnel tool
-- scan for hidden local services - low priority
-- scan local network - lowest priority
-  - docker network interface `172.17.0.1/241` to `172.x/8`
+End of Web stuff
+====================================================================================================
 
 # RDP
 - rdp into machine to see the login screen and get an idea of OS
@@ -177,8 +177,15 @@ END
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 
-# ssh
+# HTTP proxy / squid proxy
+- proxytunnel tool
+- scan for hidden local services - low priority
+- scan local network - lowest priority
+  - docker network interface `172.17.0.1/241` to `172.x/8`
+
+# SSH
 - really old check for bad keys circa 2007
 - credential reuse
   - hydra with low threads
   - crackmapexec
+
