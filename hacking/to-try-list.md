@@ -191,12 +191,36 @@ End of Web stuff
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 
-# Databases ( general SQL )
+# got access to filesystem
+- read access
+  - get source code
+  - enum users
+  - general targets
+    - home dirs
+    - source code
+    - configuration locations
+  - linux targets
+    - etc
+      - config for other services
+      - users
+  - windows targets
+    - registry backups
+    - xampp
+    - appdata
+- write access
+  - web shells
+  - ssh authorized keys
+  - scripts
+
+# got access to databases ( general SQL )
 - dump creds / hashes
 - command execution
-  - write web shell
+  - write web shell directly into outfile
   - code execution built into database or with modules
+  - write config backups with web shells embedded in data
 - read files
+- check if DBA
+  - enable access to files / commands
 
 # RDP
 - everything from the everything list
