@@ -43,6 +43,8 @@ END
 - XPath injection
 - SSRF server side request forgery
 - XSS
+## old stuff for old servers
+- shellshock
 ## found login form #loginform
 - default creds
 - sqli
@@ -170,3 +172,8 @@ END
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 
+# ssh
+- really old check for bad keys circa 2007
+- credential reuse
+  - hydra with low threads
+  - crackmapexec
