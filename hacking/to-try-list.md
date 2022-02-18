@@ -19,6 +19,7 @@ Web stuff
 ====================================================================================================
 
 # HTTP
+- everything from the everything list
 - busting
   - directories
   - files
@@ -153,6 +154,7 @@ End of Web stuff
 ====================================================================================================
 
 # FTP
+- everything from the everything list
 - anon login
 - nmap script checks: bounce and anon login
 - control port ( filezilla )
@@ -160,6 +162,7 @@ End of Web stuff
 - Unauth enum enumerate commands with `HELP`
 
 # SMB
+- everything from the everything list
 - guest access to shares
   - null auth
   - guest access with only username required
@@ -178,6 +181,7 @@ End of Web stuff
 - catch NTLM hashes from windows clients that automatically authenticate
 
 # RDP
+- everything from the everything list
 - rdp into machine to see the login screen and get an idea of OS
 - change user password
 
