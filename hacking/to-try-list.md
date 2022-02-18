@@ -43,8 +43,10 @@ END
 - XPath injection
 - SSRF server side request forgery
 - XSS
+
 ## old stuff for old servers
 - shellshock
+
 ## found login form #loginform
 - default creds
 - sqli
@@ -60,6 +62,7 @@ END
 - session attacks
   - steal session id, maybe XSS
   - clickjacking (if no X frame options set )
+
 ## compromised CMS login
 - service versions information -> exploit db
 - file uploads
@@ -78,6 +81,7 @@ END
   - modify or downgrade access control lists
   - world writable directories
 - assess the functionality provided to it and seeing if we can abuse it
+
 ## got source code
 - secrets / creds
 - grep vulnerable functions
@@ -108,6 +112,7 @@ END
     - JSON object prototype pollution
     - fuzzy equal
     - TODO: finish this
+
 ## UNCOMMON HTTP ( hacktricks )
 - 2fa bypass
 - abusing hop by hop headers
