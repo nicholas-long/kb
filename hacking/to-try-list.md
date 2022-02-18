@@ -40,15 +40,15 @@ Web stuff
     - brackets -> arrays
   - JSON object prototype pollution
 - IDOR
+- bypassing restrictions
+  - `X-Forwarded-For` header - bypass bad IP filter
+  - check if validated on client side
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
 - XPath injection
 - SSRF server side request forgery
 - XSS
-
-## old stuff for old servers
-- shellshock
 
 ## found login form #loginform
 - default creds
@@ -115,6 +115,9 @@ Web stuff
     - JSON object prototype pollution
     - fuzzy equal
     - TODO: finish this
+
+## old stuff for old servers
+- shellshock - should find with nikto?
 
 ## UNCOMMON HTTP ( hacktricks )
 - 2fa bypass
