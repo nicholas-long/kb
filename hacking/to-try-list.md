@@ -1,8 +1,14 @@
+Procedure
+====================================================================================================
+- scan ( full port )
+- paste in to try list for every service
+- scan with `--vuln`
+- scan services with scripts
+- retry enumeration with new credentials on discovery
+
+# Copy this block is into notes
 
 To Try List
-====================================================================================================
-
-END
 ====================================================================================================
 
 # EVERYTHING
@@ -14,6 +20,11 @@ END
 - client side attacks
 - debug mode
 - control port, management port, debug port
+
+END
+====================================================================================================
+
+---
 
 Web stuff
 ====================================================================================================
