@@ -16,8 +16,14 @@ END
 - control port, management port, debug port
 
 # HTTP
+- busting
+  - directories
+  - files
+  - common, small, medium, large, dir list big
+  - wfuzz step to check for outliers
 - LFI
 - file upload
+- nikto
 - injection #injection
   - command injection
   - SQLi
