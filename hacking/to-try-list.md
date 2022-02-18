@@ -191,6 +191,13 @@ End of Web stuff
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 
+# Databases ( general SQL )
+- dump creds / hashes
+- command execution
+  - write web shell
+  - code execution built into database or with modules
+- read files
+
 # RDP
 - everything from the everything list
 - rdp into machine to see the login screen and get an idea of OS
