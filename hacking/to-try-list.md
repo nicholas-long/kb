@@ -36,6 +36,7 @@ Web stuff
   - files
   - common, small, medium, large, dir list big
   - wfuzz step to check for outliers
+  - view source of files found
 - LFI
 - file upload
 - nikto
@@ -193,7 +194,6 @@ End of Web stuff
 
 # got access to filesystem
 - read access
-  - get source code
   - enum users
   - general targets
     - home dirs
@@ -221,6 +221,12 @@ End of Web stuff
 - read files
 - check if DBA
   - enable access to files / commands
+
+# DNS
+- look up 127.0.0.1
+- look up stuff on networks
+- zone transfer axfr
+- brute force subdomains
 
 # RDP
 - everything from the everything list
