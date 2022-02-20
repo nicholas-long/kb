@@ -190,11 +190,16 @@ End of Web stuff
 - rpcclient / rpcdump
   - authenticated enumeration of domains and groups
 - read registry impacket reg.py
+- authenticated
+  - access to read `IPC$` 
+    - user and group enum with crackmapexec with `--rid-brute`
+  - crackmapexec with `--users`
 - kerberos auth
 - brute force: crackmapexec
 - shell with administrator privs ( auth )
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
+- include AD list if machine is connected to AD
 
 # got access to filesystem
 - read access
@@ -225,6 +230,29 @@ End of Web stuff
 - read files
 - check if DBA
   - enable access to files / commands
+
+# active directory domain
+- kerbrute
+  - user enum
+  - password spray
+  - brute force
+- crackmapexec
+  - SMB
+  - WinRM
+  - MSSQL
+  - other services exposed
+- retry credentials for every service
+- authenticated ( probably ) lateral movement
+  - impacket
+    - roasting SPN service accounts
+    - ASREP roast no preauth users
+    - get AD users - any authenticated user
+      - check notes/description of LDAP data for leaked passwords
+  - ticket attacks
+- nopac attack - patched Nov 2021 `sam the admin` on github
+- endgame dump hashes
+  - impacket secretsdump
+  - mimikatz on machine or kiwi module in msf
 
 # DNS
 - look up 127.0.0.1
