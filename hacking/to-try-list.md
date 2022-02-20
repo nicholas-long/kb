@@ -215,7 +215,7 @@ End of Web stuff
   - ssh authorized keys
   - scripts
 
-# got access to databases ( general SQL )
+# got access to databases - general SQL
 - dump creds / hashes
 - command execution
   - write web shell directly into outfile
