@@ -3,6 +3,7 @@ Procedure
 - scan ( full port )
 - paste in to try list for every service
 - scan with `--vuln`
+- scan UDP ( slow, few ports as possible )
 - scan services with scripts
 - retry enumeration with new credentials on discovery
 
@@ -248,3 +249,12 @@ End of Web stuff
   - crackmapexec
 - really old check for bad keys circa 2007
 
+# TFTP udp 69
+- put files
+  - default put location is `/var/lib/tftpboot/`
+- read files
+
+# nmap UDP scan - individual port scans
+- snmp 161
+- tftp 69
+- rest of common
