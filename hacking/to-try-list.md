@@ -40,6 +40,9 @@ Web stuff
 - LFI
 - file upload
 - nikto
+- vhost enumeration
+  - hostnames from nmap output
+  - brute force vhost subdomains
 - injection #injection
   - command injection
   - SQLi
