@@ -29,6 +29,7 @@ netstat -tunlp
 
 # important tools
 - squid proxy -> proxytunnel
+- caddy - stand up valid https server?
 
 # things to try
 
