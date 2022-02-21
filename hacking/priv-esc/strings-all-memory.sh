@@ -2,6 +2,7 @@
 
 # run strings on memory dumps for every readable process
 
+#https://serverfault.com/questions/173999/dump-a-linux-processs-memory-to-file
 procdump()
 (
     cat /proc/$1/maps | grep "rw-p" | awk '{print $1}' | ( IFS="-"
