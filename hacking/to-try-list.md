@@ -194,6 +194,9 @@ End of Web stuff
   - access to read `IPC$` 
     - user and group enum with crackmapexec with `--rid-brute`
   - crackmapexec with `--users`
+  - admin -> shell
+    - psexec
+    - wmiexec - quieter than psexec
 - kerberos auth
 - brute force: crackmapexec
 - shell with administrator privs ( auth )
@@ -248,8 +251,14 @@ End of Web stuff
     - ASREP roast no preauth users
     - get AD users - any authenticated user
       - check notes/description of LDAP data for leaked passwords
+  - bloodhound 
+    - run python version in own environ
+    - sharphound tool for more data
+  - add dc hostname and machine name to hosts file if this can't authenticate
+- common exploits
+  - nopac attack - patched Nov 2021 `sam the admin` on github, then psexec
   - ticket attacks
-- nopac attack - patched Nov 2021 `sam the admin` on github
+  - zerologon - 2020
 - endgame dump hashes
   - impacket secretsdump
   - mimikatz on machine or kiwi module in msf
