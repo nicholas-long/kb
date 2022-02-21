@@ -4,3 +4,8 @@
 xterm*font:     *-fixed-*-*-*-18-*
 ```
 
+## refresh xterm configs
+```bash
+xrdb -merge ~/.Xresources
+```
+
