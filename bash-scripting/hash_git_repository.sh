@@ -24,13 +24,12 @@ function walk_commits_tags {
 # clone repo into temp dir
 tf=$(mktemp)
 rm $tf && mkdir $tf
-git clone --mirror https://github.com/skanehira/docui $tf
+git clone --mirror https://github.com/facebook/folly $tf
 rm /tmp/hash_list 2>/dev/null
 cd $tf
 
 # get all tags and start walking their commits
-cat packed-refs | grep refs/tags/ | walk_commits_tags | tee /tmp/hash_list
-echo
+cat packed-refs | grep refs/tags/ | walk_commits_tags > /tmp/hash_list
 
 # take only unique git hashes and do md5 hashes of those files
 cat /tmp/hash_list | awk -F "\t" '{print $1}' | sort -u | \
