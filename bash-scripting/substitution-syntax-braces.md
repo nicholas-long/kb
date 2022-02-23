@@ -1,5 +1,10 @@
 # initialize variable with default value if empty and return it
 ```bash
+echo ${name:="default"}
+```
+
+example
+```
 ┌──(kali㉿kali)-[~/kb]
 └─$ echo ${name:="default"}
 default

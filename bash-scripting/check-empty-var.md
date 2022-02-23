@@ -6,7 +6,7 @@ if [ -z "$KB_DIR" ]; then
 fi
 ```
 
-```bash
+```
 ┌──(coyote㉿DESKTOP-14GJTFF)-[~/kb]
 └─$ if [ -z "$KB_DIR" ]; then   echo it is empty; fi
 it is empty
@@ -20,7 +20,7 @@ it is empty
 ```
 
 # check if a variable is empty { concise }
-```
+```bash
 [[ -n $KB_DIR ]] || echo it is empty
 ```
 
