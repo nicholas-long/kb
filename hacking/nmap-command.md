@@ -1,10 +1,10 @@
 # NMAP all ports command
-```
+```bash
 nmap -p- -v -sC -sV $IP
 ```
 
 # NMAP common ports command
-```
+```bash
 nmap -v -sC -sV $IP
 ```
 
@@ -13,7 +13,7 @@ nmap -v -sC -sV $IP
 - add `-T5` to scan really fast
 
 # nmap over proxychains using socks proxy
-```
+```bash
 proxychains -q nmap -sC -sV -sT -Pn -n -vvv $IP
 ```
 

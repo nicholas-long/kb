@@ -5,6 +5,6 @@ feroxbuster --url http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/direc
 ```
 
 # initial directory list
-```
+```bash
 feroxbuster --url http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
 ```
