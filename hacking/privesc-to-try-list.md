@@ -9,7 +9,49 @@
 
 # windows
 - whoami /all
-  - backup privs
-  - impersonate
-- lazagne / hunt for creds ( appdata )
-- TODO: make this list comprehensive
+  - SeImpersonate -> rogue potato
+  - backup permissions
+- permissions
+  - applications that run as SYSTEM
+  - write permissions
+- enum users and groups
+- common general enumeration stuff
+  - ports
+  - enumerate installed applications and configs 
+    - hunt for creds ( appdata, lazagne )
+    - saved RDP and and credential manager
+    - saved SSH keys on filesystem and in regsitry
+    - IIS web configs
+    - hacktricks "Possible filenames containing credentials"
+- user data
+  - clipboard
+  - powershell history
+  - credentials manager ( cmdkey )
+- running processes
+  - dump memory
+- enum tools to run
+  - winpeas
+  - watson
+  - powerview checks?
+- unattended XML
+- always install elevated
+- dll injection
+- list services
+  - modify executable
+  - modify service
+  - registry modification permissions
+  - unquoted service paths
+- restart perms
+  - run at startup with different user
+  - restart services by restarting machine
+- wdigest ( plain text pass in registry )
+- SAM & SYSTEM backups
+- check perms of WSL directories
+- check applocker policy
+- pop up login box with powershell
+- recycle bin
+- WSUS - using http instead of https
+- McAfee SiteList.xml
+- SCCM SCClient
+- domain stuff
+  - my to try list for foothold has info about domains as well

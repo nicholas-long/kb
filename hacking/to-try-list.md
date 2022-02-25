@@ -259,6 +259,7 @@ End of Web stuff
   - nopac attack - patched Nov 2021 `sam the admin` on github, then psexec
   - ticket attacks
   - zerologon - 2020
+  - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
 - endgame dump hashes
   - impacket secretsdump
   - mimikatz on machine or kiwi module in msf
