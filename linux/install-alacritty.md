@@ -6,3 +6,11 @@ Install apt packages
 - libxcb-xfixes0-dev
 - libxcb-render0-dev
 - libxcb-shape0-dev
+- pkg-config
+- librust-servo-fontconfig-sys-dev
+
+# install alacritty commands
+```bash
+sudo apt install -y cargo cmake libx11-xcb-dev libxcb-xfixes0-dev libxcb-render0-dev libxcb-shape0-dev pkg-config librust-servo-fontconfig-sys-dev
+cargo install alacritty
+```
