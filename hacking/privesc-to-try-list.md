@@ -1,11 +1,44 @@
 # priv esc to try lists
 
 # linux
-- linpeas
+- `sudo -l`
+  - `LD_PRELOAD`
+  - specific permissions to binaries / scripts
+    - writable
+    - [exploiting linux scripts](#exploiting linux scripts)
+- SUID binaries
 - su or brute force with common credentials i.e. `root:root`
+- OS version `uname -a && cat /etc/*-release`
+- root processes `ps -efw | grep root`
+- installed packages `dpkg -l`
+- find scripts, crons, timers
+  - pspy
+  - exploit wildcards in scripts or cron jobs
+  - cron jobs
+    - writable scripts
+    - writable things used by script
+  - [exploiting linux scripts](#exploiting linux scripts)
+  - writable or exploitable timers
+- enumerate all writable files and directories
+- writable PATH ( not just my user's path )
+- writable service
+  - directories `systemctl show-environment`
 - linux exploit suggester or `les2.pl`
 - meterpreter local suggester
-- TODO: make this list comprehensive
+- search files by modification date with `find` to see what creators added
+- directory permissions that let you move files you can't access
+- processes with readable memory
+- linpeas ( is it allowed on OSCP? )
+
+## exploiting linux scripts
+- injecting user commands
+- relative command names ( alter PATH )
+- filesystem access 
+  - read and write sensitive files
+  - surprise symlinks
+- wildcards turning into command parameters
+- exec
+- python scripts: everything from to try list for "got source code"
 
 # windows
 - whoami /all
@@ -44,6 +77,8 @@
 - restart perms
   - run at startup with different user
   - restart services by restarting machine
+- systeminfo
+- check hotfixes
 - wdigest ( plain text pass in registry )
 - SAM & SYSTEM backups
 - check perms of WSL directories
@@ -53,5 +88,6 @@
 - WSUS - using http instead of https
 - McAfee SiteList.xml
 - SCCM SCClient
-- domain stuff
-  - my to try list for foothold has info about domains as well
+- domain stuff - to try list for foothold has info about domains
+  - [AD to try list](./to-try-list.md#active directory domain)
+- https://wadcoms.github.io/# 
