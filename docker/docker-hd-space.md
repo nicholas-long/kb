@@ -1,5 +1,5 @@
 # Try to keep logs under control
-
+/etc/docker/daemon.json
 ```json
 {
 	  "log-driver": "local",
@@ -10,7 +10,6 @@
 ```
 
 # Free up space immediately
-
 ```bash
 docker system prune -a -f
 ```
