@@ -32,6 +32,7 @@ Web stuff
 
 # HTTP
 - everything from the everything list
+- robots.txt
 - busting
   - directories
   - files
@@ -39,15 +40,25 @@ Web stuff
   - wfuzz step to check for outliers
   - view source of files found
 - LFI
+  - jhaddix
+  - graceful security
+  - logs or writable files to poison
 - file upload
 - nikto
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
-- injection #injection
-  - command injection
-  - SQLi
-  - SSTI
+- fuzz dynamic content
+  - parameters
+  - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
+  - fuzz headers and cookies if their values appear on page 
+    - fuzz special chars
+    - payload tests
+  - generated content like reports, emails, or logs
+  - injection #injection
+    - command injection
+    - SQLi
+    - SSTI
 - POST message vulnerabilities
   - same as above #injection
   - XXE xee xml external entity
