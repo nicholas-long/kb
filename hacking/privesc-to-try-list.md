@@ -95,3 +95,7 @@
 - domain stuff - to try list for foothold has info about domains
   - [AD to try list](./to-try-list.md#active directory domain)
 - https://wadcoms.github.io/# 
+- on LAN
+  - responder netbios LLMNR name poisoning
+  - mitm6
+  - relay attacks: impacket ntlmrelayx / smbrelay
