@@ -77,6 +77,10 @@
 - restart perms
   - run at startup with different user
   - restart services by restarting machine
+- vulnerable printer drivers
+  - users can install vulnerable drivers by adding a printer type
+- printnightmare local privesc ( powershell available )
+- migrate to interactive process
 - systeminfo
 - check hotfixes
 - wdigest ( plain text pass in registry )

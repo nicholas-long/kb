@@ -197,6 +197,16 @@ End of Web stuff
   - admin -> shell
     - psexec
     - wmiexec - quieter than psexec
+- upload permissions
+  - dangerous files with links to attacker smb share
+- getting NTLMv2 hashes
+  - if a user is viewing directories
+    - scf external icon link
+    - lnk
+    - documents with embedded links `\\attacker`
+  - user opening files
+    - docx with embedded links to external images 
+    - docm with macros
 - kerberos auth
 - brute force: crackmapexec
 - shell with administrator privs ( auth )
