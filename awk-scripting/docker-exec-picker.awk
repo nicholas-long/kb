@@ -26,12 +26,16 @@ BEGIN {
   container = fzf_docker_menu(options)
 
   options["exec"] = "exec into the docker"
+  options["dive"] = "dive into the docker"
   options["rmf"] = "kill with extreme prejudice"
   result = fzf_opt_menu(options)
 
   switch (result) {
     case "exec":
       command = "docker exec -it " container " sh"
+      break
+    case "dive":
+      command = "docker ps | awk '$1 == \"" container "\" {print $2}' | xargs dive"
       break
     case "rmf":
       command = "docker rm -f " container
