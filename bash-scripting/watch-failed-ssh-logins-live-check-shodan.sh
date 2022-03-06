@@ -16,6 +16,6 @@ tail -f /var/log/auth.log | \
       system("shodan host " ip)
     }
   }
-  match($0, /Invalid user (.+)/) {
+  match($0, /[Ii]nvalid user (.+)/) {
     print substr($0, RSTART, RLENGTH)
   }'
