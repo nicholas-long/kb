@@ -1,5 +1,12 @@
 #!/usr/bin/awk -f
 
+function fzf_file_menu(location) {
+  choices = "cd " location " && fzf"
+  choices | getline choice # run command
+  close(choices) # close to "prevent wrong output"
+  return choice
+}
+
 function fzf_opt_menu(options) {
   interface_choices = "printf '" # create command
   for (i in options) {
@@ -16,11 +23,14 @@ function fzf_opt_menu(options) {
 BEGIN {
   options["active"] = "ACTIVE MODE"
   options["passive"] = "PASSIVE MODE"
-  options["quotes"] = "TEST QUOTES'\";id MODE"
-  options["quotes2"] = "TEST QUOTES\"';id MODE"
+  options["file"] = "File mode"
   result = fzf_opt_menu(options)
 
+  print "You picked " result "!"
   switch (result) {
+    case "file":
+      print fzf_file_menu("/")
+      break
     case "active":
       print "active option here"
       break
