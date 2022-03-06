@@ -11,6 +11,7 @@ tail -f /var/log/auth.log | \
       if (last != ip) print "Already saw " ip
       last = ip
     } else {
+      print ip
       ip = substr($0, RSTART, RLENGTH)
       seen[ip] = 1
       system("shodan host " ip)
