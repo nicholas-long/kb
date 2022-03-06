@@ -6,10 +6,13 @@ mkdir /tmp/shodancache
 # lookup unique hosts with shodan api
 #cat /var/log/auth.log | \
 tail -f /var/log/auth.log | \
-  grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | \
+  awk 'match($0, /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/) {
+    print substr($0, RSTART, RLENGTH)
+    fflush()
+  }' | \
   while read ip; do
     echo "$ip"
-    [ -f "/tmp/shodancache/$ip" ] || (shodan host "$ip" > /tmp/shodancache/$ip && sleep 2)
+    [ -f "/tmp/shodancache/$ip" ] || (sleep 2 && shodan host "$ip" && sleep 2 && shodan host "$ip" > /tmp/shodancache/$ip)
     bat --paging=never --language=markdown "/tmp/shodancache/$ip"
   done
   # filter unique
