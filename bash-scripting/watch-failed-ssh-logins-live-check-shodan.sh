@@ -6,6 +6,7 @@
 tail -f /var/log/auth.log | \
   awk '/\]: Connection closed by/ { print $9 ; fflush() }
     /Connection closed by invalid user/ { print $12 ; fflush() }
+    /Disconnected from invalid user/ { print $11 ; fflush() }
     /Invalid user .+ from/ { print $10; fflush() } ' | \
   awk '/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print; fflush() }' | \
   while read ip; do
