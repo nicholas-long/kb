@@ -8,10 +8,10 @@ tail -f /var/log/auth.log | \
   awk 'match($0, /[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/) {
     ip = substr($0, RSTART, RLENGTH)
     if (seen[ip]) {
-      print "Already saw " ip
+      if (last != ip) print "Already saw " ip
+      last = ip
     } else {
       ip = substr($0, RSTART, RLENGTH)
-      print ip
       seen[ip] = 1
       system("shodan host " ip)
     }
