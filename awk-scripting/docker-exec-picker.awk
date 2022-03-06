@@ -9,15 +9,16 @@ function fzf_docker_menu(options) {
 }
 
 function fzf_opt_menu(options) {
+  sep="!"
   interface_choices = "printf '" # create command
   for (i in options) {
     gsub(/'/, " QUOTE ", options[i]) # never let options list escape
-    interface_choices = interface_choices i "!" options[i] "\n"
+    interface_choices = interface_choices i sep options[i] "\n"
   }
-  interface_choices = interface_choices "' | fzf --with-nth=2 -d '!'"
+  interface_choices = interface_choices "' | fzf --with-nth=2 -d '" sep "'"
   interface_choices | getline choice # run command
   close(interface_choices) # close to "prevent wrong output"
-  split(choice, arr, "!")
+  split(choice, arr, sep)
   return arr[1]
 }
 
@@ -29,14 +30,14 @@ BEGIN {
   result = fzf_opt_menu(options)
 
   switch (result) {
-
     case "exec":
-      system("docker exec -it " container " sh")
+      command = "docker exec -it " container " sh"
       break
-
     case "rmf":
-      system("docker rm -f " container)
+      command = "docker rm -f " container
       break
-
   }
+
+  print(command)
+  system(command)
 }
