@@ -34,8 +34,8 @@ Web stuff
 - everything from the everything list
 - robots.txt
 - busting
+  - even if you identify CMS and version, find exposed files
   - directories
-  - files
   - common, small, medium, large, dir list big
   - wfuzz step to check for outliers
   - view source of files found
@@ -43,11 +43,14 @@ Web stuff
   - jhaddix
   - graceful security
   - logs or writable files to poison
+  - check notes about techniques and wordlists
 - file upload
 - nikto
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
+- CMS -> everything from CMS list
+- Login form -> everything from login form list
 - fuzz dynamic content
   - parameters
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
@@ -77,6 +80,10 @@ Web stuff
 - XPath injection
 - SSRF server side request forgery
 - XSS
+
+## CMS
+- try all enumeration options for tools specific to web app
+  - wordpress -> wpscan initial, enumerate all plugins, bruteforce
 
 ## found login form #loginform
 - default creds
