@@ -21,6 +21,7 @@ To Try List
 - client side attacks
 - debug mode
 - control port, management port, debug port
+- it should be reasonable; am i trying too hard?
 
 END
 ====================================================================================================
