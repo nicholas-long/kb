@@ -46,6 +46,8 @@ Web stuff
   - logs or writable files to poison
   - check notes about techniques and wordlists
 - file upload
+  - bypassing extension filtering
+    - php: php4, php5, php?, phps, phtml, phar
 - nikto
 - vhost enumeration
   - hostnames from nmap output
@@ -262,6 +264,7 @@ End of Web stuff
 - read files
 - check if DBA
   - enable access to files / commands
+- see what other databases are accessable
 
 # active directory domain
 - kerbrute
