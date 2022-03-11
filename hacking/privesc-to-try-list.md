@@ -23,6 +23,7 @@
 - writable PATH ( not just my user's path )
 - writable service
   - directories `systemctl show-environment`
+- headline exploits from privesc to try list
 - linux exploit suggester or `les2.pl`
 - meterpreter local suggester
 - search files by modification date with `find` to see what creators added
@@ -62,6 +63,7 @@
   - credentials manager ( cmdkey )
 - running processes
   - dump memory
+- headline exploits from privesc to try list
 - enum tools to run
   - winpeas
   - watson
@@ -79,7 +81,6 @@
   - restart services by restarting machine
 - vulnerable printer drivers
   - users can install vulnerable drivers by adding a printer type
-- printnightmare local privesc ( powershell available )
 - migrate to interactive process
 - systeminfo
 - check hotfixes
@@ -99,3 +100,15 @@
   - responder netbios LLMNR name poisoning
   - mitm6
   - relay attacks: impacket ntlmrelayx / smbrelay
+
+# linux headline exploits
+- 2022 : dirty pipe
+- 2022 : pwnkit - polkit CVE
+
+# windows headline exploits
+- 2021 - present : printnightmare local privesc ( powershell available )
+- ever - present : rogue potato ( SEImpersonatePrivilege )
+- 2021 : hivenightmare
+## windows AD headline exploits
+- 2021 - nopac attack `sam the admin` on github, then psexec
+- 2020 - zerologon

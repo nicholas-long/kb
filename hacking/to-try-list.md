@@ -32,7 +32,7 @@ Web stuff
 ====================================================================================================
 
 # HTTP
-- everything from the everything list
+- everything from the everything list (including web server version)
 - robots.txt
 - busting
   - even if you identify CMS and version, find exposed files
@@ -203,7 +203,7 @@ End of Web stuff
 - guest access to shares
   - null auth
   - guest access with only username required
-- enum4linux
+- enum4linux & enum4linux-ng
 - common creds: `Guest:`
 - dump users
   - impacket samrdump ( auth )
@@ -288,9 +288,8 @@ End of Web stuff
     - sharphound tool for more data
   - add dc hostname and machine name to hosts file if this can't authenticate
 - common exploits
-  - nopac attack - patched Nov 2021 `sam the admin` on github, then psexec
+  - headline exploits from privesc to try list
   - ticket attacks
-  - zerologon - 2020
   - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
 - endgame dump hashes
   - impacket secretsdump
@@ -328,3 +327,10 @@ End of Web stuff
 - snmp 161
 - tftp 69
 - rest of common
+
+# wsmans tcp 1270, 5985, 5986
+- omigod
+
+# email
+- mailsniper powershell script (OWA)
+- credmaster?
