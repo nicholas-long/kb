@@ -68,9 +68,10 @@
   - winpeas
   - watson
   - powerview checks?
-- unattended XML
-- always install elevated
+- writable path
 - dll injection
+- always install elevated
+- unattended XML
 - list services
   - modify executable
   - modify service
