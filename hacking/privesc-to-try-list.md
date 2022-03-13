@@ -113,3 +113,8 @@
 ## windows AD headline exploits
 - 2021 - nopac attack `sam the admin` on github, then psexec
 - 2020 - zerologon
+
+# database creds
+- wordpress `wp-config.php`
+- drupal `sites/default/settings.php`
+

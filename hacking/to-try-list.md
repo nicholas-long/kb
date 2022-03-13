@@ -86,7 +86,8 @@ Web stuff
 
 ## CMS
 - try all enumeration options for tools specific to web app
-  - wordpress -> wpscan initial, enumerate all plugins, bruteforce
+- wordpress -> wpscan initial, enumerate all plugins, bruteforce
+- drupal / silverstripe -> droopescan
 
 ## found login form #loginform
 - default creds
@@ -107,9 +108,10 @@ Web stuff
 ## compromised CMS login
 - service versions information -> exploit db
 - file uploads
-- user privileges
+- user privileges - elevate
 - code execution directly
-- modules/extensions/addons 
+- installs
+- plugins/modules/extensions/addons/themes
   - upload with malicious backdoors
 - downgrade attack - backdoor, plugin, revert to vulnerable version
 - edit some extension or functionality
@@ -119,9 +121,18 @@ Web stuff
 - administration
   - access to sensitive database credentials
   - backups
+  - database dumps
   - modify or downgrade access control lists
   - world writable directories
 - assess the functionality provided to it and seeing if we can abuse it
+## CMS auth code exec / becoming web user
+- drupal
+  - "extend" "install new module"
+  - install drupal project php https://www.drupal.org/project/php and enable the module
+  - content > add content > basic page
+    - edit in source view and set text type at bottom to php code
+- wordpress -> edit plugins or themes to install web shell
+
 
 ## got source code
 - secrets / creds
