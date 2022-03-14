@@ -45,6 +45,7 @@ Web stuff
   - graceful security
   - logs or writable files to poison
   - check notes about techniques and wordlists
+  - check user input just like injections (could be passed as filenames or to commands)
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
@@ -164,6 +165,9 @@ Web stuff
     - JSON object prototype pollution
     - fuzzy equal
     - TODO: finish this
+  - golang
+    - user input to controllers -> `http.Request`
+    - shell exec -> `exec.Command`
 
 ## old stuff for old servers
 - shellshock - should find with nikto?
