@@ -19,6 +19,7 @@
     - writable things used by script
   - [exploiting linux scripts](#exploiting linux scripts)
   - writable or exploitable timers
+- local ports
 - enumerate all writable files and directories
 - writable PATH ( not just my user's path )
 - writable service
@@ -42,6 +43,7 @@
 - python scripts: everything from to try list for "got source code"
 
 # windows
+- check for local ports
 - whoami /all
   - SeImpersonate -> rogue potato
   - backup permissions
@@ -50,7 +52,6 @@
   - write permissions
 - enum users and groups
 - common general enumeration stuff
-  - ports
   - enumerate installed applications and configs 
     - hunt for creds ( appdata, lazagne )
     - saved RDP and and credential manager
