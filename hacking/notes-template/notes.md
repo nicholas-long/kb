@@ -26,3 +26,10 @@ Steps Taken
 ===========
 
 - NMAP full port scan
+
+Exploit
+=======
+
+Privilege Escalation and Lateral Movement
+=========================================
+
