@@ -15,6 +15,11 @@ ps -efw --forest
 ps -efw --forest -M                  # SELinux
 ```
 
+# find setuid binaries
+```bash
+find / -perm -4000 -ls 2>/dev/null
+```
+
 # find files belonging to user
 ```bash
 find / -user username 2>/dev/null
