@@ -6,7 +6,10 @@
   - specific permissions to binaries / scripts
     - writable
     - [exploiting linux scripts](#exploiting linux scripts)
+  - vulnerable versions of allowed commands
 - SUID binaries
+  - gtfobins
+  - vulnerable versions
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release`
 - root processes `ps -efw | grep root`
@@ -30,6 +33,7 @@
 - search files by modification date with `find` to see what creators added
 - directory permissions that let you move files you can't access
 - processes with readable memory
+- access to mount - mount something containing setuid binaries
 - linpeas ( is it allowed on OSCP? )
 
 ## exploiting linux scripts
