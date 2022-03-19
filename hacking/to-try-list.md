@@ -84,6 +84,8 @@ Web stuff
 - XPath injection
 - SSRF server side request forgery
 - XSS
+- generate cewl wordlist from site
+  - use for login bruteforcing, busting directories, subdomains
 
 ## CMS
 - try all enumeration options for tools specific to web app
