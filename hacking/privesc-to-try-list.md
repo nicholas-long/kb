@@ -35,6 +35,7 @@
 - processes with readable memory
 - access to mount - mount something containing setuid binaries
 - linpeas ( is it allowed on OSCP? )
+- su or hydra ssh test credential reuse
 
 ## exploiting linux scripts
 - injecting user commands
