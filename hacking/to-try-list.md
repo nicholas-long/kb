@@ -34,6 +34,7 @@ Web stuff
 # HTTP
 - everything from the everything list (including web server version)
 - robots.txt
+- nikto
 - busting
   - even if you identify CMS and version, find exposed files
   - directories
@@ -49,7 +50,6 @@ Web stuff
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
-- nikto
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
@@ -74,6 +74,8 @@ Web stuff
   - general POST message vulnerabilities
     - brackets -> arrays
   - JSON object prototype pollution
+- generate cewl wordlist from site
+  - use for login bruteforcing, busting directories, subdomains
 - IDOR
 - bypassing restrictions
   - `X-Forwarded-For` header - bypass bad IP filter
@@ -84,8 +86,6 @@ Web stuff
 - XPath injection
 - SSRF server side request forgery
 - XSS
-- generate cewl wordlist from site
-  - use for login bruteforcing, busting directories, subdomains
 
 ## CMS
 - try all enumeration options for tools specific to web app
