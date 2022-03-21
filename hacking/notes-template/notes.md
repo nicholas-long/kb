@@ -5,6 +5,9 @@ OS         :
 Hostname   : 
 Subdomains : 
 
+Users
+=====
+
 Credentials / Loot
 ==================
 
@@ -13,7 +16,7 @@ NMAP Scan
 ```
 ```
 
-Web Enumeration
+Enumeration
 ===============
 Directories
 ```
