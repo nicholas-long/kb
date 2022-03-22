@@ -41,6 +41,7 @@ Web stuff
   - common, small, medium, large, dir list big
   - wfuzz step to check for outliers
   - view source of files found
+- manual inspection (view source)
 - LFI
   - jhaddix
   - graceful security
