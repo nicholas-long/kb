@@ -10,6 +10,9 @@
 - SUID binaries
   - gtfobins
   - vulnerable versions
+- sensitive config files
+  - htpasswd
+  - database configs
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release`
 - root processes `ps -efw | grep root`
