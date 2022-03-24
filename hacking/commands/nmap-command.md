@@ -1,6 +1,11 @@
 # NMAP all ports command
 ```bash
-nmap -p- -v -sC -sV $IP
+sudo nmap -p- -v -sC -sV -oA nmap.all $IP
+```
+
+# NMAP quick all ports command
+```bash
+sudo nmap -p- -v -sC -sV --min-rate 10000 -oA nmap.all $IP
 ```
 
 # NMAP common ports command
