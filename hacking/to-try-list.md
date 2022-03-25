@@ -67,6 +67,7 @@ Web stuff
     - command injection
     - SQLi
     - SSTI
+  - type juggling http post data (JSON, XML, url encoded)
 - POST message vulnerabilities
   - same as above #injection
   - XXE xee xml external entity
@@ -137,7 +138,6 @@ Web stuff
     - edit in source view and set text type at bottom to php code
 - wordpress -> edit plugins or themes to install web shell
 
-
 ## got source code
 - secrets / creds
 - grep vulnerable functions
@@ -158,6 +158,7 @@ Web stuff
     - assert
     - regular expressions that execute code
     - fuzzy equal
+      - type juggling http post data (JSON, XML, url encoded)
   - python
     - eval
     - pickle
