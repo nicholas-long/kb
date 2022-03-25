@@ -18,6 +18,7 @@ To Try List
 - default credentials
 - common credentials
 - find things that are not COTS
+- preliminary OSINT on data retrieved
 - client side attacks
 - debug mode
 - control port, management port, debug port
