@@ -39,6 +39,10 @@
 - access to mount - mount something containing setuid binaries
 - linpeas ( is it allowed on OSCP? )
 - su or hydra ssh test credential reuse
+- check exploits / vulnerabilities found during enumeration
+  - leaked credentials
+  - potential privesc exploits
+  - vulnerable services running as root
 
 ## exploiting linux scripts
 - injecting user commands
@@ -110,6 +114,10 @@
   - responder netbios LLMNR name poisoning
   - mitm6
   - relay attacks: impacket ntlmrelayx / smbrelay
+- check exploits / vulnerabilities found during enumeration
+  - leaked credentials
+  - potential privesc exploits
+  - vulnerable services running as SYSTEM
 
 # linux headline exploits
 - 2022 : dirty pipe
