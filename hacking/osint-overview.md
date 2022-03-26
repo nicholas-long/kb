@@ -1,3 +1,6 @@
+# OSINT guides and step-by-step
+- flowcharts by "intel techniques"
+
 # sock puppets
 - online identity that is a misrepresentation. fake account, alt identity
   - looks legitimate
@@ -85,4 +88,94 @@
 - social media accounts uncovered may give new info like names for an username
   - user profile image -> reverse image search
   - fuzzing by typing partial names
+
+# people OSINT
+- searching for people with websites
+  - search for any piece of info and uncover other things
+    - reverse address search address / phone -> person
+    - middle name, age, specifics
+    - relatives
+    - search by IP address (also on data leaks)
+  - websites
+    - whitepages
+    - true people search
+    - fastpeoplesearch
+    - fast background check
+    - webmii
+    - peekyou
+    - thats them
+    - simple googling
+- public records
+  - voter records
+- hunting phone numbers
+  - google - hit or miss
+    - many sketchy website results
+    - try different phone number format variations in quotes
+    - try inserting a phone emoji
+  - truecaller.com - contacts uploaded from various sources
+  - attempt to recover yahoo account to get partial phone number (sends alert)
+  - infobel.com - search in various countries
+- birthdates
+  - google - include full name in quotes along with `birthday` or `intext:birthday`
+  - discover social media posts and congratulations
+- resumes
+  - linkedin
+  - google name in quotes with `resume`
+  - google drive links to resumes `site:google.com`
+
+# social media OSINT
+- twitter
+  - search trending posts about topics, people, keyword search
+    - filters
+      - from
+      - to
+      - mentions with `@`
+      - filter by date with `since` and `until`
+      - `geocode:12.345,-45.678,10km`
+      - advanced search with operators
+  - third party websites with analytics
+    - socialbearing.com
+      - sentiment, domains shared, languages, followers, common words
+      - associated people
+    - twitonomy.com
+      - active hours of the day
+        - other speicific source: sleepingtime
+    - mentionmapp - mentions and correlations with networks of people
+    - tweetbeaver 
+      - get twitter ID to track someone even if they change handle
+      - conversations
+    - spoonbill.io - track changes over time
+    - tinfoleak - potential leak information
+      - applications used
+      - geo enabled
+      - timezone
+    - tweetdeck (tweetdeck.twitter.com logged in)
+      - open live panels to watch events related to users, topics, or same search operators as twitter
+- facebook
+  - graph searching tools might stop working
+  - search on facebook
+    - include `photos of` before search to see pictures tagged in
+- instagram
+  - wopita
+  - instadp.com
+  - imginn.com - search and download images found
+  - google
+- snapchat
+  - username search, correlate, "slow typing" competion fuzzing
+  - snapchat has a map map.snapchat.com which can see snaps from specific locations 
+    - use for physical location OSINT
+- reddit
+  - reddit searching
+  - google searching - `site:reddit`
+  - comment history - valuable for research
+- linkedin
+  - connections determine level of information you can see
+  - contact info
+  - some location info
+  - history of posts
+  - unsolicited requests to users can lead to bans
+    - can use linked in recruiters to get degrees of separation to a target because they will add anyone
+      - "Linked In Open Networker" LION
+  - recommmendations show associated people or coworkers
+- tiktok
 
