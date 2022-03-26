@@ -286,6 +286,15 @@ End of Web stuff
   - enable access to files / commands
 - see what other databases are accessable
 
+# got hashes
+- md5 -> crackstation
+- john
+- hashcat
+  - rockyou
+  - rules
+  - cewl wordlist
+  - common seasons and years wordlist
+
 # active directory domain
 - kerbrute
   - user enum
