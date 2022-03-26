@@ -149,6 +149,7 @@ Web stuff
 - deserialization vulnerabilities
 - templates
 - vulnerable third party libraries
+- git repositories and history log
 - vulnerabilities common to the programming language
   - PHP
     - common antipatterns:
