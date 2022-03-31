@@ -57,11 +57,12 @@ Web stuff
   - brute force vhost subdomains
 - CMS -> everything from CMS list
 - API
-  - kiterunner
-  - wfuzz
+  - enumerate resources and endpoints to interact with them
+  - enumerate parameters for endpoints - arjun
+  - everything from separate API enumeration list
   - restful methods GET POST PUT DELETE
 - Login form -> everything from login form list
-- fuzz dynamic content
+- fuzz all dynamic content
   - parameters
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
   - fuzz headers and cookies if their values appear on page 
