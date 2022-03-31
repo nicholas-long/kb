@@ -56,6 +56,10 @@ Web stuff
   - hostnames from nmap output
   - brute force vhost subdomains
 - CMS -> everything from CMS list
+- API
+  - kiterunner
+  - wfuzz
+  - restful methods GET POST PUT DELETE
 - Login form -> everything from login form list
 - fuzz dynamic content
   - parameters
