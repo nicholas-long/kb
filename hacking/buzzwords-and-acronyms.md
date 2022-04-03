@@ -10,3 +10,11 @@ zabbix stores configs to access mysql database
 # systemd-private
 systemd stores some directories in the /tmp directory that are like sandboxes for services.
 these are tmp directories that belong to the individual services.
+
+# CBC cipher
+vulnerable
+crackable?
+brute forceable if used to generate a cookie
+
+# sperl and suidperl
+variations of perl designed to handle setuid security properly

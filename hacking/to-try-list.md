@@ -94,6 +94,7 @@ Web stuff
 - XPath injection
 - SSRF server side request forgery
 - XSS
+- apache (old versions) - searchsploit plugins versions
 
 ## CMS
 - try all enumeration options for tools specific to web app
