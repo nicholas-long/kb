@@ -5,15 +5,16 @@
 `--open` flag to sleep up scans
 `-T5` or `--min-rate 10000` to increase scan rate
 `-A` run "all" scripts
+`-sC` equivalent to --script=default
 
 # NMAP all ports command
 ```bash
 sudo nmap -p- -v -sC -sV -oA nmap.all $IP
 ```
 
-# NMAP quick all ports command
+# NMAP quick all TCP ports command
 ```bash
-sudo nmap -p- -v -sC -sV --min-rate 10000 -oA nmap.all $IP
+sudo nmap -p- -v -sT -sC -sV --min-rate 10000 -oA nmap.all $IP
 ```
 
 # NMAP common ports command
