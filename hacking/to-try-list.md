@@ -369,3 +369,10 @@ End of Web stuff
 # email
 - mailsniper powershell script (OWA)
 - credmaster?
+
+# IPMI
+- dump hashes and crack
+- auth bypass in metasploit
+- ipmitool
+- zabbix -> authenticated RCE
+
