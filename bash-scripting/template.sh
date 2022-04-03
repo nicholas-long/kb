@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# parse args
+# parse args with case statement
 VERBOSE=0
 PAGING="no"
 while [[ $# -gt 0 ]]; do
