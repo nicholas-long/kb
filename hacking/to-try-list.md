@@ -94,6 +94,7 @@ Web stuff
 - XPath injection
 - SSRF server side request forgery
 - XSS
+  - dalfox
 - apache (old versions) - searchsploit plugins versions
 
 ## CMS
