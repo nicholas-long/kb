@@ -101,6 +101,19 @@ Web stuff
 - wordpress -> wpscan initial, enumerate all plugins, bruteforce
 - drupal / silverstripe -> droopescan
 
+## Busting
+for each path
+/
+  - common
+  - files
+    - large
+    - with extensions -> FUZZ.ext raft-large-words wordlist
+  - directories
+    - small
+    - medium
+    - large
+    - dir list big
+
 ## found login form #loginform
 - default creds
 - sqli
