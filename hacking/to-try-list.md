@@ -65,6 +65,7 @@ Web stuff
 - fuzz all dynamic content
   - type juggling http post data
     - change content type to JSON and try different types for params
+      - target things that might be compared with `==` and try changing them to `true`
     - brackets -> arrays
   - parameters
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
@@ -73,7 +74,7 @@ Web stuff
     - payload tests
   - generated content like reports, emails, or logs
   - injection #injection
-    - SQLi
+    - SQLi -> dump data and try everything from "got access to database" list
     - SSTI
     - LDAP injection
     - NoSQL injection
@@ -300,7 +301,7 @@ End of Web stuff
 # got access to databases - general SQL
 - dump creds / hashes
 - command execution
-  - write web shell directly into outfile
+  - write web shell directly into outfile - may return SQL error but still write file
   - code execution built into database or with modules
   - write config backups with web shells embedded in data
 - read files
