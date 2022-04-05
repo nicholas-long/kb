@@ -63,38 +63,39 @@ Web stuff
   - restful methods GET POST PUT DELETE
 - Login form -> everything from login form list
 - fuzz all dynamic content
+  - type juggling http post data
+    - change content type to JSON and try different types for params
+    - brackets -> arrays
   - parameters
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
-  - fuzz headers and cookies if their values appear on page 
+  - fuzz headers and cookies if their values appear on page
     - fuzz special chars
     - payload tests
   - generated content like reports, emails, or logs
   - injection #injection
-    - command injection
     - SQLi
     - SSTI
-  - type juggling http post data (JSON, XML, url encoded)
-- POST message vulnerabilities
-  - same as above #injection
-  - XXE xee xml external entity
-  - LDAP injection
-  - NoSQL injection
+    - LDAP injection
+    - NoSQL injection
+    - XML
+      - XXE xml external entity
+      - XPath injection
+    - XSS - dalfox
   - general POST message vulnerabilities
-    - brackets -> arrays
   - JSON object prototype pollution
 - generate cewl wordlist from site
   - use for login bruteforcing, busting directories, subdomains
 - IDOR
 - bypassing restrictions
-  - `X-Forwarded-For` header - bypass bad IP filter
+  - `X-Forwarded-For` header bypass
+    - bypass bad IP filter
+    - bypass scripts returning 403
+    - bypass rate limits
   - check if validated on client side
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
-- XPath injection
 - SSRF server side request forgery
-- XSS
-  - dalfox
 - apache (old versions) - searchsploit plugins versions
 
 ## CMS
