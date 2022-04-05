@@ -183,6 +183,7 @@ for each path
     - regular expressions that execute code
     - fuzzy equal
       - type juggling http post data (JSON, XML, url encoded)
+    - laravel : SQLi with `whereRaw` for manipulating raw query
   - python
     - eval
     - pickle
