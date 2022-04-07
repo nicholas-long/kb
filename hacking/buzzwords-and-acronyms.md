@@ -22,3 +22,8 @@ variations of perl designed to handle setuid security properly
 # java serialization payload `rO0` base64 `AC ED 00 05` in hex
 "rO0" Base64
 "AC ED 00 05" in Hex
+
+# firefox containers
+# mutliple sessions cookies in firefox web browser
+Firefox Multi-Account Containers
+https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers/
