@@ -69,6 +69,7 @@ Web stuff
     - brackets -> arrays
   - parameters
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
+  - fuzz with different HTTP methods (ex: POST might work and accept GET params)
   - fuzz headers and cookies if their values appear on page
     - fuzz special chars
     - payload tests
@@ -84,6 +85,7 @@ Web stuff
     - XSS - dalfox
   - general POST message vulnerabilities
   - JSON object prototype pollution
+  - fuzz all parameters as get and post with get and post http methods
 - generate cewl wordlist from site
   - use for login bruteforcing, busting directories, subdomains
 - IDOR
@@ -340,6 +342,7 @@ End of Web stuff
     - run python version in own environ
     - sharphound tool for more data
   - add dc hostname and machine name to hosts file if this can't authenticate
+- unauthenticated ASREP roast with usernames list
 - common exploits
   - headline exploits from privesc to try list
   - ticket attacks

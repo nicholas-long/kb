@@ -5,3 +5,5 @@
 - use `FUZ2Z` for the second fuzz placeholder
   - example: `-H 'X-Forwarded-For: FUZ2Z'`
 
+# wfuzz show or hide responses containing text regex
+`--ss` / `--hs` regex : Show/Hide responses with the specified regex within the content
