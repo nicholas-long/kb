@@ -60,11 +60,6 @@ newer technology -> developers adopting early without considering security.
 introspection can disclose fields. not considered a bug, it is like API documentation.
 even if introspection is off, can still do normal API recon.
 occasionally verbose error messages will leak info by suggesting mistakes in queries.
-## GraphQL pentesting
-- enumerate with introspection
-- identify business logic of each endpoint
-- craft queries to check for IDORs or information disclosure
-- pay attention to the syntax - the most difficult part
 ## common GraphQL bugs
 - same exact types of bugs as normal APIs
 - IDORs
@@ -85,7 +80,7 @@ occasionally verbose error messages will leak info by suggesting mistakes in que
   - test for injections in data
 - `graphql-path-enum` for finding paths A -> B (think like bloodhound)
 ## common specific GraphQL endpoints
-- qql
+- ql
 - gql
 - graphql
 - graphiql
@@ -132,3 +127,15 @@ mutaiton CreateBlah($param: Thing) {
   }
 }
 ```
+
+# GraphQL API pentesting to try list
+- recon
+  - /graphiql is endpoint with in-browser GraphQL IDE
+    - IDE is also available within InQL burp extension
+  - `/graphql?query=` with url encoded queries or mutations
+  - enumerate with introspection
+    - payloadsallthethings has GraphQL enumeration payloads
+    - take output of introspection payload and paste into GraphQL voyager
+- identify business logic of each endpoint
+- craft queries to check for IDORs or information disclosure
+- pay attention to the syntax - the most difficult part
