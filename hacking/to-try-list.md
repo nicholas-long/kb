@@ -96,11 +96,17 @@ Web stuff
     - bypass scripts returning 403
     - bypass rate limits
   - check if validated on client side
+- log4j injection - early 2022 (especially Java stack)
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
 - SSRF server side request forgery
 - apache (old versions) - searchsploit plugins versions
+
+## specific HTTP server exploit possibilities
+- tomcat
+  - tomcat + apache httpd proxy route -> path traversal with `/..;/` `www.vulnerable.com/lalala/..;/manager/html` `http://www.vulnerable.com/;param=value/manager/html` (hacktricks)
+- nginx + another HTTP -> request smuggling
 
 ## CMS
 - try all enumeration options for tools specific to web app
