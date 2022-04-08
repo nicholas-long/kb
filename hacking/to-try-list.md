@@ -68,6 +68,7 @@ Web stuff
       - target things that might be compared with `==` and try changing them to `true`
     - brackets -> arrays
   - parameters
+  - IDs -> IDOR
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
   - fuzz with different HTTP methods (ex: POST might work and accept GET params)
   - fuzz headers and cookies if their values appear on page

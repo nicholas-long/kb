@@ -50,3 +50,85 @@ tips from InsiderPhD
  1273833 /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt
  2171687 /usr/share/seclists/Discovery/DNS/dns-Jhaddix.txt
 ```
+
+# GraphQL APIs
+alternative to RESTful APIs, but works very differently.
+only one endpoint for every resource. queries for common operations; look very different from SQL.
+much less recon than RESTful APIs.
+newer technology -> developers adopting early without considering security.
+## GraphQL introspection and recon
+introspection can disclose fields. not considered a bug, it is like API documentation.
+even if introspection is off, can still do normal API recon.
+occasionally verbose error messages will leak info by suggesting mistakes in queries.
+## GraphQL pentesting
+- enumerate with introspection
+- identify business logic of each endpoint
+- craft queries to check for IDORs or information disclosure
+- pay attention to the syntax - the most difficult part
+## common GraphQL bugs
+- same exact types of bugs as normal APIs
+- IDORs
+- busness logic errors
+- possibility to enumerate internal API endpoints leads to plenty of information disclosure
+- GraphQL specific bugs
+  - usually require access to source code and review
+  - insufficient type checks on values
+  - switching object's types
+  - NoSQL injection through JSON types "custom scalar types"
+## GraphQL tools
+- `GraphQL voyager` is a tool to visualize GraphQL using introspection
+  - can see the queries and mutations that are defined for this database, provides query/mutation payloads
+- GraphQL IDE
+- Altair
+- `InQL` burp add-on
+- `GraphQLmap`
+  - test for injections in data
+- `graphql-path-enum` for finding paths A -> B (think like bloodhound)
+## common specific GraphQL endpoints
+- qql
+- gql
+- graphql
+- graphiql
+- graphql/console
+look out for queries mentioning queries (q) and mutation
+queries are usually URL encoded
+## how GraphQL works
+- implements graph structure in database
+- reading and modifying, code written ahead of time
+  - queries fetch data
+  - mutations edit
+  - fragments are lists of fields
+  - metafields for inspection of query or mutation
+- fragments are like classes of data with defined fields
+  - a list of things to select that can be reused for different objects
+## writing GraphQL queries
+look like functions - they return one or more items
+queries can contain things like strings, but it's not JSON. JSON is returned by the API as the result of queries.
+## writing GraphQL mutations
+mutation is defined to reference fields in json passed in
+```graphql
+mutaiton CreateBlah($param: Thing) {
+  paramField
+}
+```
+```json
+{ "param": "value" }
+```
+## example GraphQL queries from InsiderPHD video
+```graphql
+{
+  # return hero's name and name of every friend
+  hero {
+    name
+    friends {
+      name
+    }
+  }
+}
+{
+  human(id: 1000) {
+    name
+    height(Unit: FOOT)
+  }
+}
+```
