@@ -84,6 +84,7 @@ Web stuff
       - XXE xml external entity
       - XPath injection
     - XSS - dalfox
+    - log4j log4shell injection - test every field, parameter, and http header with payload (especially Java stack)
   - general POST message vulnerabilities
   - JSON object prototype pollution
   - fuzz all parameters as get and post with get and post http methods
@@ -96,7 +97,6 @@ Web stuff
     - bypass scripts returning 403
     - bypass rate limits
   - check if validated on client side
-- log4j injection - early 2022 (especially Java stack)
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
