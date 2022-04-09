@@ -23,6 +23,9 @@ variations of perl designed to handle setuid security properly
 "rO0" Base64
 "AC ED 00 05" in Hex
 
+# php type juggling confusion vulnerable hash prefix
+`0e...`
+
 # firefox containers
 # mutliple sessions cookies in firefox web browser
 Firefox Multi-Account Containers
