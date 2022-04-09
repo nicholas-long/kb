@@ -28,3 +28,10 @@ the latest version of pimps/JNDI-Exploit-Kit is broken, go back to old versions
 git clone https://github.com/pimps/JNDI-Exploit-Kit
 git checkout 0b6925d80d453146db917616c521e7fc8419dbf7
 ```
+
+# identifying type of encryption of unknown ciphertext
+the length of ciphertext encrypted with block mode is usually divisible by some power of 2
+```bash
+echo $(( 176 / 8 ))
+22
+```
