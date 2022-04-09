@@ -4,6 +4,7 @@
 
 # php type juggling confusion vulnerable hash prefix
 `0e...`
+md5 of `kittycat` is a hash that begins with 0e
 
 # tomcat management console admin login
 `/manager/html`
