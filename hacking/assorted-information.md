@@ -1,3 +1,10 @@
+# java serialization payload `rO0` base64 `AC ED 00 05` in hex
+"rO0" Base64
+"AC ED 00 05" in Hex
+
+# php type juggling confusion vulnerable hash prefix
+`0e...`
+
 # tomcat management console admin login
 `/manager/html`
 

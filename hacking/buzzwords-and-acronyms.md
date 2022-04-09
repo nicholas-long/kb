@@ -19,13 +19,6 @@ brute forceable if used to generate a cookie
 # sperl and suidperl
 variations of perl designed to handle setuid security properly
 
-# java serialization payload `rO0` base64 `AC ED 00 05` in hex
-"rO0" Base64
-"AC ED 00 05" in Hex
-
-# php type juggling confusion vulnerable hash prefix
-`0e...`
-
 # firefox containers
 # mutliple sessions cookies in firefox web browser
 Firefox Multi-Account Containers
