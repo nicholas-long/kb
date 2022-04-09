@@ -54,3 +54,6 @@ variations of perl designed to handle setuid security properly
 # mutliple sessions cookies in firefox web browser
 Firefox Multi-Account Containers
 https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers/
+
+# h2 database on tcp port 8082
+java version of mysql database

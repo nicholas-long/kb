@@ -135,6 +135,7 @@ for each path
 - reset password
 - error message username enumeration
   - forgot password forms - applies as well
+  - create user form if there is an error when user ID already exists
 - register account to find authenticated endpoints
 - brute forcing
 - xsrf
@@ -167,6 +168,7 @@ for each path
 - drupal
   - "extend" "install new module"
   - install drupal project php https://www.drupal.org/project/php and enable the module
+    - alternatively built in module `PHP Filter` allows editing php
   - content > add content > basic page
     - edit in source view and set text type at bottom to php code
 - wordpress -> edit plugins or themes to install web shell

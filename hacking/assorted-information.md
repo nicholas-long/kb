@@ -19,6 +19,9 @@ python2 pickles start with hex `80 03` and end with `.`
 specific password payloads that generate md5 hashes are in payloadsallthethings "Type Juggling"
 md5 of `kittycat` is a hash that begins with 0e
 
+# default openssl message digest
+sha256
+
 # tomcat management console admin login
 `/manager/html`
 
