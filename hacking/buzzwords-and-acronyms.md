@@ -11,10 +11,15 @@ zabbix stores configs to access mysql database
 systemd stores some directories in the /tmp directory that are like sandboxes for services.
 these are tmp directories that belong to the individual services.
 
+# AES DES blowfish block ciphers
+# ECB CBC CFB OFB CTR cipher modes
 # block ciphers
 - modes of operation
   - ECB
   - CBC
+  - CFB
+  - OFB
+  - CTR
 - Notable block ciphers
   - Lucifer / DES
   - IDEA
