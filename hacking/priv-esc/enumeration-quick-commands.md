@@ -47,6 +47,11 @@ find . -exec md5sum {} \;
 cat /proc/cpuinfo | grep processor | wc -l
 ```
 
+# find all git repositories
+```bash
+find / -name .git 2>/dev/null
+```
+
 # get IP with no `ifconfig` or `ip a` on a host or within docker container
 ```bash
 hostname -I

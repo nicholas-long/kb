@@ -135,6 +135,7 @@ for each path
 - reset password
 - error message username enumeration
   - forgot password forms - applies as well
+- register account to find authenticated endpoints
 - brute forcing
 - xsrf
   - add self as admin
