@@ -26,6 +26,7 @@
   - [exploiting linux scripts](#exploiting linux scripts)
   - writable or exploitable timers
 - local ports
+- git or other repositories - check history
 - enumerate all writable files and directories
 - writable PATH ( not just my user's path )
 - writable service
