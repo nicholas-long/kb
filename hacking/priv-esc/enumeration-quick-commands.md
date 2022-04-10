@@ -25,6 +25,11 @@ find / -perm -4000 -ls 2>/dev/null
 find / -user username 2>/dev/null
 ```
 
+# find files belonging to group
+```bash
+find / -group adm 2>/dev/null
+```
+
 # find files modified between specific dates
 ```bash
 find / -type f -newermt "2022-02-20" -not -newermt "2022-02-28" 2>/dev/null
