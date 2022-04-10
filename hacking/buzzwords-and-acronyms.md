@@ -57,3 +57,8 @@ https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers/
 
 # h2 database on tcp port 8082
 java version of mysql database
+
+# IPsec VPN UDP port 500 2500 strongswan
+`strongswan` utility for connecting to ipsec VPNs
+ike-scan
+complicated - refer to ippsec "conceal" video

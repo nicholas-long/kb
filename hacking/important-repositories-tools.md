@@ -15,3 +15,5 @@ https://github.com/epinna/tplmap
 https://github.com/arthaud/git-dumper
 pip3 install git-dumper
 
+# webshells for all sorts of languages
+https://github.com/tennc/webshell
