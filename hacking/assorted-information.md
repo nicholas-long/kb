@@ -41,3 +41,10 @@ try lowering MTU of the actual interface to accomodate packets with all the extr
 ```bash
 ifconfig tun0 MTU 1000
 ```
+
+# compile windows c++ binaries on linux
+```bash
+sudo apt install mingw-w64
+# build 32 bit windows DLL on linux and link winsock
+x86_64-w64-mingw32-g++ rev.c -o rev.dll -lws2_32 -shared
+```
