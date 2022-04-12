@@ -17,3 +17,6 @@ pip3 install git-dumper
 
 # webshells for all sorts of languages
 https://github.com/tennc/webshell
+
+# obfuscate powershell scripts (python)
+https://github.com/klezVirus/chameleon
