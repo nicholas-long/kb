@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -R $1 /var/lib/dpkg/info
+grep -R $1 /var/lib/dpkg/info/*.list
