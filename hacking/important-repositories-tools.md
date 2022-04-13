@@ -1,6 +1,14 @@
-# Important repositories and tools
-- Seclists https://github.com/danielmiessler/SecLists
-- OWASP CheatSheetSeries https://github.com/OWASP/CheatSheetSeries
+# hacktricks markdown data github
+https://github.com/carlospolop/hacktricks
+
+# seclists github
+https://github.com/danielmiessler/SecLists
+
+# payloads payloadsallthethings github
+https://github.com/swisskyrepo/PayloadsAllTheThings
+
+# OWASP cheat sheet series
+https://github.com/OWASP/CheatSheetSeries
 
 # Compiled versions of .NET Windows enumeration tools
 https://github.com/Flangvik/SharpCollection
