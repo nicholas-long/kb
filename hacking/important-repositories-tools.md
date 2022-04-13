@@ -20,3 +20,6 @@ https://github.com/tennc/webshell
 
 # obfuscate powershell scripts (python)
 https://github.com/klezVirus/chameleon
+
+# HTML preview report input list of HTTP(s) sites attack surface with aquatone
+https://github.com/michenriksen/aquatone
