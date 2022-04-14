@@ -55,3 +55,6 @@ x86_64-w64-mingw32-g++ rev.c -o rev.dll -lws2_32 -shared
 - go to proxy tab -> options tab -> match and replace: click add
 - add header in "Replace" field in format `Header: value`
 - leave match condition field blank to add header instead of replacing one
+
+# linux capability `=ep`
+it grants all permissions.
