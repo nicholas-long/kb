@@ -56,6 +56,7 @@ Web stuff
   - hostnames from nmap output
   - brute force vhost subdomains
 - CMS -> everything from CMS list
+- compromised CMS -> everything from "compromised CMS login" list
 - API
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
@@ -153,6 +154,7 @@ for each path
 - installs
 - plugins/modules/extensions/addons/themes
   - upload with malicious backdoors
+  - check if any installed plugins allow upload or exec
 - downgrade attack - backdoor, plugin, revert to vulnerable version
 - edit some extension or functionality
   - plant executable code
