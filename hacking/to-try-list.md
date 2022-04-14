@@ -116,6 +116,7 @@ Web stuff
 ## Busting
 for each path
 /
+  - feroxbuster medium dirs with extensions
   - common
   - files
     - large
