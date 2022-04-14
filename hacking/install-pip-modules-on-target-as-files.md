@@ -1,3 +1,4 @@
+# install programs on target as tar archive file using docker to find installed dependencies
 # install pip modules on target as files with no dependencies on network connection to pip
 - create a docker image with python3-pip installed and a user account created
 - run a docker (no --rm) with that image, install packages with pip
