@@ -415,3 +415,8 @@ End of Web stuff
 - snmpwalk
 - snmp-check for dumping interesting and categorized enumeration information
 - onesixtyone
+
+# LDAP
+- ldapsearch
+- unauthenticated enumeration
+- authenticated enumeration
