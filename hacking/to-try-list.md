@@ -116,8 +116,8 @@ Web stuff
 
 ## Busting
 for each path
-/
   - feroxbuster medium dirs with extensions
+  - .git/ and .git/HEAD
   - common
   - files
     - large
@@ -127,6 +127,7 @@ for each path
     - medium
     - large
     - dir list big
+/
 
 ## found login form #loginform
 - default creds
