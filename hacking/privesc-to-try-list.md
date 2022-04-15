@@ -14,6 +14,9 @@
 - sensitive config files
   - htpasswd
   - database configs
+- sensitive logs
+  - auth.log - may contain accidental passwords in usernames in login failures
+  - bash history
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release`
 - root processes `ps -efw | grep root`
@@ -55,6 +58,7 @@
 - wildcards turning into command parameters
 - exec
 - python scripts: everything from to try list for "got source code"
+- dependent libraries of scripts (ex: tar, zip -> overwrite files / zip slip)
 
 # windows
 - check for local ports
