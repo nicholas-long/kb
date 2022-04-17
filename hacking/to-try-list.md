@@ -103,6 +103,9 @@ Web stuff
 - parameter pollution
 - SSRF server side request forgery
 - apache (old versions) - searchsploit plugins versions
+- webdav
+  - davtest unauth
+  - davtest authenticated
 
 ## specific HTTP server exploit possibilities
 - tomcat
