@@ -1,3 +1,6 @@
+# linux exploit suggester
+https://github.com/mzet-/linux-exploit-suggester
+
 # hacktricks markdown data github
 https://github.com/carlospolop/hacktricks
 
