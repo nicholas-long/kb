@@ -37,10 +37,8 @@ Web stuff
 - robots.txt
 - nikto
 - busting
+  - copy up busting to try list, run through it for paths, add
   - even if you identify CMS and version, find exposed files
-  - directories
-  - common, small, medium, large, dir list big
-  - wfuzz step to check for outliers
   - view source of files found
 - manual inspection (view source)
 - LFI
@@ -102,10 +100,24 @@ Web stuff
 - cookie deserialization
 - parameter pollution
 - SSRF server side request forgery
+- retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
 - apache (old versions) - searchsploit plugins versions
 - webdav
   - davtest unauth
   - davtest authenticated
+
+# web to try list directory busting HTTP
+for each path
+  - feroxbuster medium dirs with extensions and `-e` extract links
+  - .git/ and .git/HEAD
+  - common
+  - files
+    - gobuster with extensions -> raft-large-words and discover backups `-d` option
+    - wfuzz large filename list
+  - directories
+    - wfuzz large
+    - wfuzz dir list big
+/
 
 ## specific HTTP server exploit possibilities
 - tomcat
@@ -116,21 +128,6 @@ Web stuff
 - try all enumeration options for tools specific to web app
 - wordpress -> wpscan initial, enumerate all plugins, bruteforce
 - drupal / silverstripe -> droopescan
-
-## Busting
-for each path
-  - feroxbuster medium dirs with extensions
-  - .git/ and .git/HEAD
-  - common
-  - files
-    - large
-    - with extensions -> FUZZ.ext raft-large-words wordlist
-  - directories
-    - small
-    - medium
-    - large
-    - dir list big
-/
 
 ## found login form #loginform
 - default creds
