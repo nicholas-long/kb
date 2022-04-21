@@ -101,6 +101,7 @@ Web stuff
 - parameter pollution
 - SSRF server side request forgery
 - retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
+- what is different in HTTP vs. HTTPS?
 - apache (old versions) - searchsploit plugins versions
 - webdav
   - davtest unauth
