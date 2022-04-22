@@ -4,9 +4,10 @@ This works for openssl text like `BEGIN CERTIFICATE REQUEST`
 openssl req -in $FILE -text
 ```
 
-# openssl view public key of a private key
+# openssl and ssh view public key of a private key
 ```bash
 openssl pkey -in $FILE -pubout
+ssh-keygen -y -f $FILE
 ```
 
 # openssl view information about PKCS12 certificate
