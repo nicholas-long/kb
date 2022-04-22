@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+# expect script to generate ssh key by filename
+set filename [lindex $argv 0];
+set timeout -1
+spawn ssh-keygen
+match_max 100000
+expect "/.ssh/id_rsa): "
+send -- "$filename\r"
+expect -exact "$filename\r
+Enter passphrase (empty for no passphrase): "
+send -- "\r"
+expect -exact "\r
+Enter same passphrase again: "
+send -- "\r"
+expect eof
