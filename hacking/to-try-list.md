@@ -46,6 +46,7 @@ Web stuff
   - graceful security
   - logs or writable files to poison
   - check notes about techniques and wordlists
+  - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
 - file upload
   - bypassing extension filtering

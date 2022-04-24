@@ -7,5 +7,6 @@ Things that help get list of running processes
 ```
 potential paths of running process
 /proc/self/cmdline
+fuzz `/proc/FUZZ/cmdline` for list of running processes
 environ - protected in apache
 /proc/self/environ
