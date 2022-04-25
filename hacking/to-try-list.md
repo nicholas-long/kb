@@ -101,6 +101,7 @@ Web stuff
 - cookie deserialization
 - parameter pollution
 - SSRF server side request forgery
+- apache delete files -> delete .htaccess and possibly see php source
 - retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
 - what is different in HTTP vs. HTTPS?
 - apache (old versions) - searchsploit plugins versions
