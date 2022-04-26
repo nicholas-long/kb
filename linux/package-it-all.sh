@@ -15,7 +15,7 @@ echo $arch "Ignoring packages for" $ignore
 mkdir packages
 cd packages
 allpackages=$(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances $pkg:$arch | grep "^\w" | grep -v $ignore | sort -u)
-# | xargs apt-get download
+#| xargs apt-get download
 
 for p in $allpackages
 do

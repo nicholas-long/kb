@@ -1,8 +1,6 @@
 # Initialize topics in dockers
-
 Add environment variable `KAFKA_CREATE_TOPICS`.
 Format is `topic_name:partitions:replicas?`
-
 ```yaml
 version: "3.8"
 services:
@@ -23,8 +21,7 @@ services:
       - ./volumes/kafka:/kafka
 ```
 
-# Full example
-
+## Full example
 ```yaml
 version: "3.8"
 services:

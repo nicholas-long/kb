@@ -1,11 +1,9 @@
 # check if a variable is empty
-
 ```bash
 if [ -z "$KB_DIR" ]; then
   echo it is empty
 fi
 ```
-
 ```
 ┌──(coyote㉿DESKTOP-14GJTFF)-[~/kb]
 └─$ if [ -z "$KB_DIR" ]; then   echo it is empty; fi
@@ -23,7 +21,6 @@ it is empty
 ```bash
 [[ -n $KB_DIR ]] || echo it is empty
 ```
-
 ```
 ┌──(coyote㉿DESKTOP-14GJTFF)-[~/kb]
 └─$ [[ -n $KB_DIR ]] || echo it is empty

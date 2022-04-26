@@ -1,8 +1,7 @@
-# Run with preview
+# fzf run with preview
 --preview=bat
 
-## Install
-
+# fzf install
 ```bash
 sudo apt update && sudo apt install fzf
 
@@ -11,8 +10,7 @@ wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.d
 sudo dpkg -i bat_0.19.0_amd64.deb
 ```
 
-# Help
-
+# fzf Help
 ```
 usage: fzf [options]
 
@@ -107,4 +105,3 @@ usage: fzf [options]
                           (e.g. '--layout=reverse --inline-info')
 
 ```
-

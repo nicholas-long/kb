@@ -1,3 +1,2 @@
 # Lookup missing packages
-
-`https://command-not-found.com/pkexec`
+https://command-not-found.com/pkexec

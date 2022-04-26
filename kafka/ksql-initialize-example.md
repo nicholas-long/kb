@@ -1,5 +1,4 @@
-# Initialize all ksql commands 
-
+# example docker to initialize ksql commands
 Run in a docker.
 Check if dummy file exists. If not, do initialization.
 When done, touch dummy file so it does not initialize again.
