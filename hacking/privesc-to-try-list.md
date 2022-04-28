@@ -69,6 +69,7 @@
   - applications that run as SYSTEM
   - write permissions
 - enum users and groups
+- horizontal escalation - service users may have privileges
 - common general enumeration stuff
   - enumerate installed applications and configs 
     - hunt for creds ( appdata, lazagne )
