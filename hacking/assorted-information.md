@@ -62,3 +62,19 @@ it grants all permissions.
 # bloodhound sharphound fix import errors - incompatible versions
 new version of bloodhound has to work with new version of sharphound (4).
 ensure version of bloodhound is compatible with ingester.
+
+# top tier endpoint protection AV defender
+# Microsoft Defender for Endpoint - enterprise protection
+# vmware carbon black cloud
+# crowdstrike falcon
+top tier endpoint protection AV
+
+# cyber reason
+B tier of AV
+
+# arctic wolf
+# mcaffee
+# symantec
+# sophos
+# malwarebytes
+worst tier of AV
