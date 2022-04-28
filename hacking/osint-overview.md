@@ -179,3 +179,7 @@
   - recommmendations show associated people or coworkers
 - tiktok
 
+# github OSINT
+# github OSINT organizations
+check people associated
+commit history
