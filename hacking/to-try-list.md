@@ -348,6 +348,7 @@ End of Web stuff
   - WinRM
   - MSSQL
   - other services exposed
+- unauthenticated ASREP roast with usernames list
 - retry credentials for every service
 - authenticated ( probably ) lateral movement
   - impacket
@@ -359,7 +360,6 @@ End of Web stuff
     - run python version in own environ
     - sharphound tool for more data
   - add dc hostname and machine name to hosts file if this can't authenticate
-- unauthenticated ASREP roast with usernames list
 - common exploits
   - headline exploits from privesc to try list
   - ticket attacks
