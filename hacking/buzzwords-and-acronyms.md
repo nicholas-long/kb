@@ -62,3 +62,6 @@ java version of mysql database
 `strongswan` utility for connecting to ipsec VPNs
 ike-scan
 complicated - refer to ippsec "conceal" video
+
+# GMSA active directory group managed service account
+windows AD account with randomized, changing password to prevent kerberoasting service accounts
