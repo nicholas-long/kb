@@ -40,3 +40,6 @@ https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/Pow
 
 # windows exploit unquoted service path meterpreter reverse service exe
 use meterpreter format exe-service or meterpreter shell will die
+
+# lsass process contains credentials
+analyze process dump with pypykatz
