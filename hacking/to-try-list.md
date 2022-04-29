@@ -32,6 +32,19 @@ END
 Web stuff
 ====================================================================================================
 
+# web to try list directory busting HTTP
+for each path
+  - feroxbuster medium dirs with extensions and `-e` extract links
+  - .git/ and .git/HEAD
+  - common
+  - files
+    - gobuster with extensions -> raft-large-words and discover backups `-d` option
+    - wfuzz large filename list
+  - directories
+    - wfuzz large
+    - wfuzz dir list big
+/
+
 # HTTP
 - everything from the everything list (including web server version)
 - robots.txt
@@ -108,19 +121,6 @@ Web stuff
 - webdav
   - davtest unauth
   - davtest authenticated
-
-# web to try list directory busting HTTP
-for each path
-  - feroxbuster medium dirs with extensions and `-e` extract links
-  - .git/ and .git/HEAD
-  - common
-  - files
-    - gobuster with extensions -> raft-large-words and discover backups `-d` option
-    - wfuzz large filename list
-  - directories
-    - wfuzz large
-    - wfuzz dir list big
-/
 
 ## specific HTTP server exploit possibilities
 - tomcat
