@@ -10,7 +10,7 @@ setuserinfo2 targetuser 23 targetnewpwd
 ```
 
 # Backup Operators group
-permissions to back up files.
+permissions to back up files. can back up C drive to dump ntds.dit
 
 # active directory sensitive files
 ntds.dit - domain credentials

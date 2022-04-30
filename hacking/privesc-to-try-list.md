@@ -32,6 +32,10 @@
 - local ports
 - git or other repositories - check history
 - enumerate all writable files and directories
+- restricted shell
+  - attempt to execute command on ssh login with argument
+  - restricted bash breakouts
+  - python script shell breakouts
 - writable PATH ( not just my user's path )
 - writable service
   - directories `systemctl show-environment`

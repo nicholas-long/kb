@@ -89,7 +89,9 @@ for each path
     - payload tests
   - generated content like reports, emails, or logs
   - injection #injection
-    - SQLi -> dump data and try everything from "got access to database" list
+    - SQLi
+      - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
+      - dump data and try everything from "got access to database" list
     - SSTI
     - LDAP injection
     - NoSQL injection
@@ -279,7 +281,7 @@ End of Web stuff
   - authenticated enumeration of domains and groups
 - read registry impacket reg.py
 - authenticated
-  - access to read `IPC$` 
+  - access to read `IPC$`
     - user and group enum with crackmapexec with `--rid-brute`
   - crackmapexec with `--users`
   - admin -> shell
@@ -293,7 +295,7 @@ End of Web stuff
     - lnk
     - documents with embedded links `\\attacker`
   - user opening files
-    - docx with embedded links to external images 
+    - docx with embedded links to external images
     - docm with macros
 - kerberos auth
 - brute force: crackmapexec
@@ -360,7 +362,7 @@ End of Web stuff
     - ASREP roast no preauth users
     - get AD users - any authenticated user
       - check notes/description of LDAP data for leaked passwords
-  - bloodhound 
+  - bloodhound
     - run python version in own environ
     - sharphound tool for more data
   - add dc hostname and machine name to hosts file if this can't authenticate
@@ -393,6 +395,7 @@ End of Web stuff
 - credential reuse
   - hydra with low threads
   - crackmapexec
+- restricted shell -> attempt to execute command on ssh login with argument
 - really old check for bad keys circa 2007
 
 # TFTP udp 69
