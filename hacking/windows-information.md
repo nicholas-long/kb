@@ -43,3 +43,9 @@ use meterpreter format exe-service or meterpreter shell will die
 
 # lsass process contains credentials
 analyze process dump with pypykatz
+
+# check network time offset with network time protocol NTP server on windows AD kerberos
+```bash
+sudo apt install ntpsec-ntpdate
+ntpdate -q $IP
+```
