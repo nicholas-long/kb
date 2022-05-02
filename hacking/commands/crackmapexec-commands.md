@@ -1,6 +1,6 @@
 # crackmapexec commands
 crackmapexec --help
-crackmapexec winrm --help
+crackmapexec smb --help
 
 ## RID brute force
 ```bash
@@ -14,13 +14,25 @@ check individual users and passwords and/or files the same way
 crackmapexec smb $IP -u users -p passwords
 ```
 
-## test valid user and password combinations for command execution permissions
-test line by line
-### PsExec
-```bash
-crackmapexec smb $IP -u valid-users.txt -p valid-passwords.txt --no-bruteforce --continue-on-success
+## test valid user and password combinations 
 ```
-### WinRM
+--no-bruteforce           No spray when using file for username and password (user1 => password1, user2 => password2
+--continue-on-success     continues authentication attempts even after successes
+```
+
+### for command execution permissions RCE
+#### PsExec
+```bash
+crackmapexec smb $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
+```
+
+#### WinRM
 ```bash
 crackmapexec winrm $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
+```
+
+## get json report of files on shares accessable by user
+outputs to `/tmp/cme_spider_plus/$IP.json`
+```bash
+crackmapexec smb $IP -u username -p password123 -M spider_plus
 ```
