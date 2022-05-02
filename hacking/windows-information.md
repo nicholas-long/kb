@@ -59,3 +59,9 @@ sudo ntpdate $IP
 ```
 net user AccountUsername P@ssw0rd1
 ```
+
+# windows reverse shell AV bypass
+## active directory endpoint protection
+## defender
+try changing variable names
+try removing "PS" and path from prompt

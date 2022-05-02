@@ -32,3 +32,7 @@ crackpkcs12 -d dictionary.txt certificate.pfx
 ```bash
 crackpkcs12 -b certificate.pfx
 ```
+
+## cracking with johntheripper
+convert with `pfx2john.py`
+/usr/share/john/pfx2john.py
