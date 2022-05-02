@@ -10,7 +10,14 @@ openssl pkey -in $FILE -pubout
 ssh-keygen -y -f $FILE
 ```
 
-# openssl view information about PKCS12 certificate
+# openssl p12 file PKCS12
+
+## view information about certificate
 ```bash
 openssl pkcs12 -info -in $FILE
+```
+
+## public key fingerprint
+```bash
+openssl pkcs12 -info -in $FILE | openssl x509 -noout -fingerprint
 ```

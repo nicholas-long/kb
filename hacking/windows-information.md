@@ -53,3 +53,9 @@ ntpdate -q $IP
 # update local date to match server
 sudo ntpdate $IP
 ```
+
+# change user password
+## powershell or dos
+```
+net user AccountUsername P@ssw0rd1
+```
