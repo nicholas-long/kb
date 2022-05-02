@@ -7,10 +7,9 @@ BEGINFILE {
 !block && /^#+ / {
   level=length($1)
   heading[level]=$0
+  for (n=level + 1; n <= 6; n++) heading[n]="" # clear nested headings
   fulltext=""
-  for (n=1; n <= level; n++) {
-    fulltext = fulltext " " heading[n]
-  }
+  for (n=1; n <= level; n++) fulltext = fulltext " " heading[n]
   print FILENAME, FNR, fulltext
 }
 /```/ { block = !block }
