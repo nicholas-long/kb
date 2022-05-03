@@ -17,6 +17,7 @@ To Try List
 - try reusing creds
 - default credentials
 - common credentials
+- try name of service, software, computer name, usernames as passwords
 - find things that are not COTS
 - preliminary OSINT on data retrieved
 - client side attacks
