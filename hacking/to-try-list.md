@@ -363,9 +363,15 @@ End of Web stuff
     - get AD users - any authenticated user
       - check notes/description of LDAP data for leaked passwords
   - bloodhound
-    - run python version in own environ
-    - sharphound tool for more data
+    - run python version bloodhound.py in docker
+    - paths in bloodhound
+    - queries on json data
+      - users - description, password last set, last login & timestamp
+      - computers - OS
   - add dc hostname and machine name to hosts file if this can't authenticate
+- target users who might have simple passwords ( bloodhound data, ldap? )
+  - users that have not logged in `.lastlogontimestamp == -1`
+  - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`
 - common exploits
   - headline exploits from privesc to try list
   - ticket attacks
