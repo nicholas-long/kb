@@ -61,8 +61,13 @@ Web stuff
   - docs/openapi.json
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
-  - everything from separate API enumeration list
   - restful methods GET POST PUT DELETE
+  - alter parameter on endpoints that are intended to update different fields
+    - try parameter pollution
+    - including extra parameters
+    - type juggling
+  - everything from "API enumeration and bug hunting workflow"
+  - everything from "OWASP top 10 api bugs"
 - Login form -> everything from login form list
 - fuzz all dynamic content
   - type juggling http post data
