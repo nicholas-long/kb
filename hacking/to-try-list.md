@@ -58,6 +58,7 @@ Web stuff
 - CMS -> everything from CMS list
 - compromised CMS -> everything from "compromised CMS login" list
 - API
+  - docs/openapi.json
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
   - everything from separate API enumeration list
