@@ -9,6 +9,7 @@ BEGIN {
   file=$1
   heading=$3
   print "#" heading
+  print "~/kb/bash-scripting/" file
   print "```bash"
   system("cat " file)
   print "```"

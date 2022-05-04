@@ -1,6 +1,7 @@
 # bash scripting
 
 ## use awk to print only unique lines as a stream processor
+~/kb/bash-scripting/awk-print-unique-lines.sh
 ```bash
 #!/bin/bash
 
@@ -12,6 +13,7 @@ function unique_lines {
 ```
 
 ## find alphanumeric base64 using awk script
+~/kb/bash-scripting/find-alphanum-base64.sh
 ```bash
 #!/bin/bash
 # find alphanumeric base64 using awk script
@@ -22,6 +24,7 @@ done | grep '^[A-Za-z0-9]*$'
 ```
 
 ## get bash lines from kb snippets
+~/kb/bash-scripting/get-bash-lines-from-kb-snippets.sh
 ```bash
 #!/bin/bash
 
@@ -30,6 +33,7 @@ grep -A 1 -h -R '^```bash' . | grep -v '^```\|^--'
 ```
 
 ## get random hex unique ID bash
+~/kb/bash-scripting/get-random-unique-id.sh
 ```bash
 #!/bin/bash
 # get random hex unique ID bash
@@ -37,6 +41,7 @@ cat /dev/urandom | head -c 6 | xxd -p
 ```
 
 ## get headings from wikipedia page
+~/kb/bash-scripting/get-wikipedia-info.sh
 ```bash
 #!/bin/bash
 
@@ -45,6 +50,7 @@ curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
 ```
 
 ## get words from file
+~/kb/bash-scripting/get-words.sh
 ```bash
 #!/bin/bash
 # get words from file
@@ -56,6 +62,7 @@ done
 ```
 
 ## clone repo into temp dir
+~/kb/bash-scripting/hash-git-repository.sh
 ```bash
 #!/bin/bash
 
@@ -101,6 +108,7 @@ rm -rf $tf
 ```
 
 ## get all tags and start walking their commits
+~/kb/bash-scripting/hash-git-repository.sh
 ```bash
 #!/bin/bash
 
@@ -146,6 +154,7 @@ rm -rf $tf
 ```
 
 ## take only unique git hashes and do md5 hashes of those files
+~/kb/bash-scripting/hash-git-repository.sh
 ```bash
 #!/bin/bash
 
@@ -191,6 +200,7 @@ rm -rf $tf
 ```
 
 ## define bash array
+~/kb/bash-scripting/loop-array-pull-git-repositories.sh
 ```bash
 #!/bin/bash
 
@@ -209,6 +219,7 @@ done
 ```
 
 ## loop over bash array
+~/kb/bash-scripting/loop-array-pull-git-repositories.sh
 ```bash
 #!/bin/bash
 
@@ -227,6 +238,7 @@ done
 ```
 
 ## parse args with case statement
+~/kb/bash-scripting/template.sh
 ```bash
 #!/bin/bash
 
@@ -273,6 +285,7 @@ exit 0
 ```
 
 ## exit if parameter is missing
+~/kb/bash-scripting/template.sh
 ```bash
 #!/bin/bash
 
@@ -319,6 +332,7 @@ exit 0
 ```
 
 ## watch failed ssh login attempts as a live stream
+~/kb/bash-scripting/watch-failed-ssh-logins-live-check-shodan.sh
 ```bash
 #!/bin/bash
 
@@ -345,6 +359,7 @@ tail -f /var/log/auth.log | \
 ```
 
 ## lookup unique hosts with shodan api
+~/kb/bash-scripting/watch-failed-ssh-logins-live-check-shodan.sh
 ```bash
 #!/bin/bash
 
