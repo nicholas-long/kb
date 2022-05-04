@@ -65,3 +65,6 @@ complicated - refer to ippsec "conceal" video
 
 # GMSA active directory group managed service account
 windows AD account with randomized, changing password to prevent kerberoasting service accounts
+
+# solidity
+Solidity is an object-oriented, high-level language for implementing smart contracts
