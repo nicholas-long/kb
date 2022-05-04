@@ -62,7 +62,7 @@ Web stuff
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
   - restful methods GET POST PUT DELETE
-  - alter parameter on endpoints that are intended to update different fields
+  - mass assignment - inject parameter on endpoints that are intended to update different fields
     - try parameter pollution
     - including extra parameters
     - type juggling
@@ -195,6 +195,7 @@ check commit history for secrets / creds
 
 ## got source code
 - secrets / creds
+- paths and filenames
 - grep vulnerable functions
 - security antipatterns
 - targets
@@ -222,6 +223,8 @@ check commit history for secrets / creds
     - jinja
     - web servers running in debug mode
     - TODO: finish this
+  - ruby
+    - mass assignment
   - javascript
     - JSON object prototype pollution
     - fuzzy equal
@@ -311,13 +314,14 @@ End of Web stuff
 - catch NTLM hashes from windows clients that automatically authenticate
 - include AD list if machine is connected to AD
 
-# got access to filesystem
+# got read or write access to filesystem
 - read access
   - enum users
   - general targets
     - home dirs
     - source code
     - configuration locations
+    - log files - usernames, passwords in username field, paths
   - linux targets
     - etc
       - config for other services

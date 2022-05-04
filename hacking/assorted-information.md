@@ -78,3 +78,7 @@ B tier of AV
 # sophos
 # malwarebytes
 worst tier of AV
+
+# fastapi uvicorn put python webshells
+# python uvicorn `--reload` flag
+the `--reload` flag for uvicorn means python files can be updated and the server will reload the python

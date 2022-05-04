@@ -15,8 +15,10 @@
   - htpasswd
   - database configs
 - sensitive logs
-  - auth.log - may contain accidental passwords in usernames in login failures
+  - auth.log
   - bash history
+    - passwords or secrets in commands
+  - may contain accidental passwords in usernames in login failures
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release`
 - root processes `ps -efw | grep root`
