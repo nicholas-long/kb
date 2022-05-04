@@ -12,4 +12,4 @@ BEGINFILE {
   for (n=1; n <= level; n++) fulltext = fulltext " " heading[n]
   print FILENAME, FNR, fulltext
 }
-/```/ { block = !block }
+/^ *```/ { block = !block }

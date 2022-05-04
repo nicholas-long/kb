@@ -10,5 +10,5 @@ NR == line {
 !block && NR > line && /^#+ / && length($1) < h { pr = 0 }
 # stop if we reach another heading of equal importance if we've printed at least one blank line
 printedblank && !block && NR > line && /^#+ / && length($1) == h { pr = 0 }
-/```/ { block = !block } # toggle being inside a code block
+/^ *```/ { block = !block } # toggle being inside a code block
 pr == 1 { print }
