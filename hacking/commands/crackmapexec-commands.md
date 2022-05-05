@@ -1,4 +1,4 @@
-# crackmapexec commands
+# crackmapexec cme commands
 crackmapexec --help
 crackmapexec smb --help
 
@@ -31,7 +31,12 @@ crackmapexec smb $IP -u valid_users -p valid_passwords --no-bruteforce --continu
 crackmapexec winrm $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
 ```
 
-## enumerate shares accessable by user as json report of files
+## enumerate shares accessable by user
+```bash
+crackmapexec smb $IP -u username -p password123 --shares
+```
+
+## enumerate acccess to files as json report
 outputs to `/tmp/cme_spider_plus/$IP.json`
 ```bash
 crackmapexec smb $IP -u username -p password123 -M spider_plus
