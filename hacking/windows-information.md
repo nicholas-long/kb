@@ -65,3 +65,14 @@ net user AccountUsername P@ssw0rd1
 ## defender
 try changing variable names
 try removing "PS" and path from prompt
+
+# windows alternate data streams commands
+## enumerate directory for alt streams
+```dos
+dir /r
+```
+
+## creating alt streams
+```
+echo <YOUR DATA> > filename.txt:streamname.txt
+```
