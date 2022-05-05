@@ -31,7 +31,7 @@ crackmapexec smb $IP -u valid_users -p valid_passwords --no-bruteforce --continu
 crackmapexec winrm $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
 ```
 
-## get json report of files on shares accessable by user
+## enumerate shares accessable by user as json report of files
 outputs to `/tmp/cme_spider_plus/$IP.json`
 ```bash
 crackmapexec smb $IP -u username -p password123 -M spider_plus
