@@ -309,6 +309,7 @@ End of Web stuff
     - docm with macros
 - kerberos auth
 - brute force: crackmapexec
+- nmap smb vuln scan
 - shell with administrator privs ( auth )
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
