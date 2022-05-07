@@ -82,3 +82,24 @@ worst tier of AV
 # fastapi uvicorn put python webshells
 # python uvicorn `--reload` flag
 the `--reload` flag for uvicorn means python files can be updated and the server will reload the python
+
+
+# default webroots
+
+## BSD systems
+
+### OpenBSD httpd
+The httpd server is chrooted to /var/www/ so the document root should be in that directory or deeper.
+
+### FreeBSD
+/usr/local/www/data
+/usr/local/www/apache22/data
+/home/user/public-html -> /~user/
+
+## debian system
+/var/www/html
+
+# default http config locations
+
+## FreeBSD
+/usr/local/etc/apache22/httpd.conf

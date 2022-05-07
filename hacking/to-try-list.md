@@ -106,6 +106,7 @@ Web stuff
     - bypass scripts returning 403
     - bypass rate limits
   - check if validated on client side
+  - change user agent
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
@@ -113,6 +114,7 @@ Web stuff
 - apache delete files -> delete .htaccess and possibly see php source
 - retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
 - what is different in HTTP vs. HTTPS?
+- 403 forbidden servers / vhosts -> target http config information & find out why
 - apache (old versions) - searchsploit plugins versions
 - webdav
   - davtest unauth

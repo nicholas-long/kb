@@ -20,7 +20,7 @@
     - passwords or secrets in commands
   - may contain accidental passwords in usernames in login failures
 - su or brute force with common credentials i.e. `root:root`
-- OS version `uname -a && cat /etc/*-release`
+- OS version `uname -a && cat /etc/*-release` -> exploit db
 - root processes `ps -efw | grep root`
 - installed packages `dpkg -l`
 - find scripts, crons, timers
