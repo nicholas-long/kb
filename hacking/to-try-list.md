@@ -107,6 +107,7 @@ Web stuff
     - bypass rate limits
   - check if validated on client side
   - change user agent
+  - open redirect can bypass URL validation
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
