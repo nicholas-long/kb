@@ -37,9 +37,14 @@ tips from InsiderPhD
 
 # API enumeration - good wordlists
 ## seclists for endpoints
-/usr/share/seclists/Discovery/Web-Content/swagger.txt
+/usr/share/seclists/Discovery/Web-Content/common-api-endpoints-mazen160.txt
+/usr/share/seclists/Discovery/Web-Content/api/
 /usr/share/seclists/Discovery/Web-Content/api/api-endpoints.txt
+/usr/share/seclists/Discovery/Web-Content/swagger.txt
 /usr/share/seclists/Fuzzing/fuzz-Bo0oM.txt
+### commonly used list of words
+/usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
+### last resort?
 /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt
 /usr/share/seclists/Discovery/DNS/dns-Jhaddix.txt
 ## API enumeration wordlists by size
