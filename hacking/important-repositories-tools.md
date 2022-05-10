@@ -43,6 +43,11 @@ https://github.com/michenriksen/aquatone
 # generate username wordlist from list of names in text file with username anarchy
 https://github.com/urbanadventurer/username-anarchy
 list formats with `-l`.
+
+## simple
+github gist superkojiman/namemash.py
+https://gist.github.com/superkojiman/11076951
+
 ## output all formats by omitting format parameter
 ```bash
 ./username-anarchy -i test-names.txt

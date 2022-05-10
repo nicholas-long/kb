@@ -361,9 +361,11 @@ End of Web stuff
   - common seasons and years wordlist
 
 # active directory domain
+- create username list with different formats to identify usernames
 - kerbrute
   - user enum
   - password spray
+    - sync time before password spray! `ntpdate`
   - brute force
 - crackmapexec
   - SMB
@@ -385,6 +387,7 @@ End of Web stuff
       - users - description, password last set, last login & timestamp
       - computers - OS
   - add dc hostname and machine name to hosts file if this can't authenticate
+- CYCLE - reuse credentials, access services, abuse access, get more credentials
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
   - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`

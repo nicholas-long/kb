@@ -45,7 +45,7 @@ use meterpreter format exe-service or meterpreter shell will die
 analyze process dump with pypykatz
 
 # check network time offset with network time protocol NTP server on windows AD kerberos
-# set date to match Active Directory server
+# set date to match Active Directory server with ntpdate
 ```bash
 sudo apt install ntpsec-ntpdate
 # query date

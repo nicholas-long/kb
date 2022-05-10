@@ -1,4 +1,6 @@
-# bloodhound python docker
+# bloodhound
+
+## run python version in docker
 must use FQDN for `-dc` parameter
 ```bash
 git clone https://github.com/fox-it/BloodHound.py
@@ -9,3 +11,8 @@ docker run -v ${PWD}:/bloodhound-data -it bloodhound
 # run bloodhound-python command inside docker
 bloodhound-python -c All -u user -p password -dc 'FQDNMachineName.domain.local' -d 'domain.local' -ns $IP
 ```
+
+## stealthy collection method
+DCOnly
+not detectable as malicious, only queries DC machine.
+ordinary bloodhound collection methods query all machines.
