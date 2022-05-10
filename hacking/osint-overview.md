@@ -183,3 +183,6 @@
 # github OSINT organizations
 check people associated
 commit history
+
+# OSINT enumerate emails and username format for domain
+hunter.io
