@@ -63,3 +63,10 @@ Other: Facebook - uses the Facebook top 10,000 names - don't run this with all f
 
 # zip slip evilarc.py
 https://github.com/ptoomey3/evilarc
+
+# kerberos attack on windows host
+https://github.com/GhostPack/Rubeus
+## ticket attacks
+### forgery
+### extraction and harvesting
+## Constrained delegation abuse

