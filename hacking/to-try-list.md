@@ -42,13 +42,15 @@ Web stuff
   - even if you identify CMS and version, find exposed files
   - view source of files found
 - manual inspection (view source)
-- LFI
+- LFI or dir traversal
   - jhaddix
   - graceful security
-  - logs or writable files to poison
+  - logs or writable files to poison for LFI
   - check notes about techniques and wordlists
   - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
+  - ssh keys for usernames (linux and windows)
+  - sensitive files list
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
