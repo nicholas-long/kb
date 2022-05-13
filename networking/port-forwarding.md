@@ -25,3 +25,6 @@ or include port forward when running from command line
 ```bash
 ssh -L 8081:127.0.0.1:8080 user@$IP
 ```
+
+## dynamic ( socks )
+-D 1080
