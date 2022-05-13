@@ -46,6 +46,7 @@ Web stuff
   - jhaddix
   - graceful security
   - logs or writable files to poison for LFI
+  - check for Remote File Inclusion (rare)
   - check notes about techniques and wordlists
   - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
@@ -320,6 +321,8 @@ End of Web stuff
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 - include AD list if machine is connected to AD
+## old SMB exploits
+Samba smbd CVE-2010-0926 before 3.3.11, 3.4.x before 3.4.6, and 3.5.x before 3.5.0rc3 default config -> symlink dir traversal
 
 # got read or write access to filesystem
 - read access
@@ -425,12 +428,15 @@ End of Web stuff
   - crackmapexec
 - restricted shell -> attempt to execute command on ssh login with argument
 - password spraying
-- really old check for bad keys circa 2007
 - last resorts
   - in absence of website and cewl list, make wordlist with keywords
     - hostname
     - names of services
     - words from nmap output?
+## old SSH exploits
+- CVE-2008-0166 check predictable keys https://github.com/g0tmi1k/debian-ssh
+  - OpenSSL 0.9.8c-1 up to versions before 0.9.8g-9 on Debian-based operating systems
+  - https://www.exploit-db.com/exploits/5632
 
 # TFTP udp 69
 - put files
