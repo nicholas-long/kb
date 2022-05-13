@@ -41,6 +41,8 @@ Web stuff
   - copy up busting to try list, run through it for paths, add
   - even if you identify CMS and version, find exposed files
   - view source of files found
+  - fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
+  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
 - manual inspection (view source)
 - LFI or dir traversal
   - jhaddix
@@ -322,7 +324,12 @@ End of Web stuff
 - catch NTLM hashes from windows clients that automatically authenticate
 - include AD list if machine is connected to AD
 ## old SMB exploits
-Samba smbd CVE-2010-0926 before 3.3.11, 3.4.x before 3.4.6, and 3.5.x before 3.5.0rc3 default config -> symlink dir traversal
+- Samba smbd CVE-2010-0926 before 3.3.11, 3.4.x before 3.4.6, and 3.5.x before 3.5.0rc3 default config -> symlink dir traversal
+- Samba smbd CVE-2017-7494 versions 3.5.0 to 4.4.14, 4.5.10, and 4.6.4 - is_known_pipename
+  - these versions are 3 separate ranges, i.e. anything less than 4.5.10 is vuln ? 4.5.4 proved vulnerable
+  - non metasploit version https://github.com/joxeankoret/CVE-2017-7494
+- smb v1
+  - ms08-067-netapi - but use DOS reverse shell instead of meterpreter
 
 # got read or write access to filesystem
 - read access

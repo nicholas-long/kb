@@ -108,3 +108,7 @@ finger-user-enum.pl -U /usr/share/seclists/Usernames/Names/names.txt -t $IP
 ## Letter Frequency
 ## Text Manipulator
 http://rumkin.com/tools/cipher/
+
+# file backup fuzzer
+## generate wordlists from filenames
+https://github.com/olemoudi/backup-fuzzer

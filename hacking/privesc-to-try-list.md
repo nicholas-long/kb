@@ -21,7 +21,9 @@
   - may contain accidental passwords in usernames in login failures
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release` -> exploit db
-- root processes `ps -efw | grep root`
+- root processes, especially
+  - databases
+  - services exposed on local ports
 - installed packages `dpkg -l`
 - find scripts, crons, timers
   - pspy
