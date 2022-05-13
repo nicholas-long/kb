@@ -421,9 +421,16 @@ End of Web stuff
 # SSH
 - credential reuse
   - hydra with low threads
+    - old key exchange -> use patator instead
   - crackmapexec
 - restricted shell -> attempt to execute command on ssh login with argument
+- password spraying
 - really old check for bad keys circa 2007
+- last resorts
+  - in absence of website and cewl list, make wordlist with keywords
+    - hostname
+    - names of services
+    - words from nmap output?
 
 # TFTP udp 69
 - put files
@@ -461,3 +468,6 @@ End of Web stuff
 - ldapsearch
 - unauthenticated enumeration
 - authenticated enumeration
+
+# finger tcp 79
+- finger-user-enum https://github.com/pentestmonkey/finger-user-enum or metasploit `finger_users`
