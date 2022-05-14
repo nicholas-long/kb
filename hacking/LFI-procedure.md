@@ -1,4 +1,4 @@
-# LFI procedures
+# LFI or directory traversal procedures
 Things that help get list of running processes
 ```
 /proc/sched_debug
@@ -14,3 +14,9 @@ protected in apache
 
 ## read scripts from web server process cwd
 /proc/self/cwd
+### fuzzing script names
+/usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
+fuzz with known extensions
+### downloading with curl 
+#### prevent normalization of paths
+curl parameter `--path-as-is` to preserve any `../`

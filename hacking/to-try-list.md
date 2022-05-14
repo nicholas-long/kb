@@ -49,7 +49,7 @@ Web stuff
   - graceful security
   - logs or writable files to poison for LFI
   - check for Remote File Inclusion (rare)
-  - check notes about techniques and wordlists
+  - everything from "LFI procedure"
   - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
   - ssh keys for usernames (linux and windows)
@@ -71,6 +71,7 @@ Web stuff
     - try parameter pollution
     - including extra parameters
     - type juggling
+  - parameter or URL REST endpoint parameter directory traversal
   - everything from "API enumeration and bug hunting workflow"
   - everything from "OWASP top 10 api bugs"
 - Login form -> everything from login form list
@@ -80,6 +81,7 @@ Web stuff
       - target things that might be compared with `==` and try changing them to `true`
     - brackets -> arrays
   - parameters
+  - REST APIs -> get params and url params
   - IDs -> IDOR
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
   - fuzz with different HTTP methods (ex: POST might work and accept GET params)
