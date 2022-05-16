@@ -56,6 +56,8 @@
   - leaked credentials
   - potential privesc exploits
   - vulnerable services running as root
+- java web -> find website code packaged into war file
+  - secrets, config, hardcoded creds
 
 ## exploiting linux scripts
 - injecting user commands
@@ -133,6 +135,8 @@
   - leaked credentials
   - potential privesc exploits
   - vulnerable services running as SYSTEM
+- java web -> find website code packaged into war file
+  - secrets, config, hardcoded creds
 
 # linux headline exploits
 - 2022 : dirty pipe
