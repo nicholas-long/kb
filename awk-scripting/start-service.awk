@@ -1,12 +1,11 @@
 #!/usr/bin/awk -f
 
-# systemctl list-unit-files | fzf | awk '{print $1}' | xargs sudo systemctl status | ../awk-scripting/start-service.awk
-
-# systemctl list-unit-files
-# | fzf
-# | awk '{print $1}'
-# | xargs sudo systemctl status
-# | ../awk-scripting/start-service.awk
+#systemctl list-unit-files | fzf | awk '{print $1}' | xargs sudo systemctl status | ../awk-scripting/start-service.awk
+#systemctl list-unit-files
+#| fzf
+#| awk '{print $1}'
+#| xargs sudo systemctl status
+#| ../awk-scripting/start-service.awk
 
 /Active/ {
   active=$2

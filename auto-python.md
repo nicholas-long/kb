@@ -1,3 +1,7 @@
+# python scripting
+## convert a GMSA managed password structure to a NTLM hash
+~/kb/hacking/windows/convert-msds-managed-password-to-ntlm-hash.py
+```python
 #!/usr/bin/python3
 # convert a GMSA managed password structure to a NTLM hash
 ## input file - managed_password.hex
@@ -58,4 +62,6 @@ hash = MD4.new ()
 hash.update (blob['CurrentPassword'][:-2])
 ntlm = binascii.hexlify(hash.digest()).decode("utf-8")
 print(ntlm)
+
+```
 
