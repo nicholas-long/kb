@@ -1,18 +1,8 @@
 #!/bin/bash
 
-grep -Rn '^# ' *.sh | awk -F: '
-BEGIN {
-  print "# bash scripting"
-  print ""
-}
-{
-  file=$1
-  heading=$3
-  print "#" heading
-  print "~/kb/bash-scripting/" file
-  print "```bash"
-  system("cat " file)
-  print "```"
-  print ""
-}
-'
+echo "#" $1
+ext=$2
+
+find . -name "*.$ext" | \
+  xargs grep -Rn '^# ' | \
+  awk -F: -f ~/kb/awk-scripting/autogenerate-headings-for-source-files.awk
