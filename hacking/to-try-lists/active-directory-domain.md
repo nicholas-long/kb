@@ -1,0 +1,39 @@
+# active directory domain
+- create username list with different formats to identify usernames
+- kerbrute
+  - user enum
+  - password spray
+    - sync time before password spray! `ntpdate`
+  - brute force
+- crackmapexec
+  - SMB
+  - WinRM
+  - MSSQL
+  - other services exposed
+- unauthenticated ASREP roast with usernames list
+- retry credentials for every service
+- authenticated ( probably ) lateral movement
+  - impacket
+    - roasting SPN service accounts
+    - ASREP roast no preauth users
+    - get AD users - any authenticated user
+      - check notes/description of LDAP data for leaked passwords
+  - bloodhound
+    - run python version bloodhound.py in docker
+    - paths in bloodhound
+    - queries on json data
+      - users - description, password last set, last login & timestamp
+      - computers - OS
+  - add dc hostname and machine name to hosts file if this can't authenticate
+- CYCLE - reuse credentials, access services, abuse access, get more credentials
+- target users who might have simple passwords ( bloodhound data, ldap? )
+  - users that have not logged in `.lastlogontimestamp == -1`
+  - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`
+- common exploits
+  - headline exploits from privesc to try list
+  - ticket attacks
+  - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
+- endgame dump hashes
+  - impacket secretsdump
+  - mimikatz on machine or kiwi module in msf
+

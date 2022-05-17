@@ -1,0 +1,21 @@
+# got read or write access to filesystem
+- read access
+  - enum users
+  - general targets
+    - home dirs
+    - source code
+    - configuration locations
+    - log files - usernames, passwords in username field, paths
+  - linux targets
+    - etc
+      - config for other services
+      - users
+  - windows targets
+    - registry backups
+    - xampp
+    - appdata
+- write access
+  - web shells
+  - ssh authorized keys
+  - scripts
+

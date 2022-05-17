@@ -1,0 +1,12 @@
+# EVERYTHING
+- check version for vulnerabilities
+- try reusing creds
+- default credentials
+- common credentials
+- try name of service, software, computer name, usernames as passwords
+- find things that are not COTS
+- preliminary OSINT on data retrieved
+- client side attacks
+- debug mode
+- control port, management port, debug port
+- it should be reasonable; am i trying too hard?

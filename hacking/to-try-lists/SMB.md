@@ -1,0 +1,45 @@
+# SMB
+- everything from the everything list
+- guest access to shares
+  - null auth
+  - guest access with only username required
+- enum4linux & enum4linux-ng
+- common creds: `Guest:`
+- dump users
+  - impacket samrdump ( auth )
+  - sid brute forcing
+- rpcclient / rpcdump
+  - authenticated enumeration of domains and groups
+- read registry impacket reg.py
+- authenticated
+  - access to read `IPC$`
+    - user and group enum with crackmapexec with `--rid-brute`
+  - crackmapexec with `--users`
+  - admin -> shell
+    - psexec
+    - wmiexec - quieter than psexec
+- upload permissions
+  - dangerous files with links to attacker smb share
+- getting NTLMv2 hashes
+  - if a user is viewing directories
+    - scf external icon link
+    - lnk
+    - documents with embedded links `\\attacker`
+  - user opening files
+    - docx with embedded links to external images
+    - docm with macros
+- kerberos auth
+- brute force: crackmapexec
+- nmap smb vuln scan
+- shell with administrator privs ( auth )
+- relay?
+- catch NTLM hashes from windows clients that automatically authenticate
+- include AD list if machine is connected to AD
+## old SMB exploits
+- Samba smbd CVE-2010-0926 before 3.3.11, 3.4.x before 3.4.6, and 3.5.x before 3.5.0rc3 default config -> symlink dir traversal
+- Samba smbd CVE-2017-7494 versions 3.5.0 to 4.4.14, 4.5.10, and 4.6.4 - is_known_pipename
+  - these versions are 3 separate ranges, i.e. anything less than 4.5.10 is vuln ? 4.5.4 proved vulnerable
+  - non metasploit version https://github.com/joxeankoret/CVE-2017-7494
+- smb v1
+  - ms08-067-netapi - but use DOS reverse shell instead of meterpreter
+
