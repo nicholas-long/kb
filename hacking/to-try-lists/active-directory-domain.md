@@ -1,5 +1,6 @@
 # active directory domain
 - create username list with different formats to identify usernames
+- sensitive content in file shares
 - kerbrute
   - user enum
   - password spray
