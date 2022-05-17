@@ -3,7 +3,7 @@
 - kerbrute
   - user enum
   - password spray
-    - sync time before password spray! `ntpdate`
+    - sync time before password spray! `ntpdate`; VM -> stop time sync with host or spray with CME
   - brute force
 - crackmapexec
   - SMB
