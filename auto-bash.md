@@ -11,7 +11,7 @@ cat /dev/urandom | head -c 6 | xxd -p
 ~/kb/bash-scripting/awk-print-unique-lines.sh
 ```bash
 # use awk to print only unique lines as a stream processor
-awk '!seen[$0] {print} {++seen[$0]}'
+awk '!seen[$0]++ { print }'
 ```
 
 ## define bash array
