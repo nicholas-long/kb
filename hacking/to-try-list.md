@@ -200,7 +200,7 @@ for each path
     - edit in source view and set text type at bottom to php code
 - wordpress -> edit plugins or themes to install web shell
 
-# github
+## github
 organizations -> people and their projects / commits
 check commit history for secrets / creds
 
