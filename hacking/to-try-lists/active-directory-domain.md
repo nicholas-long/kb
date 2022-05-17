@@ -18,6 +18,7 @@
     - ASREP roast no preauth users
     - get AD users - any authenticated user
       - check notes/description of LDAP data for leaked passwords
+    - impacket-findDelegation (bloodhound checks this too)
   - bloodhound
     - run python version bloodhound.py in docker
     - paths in bloodhound
