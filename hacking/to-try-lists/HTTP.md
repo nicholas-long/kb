@@ -26,8 +26,12 @@
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
-- CMS -> everything from CMS list
-- compromised CMS -> everything from "compromised CMS login" list
+- found CMS
+  - try all enumeration options for tools specific to web app
+    - wordpress -> wpscan initial, enumerate all plugins, bruteforce
+    - drupal / silverstripe -> droopescan
+  - check plugin versions for vulns exploit-db AND google
+  - compromised CMS -> everything from "compromised CMS login" list
 - API
   - docs/openapi.json
   - enumerate resources and endpoints to interact with them
@@ -40,7 +44,23 @@
   - parameter or URL REST endpoint parameter directory traversal
   - everything from "API enumeration and bug hunting workflow"
   - everything from "OWASP top 10 api bugs"
-- Login form -> everything from login form list
+- found login form
+  - default creds
+  - sqli
+    - sqli filtering
+  - SSTI
+  - authentication bypass
+  - reset password
+  - error message username enumeration
+    - forgot password forms - applies as well
+    - create user form if there is an error when user ID already exists
+  - register account to find authenticated endpoints
+  - brute forcing
+  - xsrf
+    - add self as admin
+  - session attacks
+    - steal session id, maybe XSS
+    - clickjacking (if no X frame options set )
 - fuzz all dynamic content
   - type juggling http post data
     - change content type to JSON and try different types for params
@@ -95,6 +115,10 @@
   - davtest unauth
   - davtest authenticated
 - username list -> fuzz home directories like `/~user`
+- mention github/source control -> go look it up, find source
+  - organizations -> people and their projects / commits
+  - check commit history for secrets / creds
+- got source code -> everything from "got source code" list
 
 ## web to try list directory busting
 for each path
@@ -113,29 +137,6 @@ for each path
 - tomcat
   - tomcat + apache httpd proxy route -> path traversal with `/..;/` `www.vulnerable.com/lalala/..;/manager/html` `http://www.vulnerable.com/;param=value/manager/html` (hacktricks)
 - nginx + another HTTP -> request smuggling
-
-## CMS
-- try all enumeration options for tools specific to web app
-- wordpress -> wpscan initial, enumerate all plugins, bruteforce
-- drupal / silverstripe -> droopescan
-
-## found login form #loginform
-- default creds
-- sqli
-  - sqli filtering
-- SSTI
-- authentication bypass
-- reset password
-- error message username enumeration
-  - forgot password forms - applies as well
-  - create user form if there is an error when user ID already exists
-- register account to find authenticated endpoints
-- brute forcing
-- xsrf
-  - add self as admin
-- session attacks
-  - steal session id, maybe XSS
-  - clickjacking (if no X frame options set )
 
 ## compromised CMS login
 - service versions information -> exploit db
@@ -158,7 +159,8 @@ for each path
   - modify or downgrade access control lists
   - world writable directories
 - assess the functionality provided to it and seeing if we can abuse it
-## CMS auth code exec / becoming web user
+
+### CMS auth code exec / becoming web user
 - drupal
   - "extend" "install new module"
   - install drupal project php https://www.drupal.org/project/php and enable the module
@@ -166,10 +168,6 @@ for each path
   - content > add content > basic page
     - edit in source view and set text type at bottom to php code
 - wordpress -> edit plugins or themes to install web shell
-
-## github
-organizations -> people and their projects / commits
-check commit history for secrets / creds
 
 ## got source code
 - secrets / creds

@@ -1,5 +1,7 @@
 # EVERYTHING
 - check version for vulnerabilities
+  - exploit-db
+  - google
 - try reusing creds
 - default credentials
 - common credentials
