@@ -19,6 +19,7 @@
   - check user input just like injections (could be passed as filenames or to commands)
   - ssh keys for usernames (linux and windows)
   - sensitive files list
+  - open directories as files - see if directory listing supported (rare?)
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
@@ -93,6 +94,7 @@
 - webdav
   - davtest unauth
   - davtest authenticated
+- username list -> fuzz home directories like `/~user`
 
 ## web to try list directory busting
 for each path
