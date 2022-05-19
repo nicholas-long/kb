@@ -5,64 +5,6 @@ priv esc quick list
 c0:$1$coyote0x$S9Aruc4H1kvDizg..ij81.:0:0:root:/root:/bin/bash
 ```
 
-                          Initial Fast TCP Scan                                 
-================================================================================
-
-```bash
-nmap -v -sS -sV -Pn --top-ports 1000 -oA initial_scan_192.168.0.1 192.168.0.1
-```
-
-                               Full TCP Scan                            
-========================================================================
-
-```bash
-nmap -v -sS -Pn -sV -p 0-65535 -oA full_scan_192.168.0.1 192.168.0.1
-```
-
-                           Limited Full TCP Scan                          
-==========================================================================
-
-If the syn scan is taking very long to complete, the following command is an alternative (no service detection).
-
-```bash
-nmap -sT -p- --min-rate 5000 --max-retries 1 192.168.0.1
-```
-
-                            Top 100 UDP Scan                              
-==========================================================================
-
-```bash
-nmap -v -sU -T4 -Pn --top-ports 100 -oA top_100_UDP_192.168.0.1 192.168.0.1
-```
-
-                           Full Vulnerability scan                                     
-=======================================================================================
-
-```bash
-nmap -v -sS  -Pn --script vuln --script-args=unsafe=1 -oA full_vuln_scan_192.168.0.1 192.168.0.1
-```
-
-                            Vulners Vulnerability Script                                           
-===================================================================================================
-
-```bash
-nmap -v -sS  -Pn --script nmap-vulners $IP
-```
-
-                           SMB Vulnerabitlity Scan                                
-==================================================================================
-
-```bash
-nmap -v -sS -p 445,139 -Pn --script smb-vuln* --script-args=unsafe=1 $IP
-```
-
-                             NBTSCAN                                          
-==============================================================================
-
-```bash
-nmap -sV $IP --script nbstat.nse -v
-```
-
 # Gobuster Fast Scan (Small List)
 ```bash
 gobuster dir -e -u http://192.168.0.1 -w /usr/share/wordlists/dirb/big.txt -t 20
