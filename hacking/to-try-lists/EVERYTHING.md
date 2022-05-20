@@ -6,6 +6,7 @@
 - default credentials
 - common credentials
 - try name of service, software, computer name, usernames as passwords
+- identify common temporary password
 - find things that are not COTS
 - preliminary OSINT on data retrieved
 - client side attacks

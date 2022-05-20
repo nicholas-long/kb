@@ -58,6 +58,7 @@ sudo ntpdate $IP
 ## powershell or dos
 ```
 net user AccountUsername P@ssw0rd1
+net user AccountUsername P@ssw0rd1 /domain
 ```
 
 # windows reverse shell AV bypass
@@ -81,3 +82,13 @@ echo <YOUR DATA> > filename.txt:streamname.txt
 https://github.com/xct/SeRestoreAbuse
 Executes a command as SYSTEM when SeRestorePrivilege is assigned.
 In case it's disabled, the program will enable it for you.
+
+# create windows backdoor accounts
+a local admin added to domain controller should be able to authentice to SMB on the DC (not local auth).
+password policy might be different on local machine vs. domain.
+
+# dumping credentials as admin
+
+## in remote desktop RDP or GUI
+- task manager > details > lsass.exe
+- create dump file

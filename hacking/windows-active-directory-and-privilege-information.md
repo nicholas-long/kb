@@ -1,5 +1,14 @@
 # active directory 
 
+## exploiting permissions
+
+### WriteDacl
+- give owned user access to GenericAll permissions over group or account
+- change the password
+
+### GenericAll
+- change password
+
 ## NTLMv2 vs kerberos authentication on the network
 NTLMv2 authentication is still often enabled on company LAN.
 it is very rare for it to be completely disabled across the domain.
@@ -69,10 +78,6 @@ ConvertFrom-AdManagedPasswordBlob is not recognized as the name of a cmdlet, fun
 rpcclient -U helpdesk //$IP
 rpcclient $> setuserinfo2 adminuser 23 'ASDqwe123'
 ```
-
-## exploiting WriteDacl
-- give owned user access to GenericAll permissions over group or account
-- change the password
 
 ## DNS
 active directory DNS is dynamic DNS.
