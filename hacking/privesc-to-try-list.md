@@ -10,6 +10,7 @@
 - SUID binaries
   - gtfobins
   - vulnerable versions
+- getcap capabilities
 - enumerate all readable files
 - sensitive config files
   - htpasswd

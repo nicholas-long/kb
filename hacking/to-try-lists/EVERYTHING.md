@@ -2,13 +2,15 @@
 - check version for vulnerabilities
   - exploit-db
   - google
-- try reusing creds
-- default credentials
-- common credentials
-- try name of service, software, computer name, usernames as passwords
-- identify common temporary password
-- find things that are not COTS
-- preliminary OSINT on data retrieved
+- try reusing creds in other places
+- credentials
+  - default credentials
+  - common credentials
+  - try name of service, software, company / site name, computer name, usernames as passwords
+  - try all default/common username & password combinations instead of specific colon separated list
+- identify common temporary passwords
+  - try variations
+- find things that are not "Common Off The Shelf"
 - client side attacks
 - debug mode
 - control port, management port, debug port
