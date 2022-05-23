@@ -9,6 +9,7 @@
   - fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
   - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
 - manual inspection (view source)
+  - see if the website content plainly discloses anything useful
 - LFI or dir traversal
   - jhaddix
   - graceful security

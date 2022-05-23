@@ -8,6 +8,8 @@ Procedure
 - retry enumeration with new credentials on discovery
 - OSINT
   - users and their potential passwords
+    - likes/interests -> wikipedia -> cewl -> password list
+    - leaked databases
   - github or other public source control
     - secrets
     - creds
