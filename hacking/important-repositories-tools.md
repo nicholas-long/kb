@@ -122,3 +122,9 @@ https://github.com/dirkjanm/krbrelayx
 ## krbrelayx.py Kerberos relaying and Unconstrained delegation abuse
 When no credentials are supplied, but at least one target is specified, krbrelayx will forward the Kerberos authentication to a matching target hostname, effectively relaying the authentication. How to get incoming Kerberos auth with a valid SPN is up to you, but you could use mitm6 for this.
 In this mode, krbrelayx will either decrypt and dump incoming TGTs embedded in authentication with unconstrained delegation, or immediately use the TGTs to authenticate to a target service. This requires that credentials for an account with unconstrained delegation are specified.
+
+# threatcheck
+## evade windows antivirus detection (defender)
+### identify and pinpoints that exact bytes that the target antivirus engine will flag on
+windows tool that runs AV tools to determine which bytes of a binary are detected by AV.
+https://github.com/rasta-mouse/ThreatCheck
