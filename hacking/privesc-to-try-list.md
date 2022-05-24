@@ -46,12 +46,11 @@
   - directories `systemctl show-environment`
 - headline exploits from privesc to try list
 - linux exploit suggester or `les2.pl`
-- meterpreter local suggester
+- linenum ( is it allowed on OSCP? )
 - search files by modification date with `find` to see what creators added
 - directory permissions that let you move files you can't access
 - processes with readable memory
 - access to mount - mount something containing setuid binaries
-- linpeas ( is it allowed on OSCP? )
 - su or hydra ssh test credential reuse
 - check exploits / vulnerabilities found during enumeration
   - leaked credentials
@@ -59,6 +58,8 @@
   - vulnerable services running as root
 - java web -> find website code packaged into war file
   - secrets, config, hardcoded creds
+- linpeas ( allowed on OSCP if no automatic exploitation )
+- meterpreter local suggester ( could use once on OSCP )
 
 ## exploiting linux scripts
 - injecting user commands
