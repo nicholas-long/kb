@@ -10,6 +10,7 @@
 - SUID binaries
   - gtfobins
   - vulnerable versions
+- /opt
 - getcap capabilities
 - enumerate all readable files
 - sensitive config files
