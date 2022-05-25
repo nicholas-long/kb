@@ -1,0 +1,77 @@
+# linux privilege escalation
+- `sudo -l`
+  - `LD_PRELOAD`
+  - specific permissions to binaries / scripts
+    - writable
+    - [exploiting linux scripts](#exploiting linux scripts)
+  - vulnerable versions of allowed commands
+- SUID binaries
+  - gtfobins
+  - vulnerable versions
+- /opt
+- getcap capabilities
+- enumerate all readable files
+- sensitive config files
+  - htpasswd
+  - database configs
+- sensitive logs
+  - auth.log
+  - bash history
+    - passwords or secrets in commands
+  - may contain accidental passwords in usernames in login failures
+- su or brute force with common credentials i.e. `root:root`
+- OS version `uname -a && cat /etc/*-release` -> exploit db
+- root processes, especially
+  - databases
+  - services exposed on local ports
+- installed packages `dpkg -l`
+- find scripts, crons, timers
+  - pspy
+  - exploit wildcards in scripts or cron jobs
+  - cron jobs
+    - writable scripts
+    - writable things used by script
+  - [exploiting linux scripts](#exploiting linux scripts)
+  - writable or exploitable timers
+- local ports
+- git or other repositories - check history
+- enumerate all writable files and directories
+- restricted shell
+  - attempt to execute command on ssh login with argument
+  - restricted bash breakouts
+  - python script shell breakouts
+- writable PATH ( not just my user's path )
+- writable service
+  - directories `systemctl show-environment`
+- headline exploits from privesc to try list
+- linux exploit suggester or `les2.pl`
+- linenum ( is it allowed on OSCP? )
+- search files by modification date with `find` to see what creators added
+- directory permissions that let you move files you can't access
+- processes with readable memory
+- access to mount - mount something containing setuid binaries
+- su or hydra ssh test credential reuse
+- check exploits / vulnerabilities found during enumeration
+  - leaked credentials
+  - potential privesc exploits
+  - vulnerable services running as root
+- java web -> find website code packaged into war file
+  - secrets, config, hardcoded creds
+- linpeas ( allowed on OSCP if no automatic exploitation )
+- meterpreter local suggester ( could use once on OSCP )
+
+## exploiting scripts on linux
+- injecting user commands
+- relative command names ( alter PATH )
+- filesystem access
+  - read and write sensitive files
+  - surprise symlinks
+- wildcards turning into command parameters
+- exec
+- python scripts: everything from to try list for "got source code"
+- dependent libraries of scripts (ex: tar, zip -> overwrite files / zip slip)
+
+## headline exploits
+- 2022 : dirty pipe
+- 2022 : pwnkit - polkit CVE
+
