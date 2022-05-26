@@ -14,26 +14,6 @@ cat /dev/urandom | head -c 6 | xxd -p
 awk '!seen[$0]++ { print }'
 ```
 
-## define bash array
-## loop over bash array
-~/kb/bash-scripting/loop-array-pull-git-repositories.sh
-```bash
-#!/bin/bash
-
-function updatepull {
-  cd "$1" && git pull
-}
-
-# define bash array
-places=(~/kb ~/pen-test-environ)
-
-# loop over bash array
-for p in ${places[@]}; do
-  echo Pulling $p
-  updatepull $p
-done
-```
-
 ##    -v $HOME/neo4j/data
 ##    -v $HOME/neo4j/logs
 ##    -v $HOME/neo4j/import
@@ -63,6 +43,26 @@ docker run --rm \
 
 ```
 
+## define bash array
+## loop over bash array
+~/kb/bash-scripting/loop-array-pull-git-repositories.sh
+```bash
+#!/bin/bash
+
+function updatepull {
+  cd "$1" && git pull
+}
+
+# define bash array
+places=(~/kb ~/pen-test-environ)
+
+# loop over bash array
+for p in ${places[@]}; do
+  echo Pulling $p
+  updatepull $p
+done
+```
+
 ## find alphanumeric base64 using awk script
 ~/kb/bash-scripting/find-alphanum-base64.sh
 ```bash
@@ -72,24 +72,6 @@ echo "$1" | ~/kb/awk-scripting/space-invader.awk | while read line; do
   echo -n "$line" | base64 -w0
   echo ""
 done | grep '^[A-Za-z0-9]*$'
-```
-
-## get bash lines from kb snippets
-~/kb/bash-scripting/get-bash-lines-from-kb-snippets.sh
-```bash
-#!/bin/bash
-
-# get bash lines from kb snippets
-grep -A 1 -h -R '^```bash' . | grep -v '^```\|^--'
-```
-
-## get headings from wikipedia page
-~/kb/bash-scripting/get-wikipedia-info.sh
-```bash
-#!/bin/bash
-
-# get headings from wikipedia page
-curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
 ```
 
 ## print the md5 hashes of all lines in a wordlist file
@@ -106,16 +88,22 @@ function hashing {
 cat $1 | hashing
 ```
 
-## get words from file
-~/kb/bash-scripting/get-words.sh
+## get headings from wikipedia page
+~/kb/bash-scripting/get-wikipedia-info.sh
 ```bash
 #!/bin/bash
-# get words from file
-while read line; do
-  for word in $line; do
-    echo $word
-  done
-done
+
+# get headings from wikipedia page
+curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
+```
+
+## get bash lines from kb snippets
+~/kb/bash-scripting/get-bash-lines-from-kb-snippets.sh
+```bash
+#!/bin/bash
+
+# get bash lines from kb snippets
+grep -A 1 -h -R '^```bash' . | grep -v '^```\|^--'
 ```
 
 ## install sublimetext
@@ -188,6 +176,55 @@ function everything {
 everything
 ```
 
+## get words from file
+~/kb/bash-scripting/get-words.sh
+```bash
+#!/bin/bash
+# get words from file
+while read line; do
+  for word in $line; do
+    echo $word
+  done
+done
+```
+
+## run strings on memory dumps for every readable process
+~/kb/hacking/priv-esc/strings-all-memory.sh
+```bash
+#!/bin/bash
+
+# run strings on memory dumps for every readable process
+
+#https://serverfault.com/questions/173999/dump-a-linux-processs-memory-to-file
+procdump()
+(
+    cat /proc/$1/maps | grep "rw-p" | awk '{print $1}' | ( IFS="-"
+    while read a b; do
+        dd if=/proc/$1/mem bs=$( getconf PAGESIZE ) iflag=skip_bytes,count_bytes \
+           skip=$(( 0x$a )) count=$(( 0x$b - 0x$a )) of="$1_mem_$a.bin"
+    done )
+)
+
+tf=$(mktemp)
+rm $tf
+mkdir $tf
+cd $tf
+
+find /proc -type f -readable 2>/dev/null \
+  | grep '/proc/[[:digit:]]\+/mem' \
+  | cut -d '/' -f 3 \
+  | while read proc; do
+      procdump $proc 2>/dev/null
+    done
+
+for f in $(ls); do
+  strings $tf/$f
+done
+
+rm -rf $tf
+
+```
+
 ## parse args with case statement
 ## exit if parameter is missing
 ~/kb/bash-scripting/template.sh
@@ -234,43 +271,6 @@ fi
 [ -z "$KB_DIR" ] && echo "Missing parameter" && exit 1
 
 exit 0
-```
-
-## run strings on memory dumps for every readable process
-~/kb/hacking/priv-esc/strings-all-memory.sh
-```bash
-#!/bin/bash
-
-# run strings on memory dumps for every readable process
-
-#https://serverfault.com/questions/173999/dump-a-linux-processs-memory-to-file
-procdump()
-(
-    cat /proc/$1/maps | grep "rw-p" | awk '{print $1}' | ( IFS="-"
-    while read a b; do
-        dd if=/proc/$1/mem bs=$( getconf PAGESIZE ) iflag=skip_bytes,count_bytes \
-           skip=$(( 0x$a )) count=$(( 0x$b - 0x$a )) of="$1_mem_$a.bin"
-    done )
-)
-
-tf=$(mktemp)
-rm $tf
-mkdir $tf
-cd $tf
-
-find /proc -type f -readable 2>/dev/null \
-  | grep '/proc/[[:digit:]]\+/mem' \
-  | cut -d '/' -f 3 \
-  | while read proc; do
-      procdump $proc 2>/dev/null
-    done
-
-for f in $(ls); do
-  strings $tf/$f
-done
-
-rm -rf $tf
-
 ```
 
 ## watch failed ssh login attempts as a live stream
