@@ -1,3 +1,4 @@
+# figure out what to do with this
 - web 200 has list of things to try for http
 - need
   - common commands
@@ -13,8 +14,6 @@
       - if there's noise, can hide by content length
 - section for each svc enumerated like before
   - trim output and bring things to the to try list
-
-# cool commands to add
 
 # quick tools
 - meyerweb encode decode url
