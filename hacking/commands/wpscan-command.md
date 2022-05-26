@@ -1,19 +1,21 @@
-# wpscan enumerate users
+# wpscan
+
+## enumerate users
 ```bash
-wpscan --url http://$IP/ -e u
+wpscan --url $URL -e u
 ```
 
-# wpscan enumerate all plugins
+## enumerate all plugins
 ```bash
-wpscan --url http://$IP/ -e ap
+wpscan --url $URL -e ap
 ```
 
-# wpscan aggressive enumerate all plugins plugins-detection
+### aggressive plugins-detection
 ```bash
-wpscan --url http://$IP/wordpress/ -e ap --plugins-detection aggressive
+wpscan --url $URL -e ap --plugins-detection aggressive
 ```
 
-# brute force wpscan users file and password list
+## brute force users file and password list
 ```bash
-wpscan --url http://$IP/wordpress/ -U users -P /usr/share/seclists/Passwords/Leaked-Databases/rockyou-50.txt
+wpscan --url $URL -U users -P /usr/share/seclists/Passwords/Leaked-Databases/rockyou-50.txt
 ```

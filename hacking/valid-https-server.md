@@ -1,9 +1,11 @@
-# stand up https server with a valid certificate
+# caddy
+
+## stand up https server with a valid certificate
 ```bash
 ./caddy file-server --domain localhost
 ```
 
-# install caddy ( https server )
+## install
 ```bash
 wget "https://caddyserver.com/api/download?os=linux&arch=amd64&idempotency=93057457950595" -O caddy
 ```

@@ -1,9 +1,13 @@
-# gef rop gadget search
+# gef gdb plugin
+
+## rop gadget search
+gdb
 ```
 ropper --search "pop r13"
 ```
 
-# gef buffer overflow pattern create and offset
+## buffer overflow pattern create and offset
+gdb
 ```
 pattern create 200
 pattern search $rsp

@@ -1,4 +1,6 @@
-# PHP file executable extensions
+# web server file executable extensions
+
+## PHP
 php
 php2
 php3
@@ -15,7 +17,7 @@ phar
 inc
 .htaccess
 
-# ASP file executable extensions IIS
+## ASP
 asp
 aspx
 config

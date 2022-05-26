@@ -1,4 +1,6 @@
-# Try to keep logs under control
+# docker cleanup
+
+## Try to keep logs under control
 /etc/docker/daemon.json
 ```json
 {
@@ -9,7 +11,7 @@
 }
 ```
 
-# Free up space immediately
+## Free up space immediately
 ```bash
 docker system prune -a -f
 ```

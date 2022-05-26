@@ -1,8 +1,10 @@
-# analyzing go web server source code
+# analyzing source code
+
+## go web server
 - user input to controllers -> `http.Request`
 - shell exec -> `exec.Command`
 
-# analyzing PHP code
+## PHP code
 - user input -> REQUEST GET POST COOKIE? HEADERS?
 - shell exec
   - system, passthru

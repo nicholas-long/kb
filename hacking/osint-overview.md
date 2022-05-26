@@ -1,7 +1,9 @@
-# OSINT guides and step-by-step
+# OSINT
+
+## guides and step-by-step flowcharts
 - flowcharts by "intel techniques"
 
-# sock puppets
+## sock puppets
 - online identity that is a misrepresentation. fake account, alt identity
   - looks legitimate
   - shouldn't tie back to IP
@@ -12,7 +14,7 @@
 - use prepaid phone for 2fa
 - get fake IP or VPN - match geographic location of the person
 
-# search engine OSINT
+## search engine OSINT
 - search name on multiple search engines
 - `site:reddit.com` operator to restrict results specific sites
 - quotes = specific order of words
@@ -28,7 +30,7 @@
   - `site:tesla.com -www -forums`
     - enumerate and remove subdomains cycle
 
-# image OSINT
+## image OSINT
 - reverse image searching (in order)
   - google
   - yandex
@@ -38,11 +40,11 @@
   - phone info
 - pimeyes.com
 
-# physical location OSINT
+## physical location OSINT
 - satellite images
 - flying drones
 
-# identifying geographic locations from pictures OSINT
+### identifying geographic locations from pictures OSINT
 - look up "geoguessr tips and tricks and techniques" for example analysis 
   - vehicles
     - steering wheel
@@ -52,7 +54,7 @@
   - architecture (especially significant buildings)
 - geoguessr.com gamified location id; one free play per day
 
-# email OSINT
+## email OSINT
 - discover email addresses
 - hunter.io
   - find websites containing specific email domains
@@ -66,7 +68,7 @@
 - forgot password links on websites - unintended functionality
   - gmail - associate email addresses with recovery email addresses (partially censored, but strong evidence of correlation)
 
-# password OSINT
+## password OSINT
 - learn methodology instead of just specific websites because these tools might go down
 - hunting breached credentials
   - iteratively associate users, passwords 
@@ -81,7 +83,7 @@
   - snusbase
   - scylla.sh - free, not always as thorough as paid services
 
-# usernames and accounts OSINT
+## usernames and accounts OSINT
 - namechk.com - what usernames are available
   - can use it to tie accounts together
 - whatsmyname.app
@@ -89,7 +91,7 @@
   - user profile image -> reverse image search
   - fuzzing by typing partial names
 
-# people OSINT
+## people OSINT
 - searching for people with websites
   - search for any piece of info and uncover other things
     - reverse address search address / phone -> person
@@ -123,7 +125,7 @@
   - google name in quotes with `resume`
   - google drive links to resumes `site:google.com`
 
-# social media OSINT
+## social media OSINT
 - twitter
   - search trending posts about topics, people, keyword search
     - filters
@@ -179,10 +181,10 @@
   - recommmendations show associated people or coworkers
 - tiktok
 
-# github OSINT
-# github OSINT organizations
+## github OSINT
+### organizations
 check people associated
 commit history
 
-# OSINT enumerate emails and username format for domain
+## enumerate emails and username format for domain
 hunter.io

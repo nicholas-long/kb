@@ -1,11 +1,13 @@
-# python hex to string
+# python
+
+## hex to string
 bytes.fromhex(str).decode()
 bytes.fromhex(str).decode('latin-1')
 
-# python hex to bytes
+## hex to bytes
 bytes.fromhex(str)
 
-# python string alphanumeric chars
+## string alphanumeric chars
 ```python
 import string
 string.ascii_uppercase + string.ascii_lowercase + string.digits

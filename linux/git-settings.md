@@ -1,9 +1,11 @@
-# set up credential storage
+# git config settings
+
+## set up credential storage
 ```bash
 git config --global credential.helper store
 ```
 
-# make git smoother with merges
+## make merges smoother
 ```bash
 git config --global pull.rebase true
 ```

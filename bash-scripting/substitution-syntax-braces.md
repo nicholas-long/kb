@@ -1,46 +1,38 @@
-# initialize variable with default value if empty and return it
+# bash scripting substitution syntax
+
+## initialize variable with default value if empty and return it
 ```bash
 echo ${name:="default"}
 ```
 
-example
+### example
 ```
-┌──(kali㉿kali)-[~/kb]
-└─$ echo ${name:="default"}
+$ echo ${name:="default"}
 default
-
-┌──(kali㉿kali)-[~/kb]
-└─$ name=coyote
-
-┌──(kali㉿kali)-[~/kb]
-└─$ echo ${name:="default"}
+$ name=coyote
+$ echo ${name:="default"}
 coyote
 ```
 
-# return a variables value or a default value if not defined
+## return variables value or default
 ```bash
 echo ${name2:-"default"}
 ```
 
-# return substring of name
+## return substring of name
 format `$(variable:offset)` or `${variable:offset:length)`
 zero indexed
 ```bash
 echo ${name:2:2}
 ```
 
-# read variable or else exit if undefined
+## read variable or else exit if undefined
 ```bash
 echo ${param:?"param is required. exiting."}
 ```
 
-# return something if another variable is set
+## return something if another variable is set
 If varname exists and isn’t null, return word; otherwise return null.
 ```bash
 ${varname:+word}
 ```
-
-# template
-```bash
-```
-

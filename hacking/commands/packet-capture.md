@@ -1,15 +1,17 @@
-# log packet capture pcap data with tcpdump
+# packet capture
+
+## log pcap data with tcpdump
 ```bash
 sudo tcpdump -i eth0 -w $FILE
 ```
 
-# read packet capture pcap data with tshark
+## read pcap data with tshark
 thsark and tcpdump both use `-r` to read file and `-w` to write file
 ```bash
 tshark -r $FILE
 ```
 
-# capture packets with tcpdump over ssh connection and pipe directly to wireshark
+## capture packets with tcpdump over ssh connection and pipe directly to wireshark
 run tcpdump as an ssh command and pipe to stdout.
 pipe into wireshark through stdin. wireshark interface `-` is stdin.
 example on ippsec video lightweight.

@@ -1,7 +1,8 @@
-# debugging bash in visual studio code
+# debugging bash
+## in visual studio code
 bashdb
 
-# debugging bash in terminal
+## in terminal
 ```bash
 bash -x $FILE
 ```
