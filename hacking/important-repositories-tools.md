@@ -146,3 +146,6 @@ sudo apt install volatility
 ```
 https://github.com/volatilityfoundation/volatility
 https://www.volatilityfoundation.org/
+
+# web app paths defaults db
+https://github.com/pwnwiki/webappdefaultsdb
