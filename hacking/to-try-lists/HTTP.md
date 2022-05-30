@@ -127,9 +127,10 @@ for each path
   - .git/ and .git/HEAD
   - common
   - files
-    - gobuster with extensions -> raft-large-words and discover backups `-d` option
-    - wfuzz large filename list
+    - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
+    - wfuzz large filename list - look at status and content length
   - directories
+    - feroxbuster recursive
     - wfuzz large
     - wfuzz dir list big
 /
