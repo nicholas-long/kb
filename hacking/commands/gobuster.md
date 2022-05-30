@@ -1,4 +1,4 @@
-# Gobuster
+# gobuster
 
 ## Fast Scan (Small List)
 ```bash
@@ -19,3 +19,9 @@ gobuster dir -e -u http://$IP -w /usr/share/wordlists/dirbuster/directory-list-2
 ## fix HTTPS cert errors
 Set the --insecuressl flag.
 
+## vhost enumeration
+```bash
+gobuster vhost -u $URL -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 100
+gobuster vhost -u $URL -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -t 100
+gobuster vhost -u $URL -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -t 100
+```
