@@ -10,6 +10,7 @@
     - etc
       - config for other services
       - users
+      - port knocking config `knockd.conf` (not in wordlists)
   - windows targets
     - registry backups
     - xampp
@@ -18,4 +19,3 @@
   - web shells
   - ssh authorized keys
   - scripts
-
