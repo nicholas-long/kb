@@ -9,3 +9,8 @@ dig @$IP -x $LOOKUP_IP
 ```bash
 dig axfr @$IP zonetransfer.me
 ```
+
+## enumerate with ANY query
+```bash
+dig any @$IP zonetransfer.me
+```
