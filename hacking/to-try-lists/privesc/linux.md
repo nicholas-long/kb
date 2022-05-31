@@ -9,6 +9,9 @@
   - gtfobins
   - vulnerable versions
 - /opt
+- custom interesting binaries or scripts running as other users or root
+  - everything from "got source code" list
+  - dependent binaries
 - getcap capabilities
 - enumerate all readable files
 - sensitive config files
