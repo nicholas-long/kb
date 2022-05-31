@@ -70,8 +70,11 @@
 - exec
 - python scripts: everything from to try list for "got source code"
 - dependent libraries of scripts (ex: tar, zip -> overwrite files / zip slip)
+- file write
+  - with garbage to remove
+    - exploit maximum line length of input files in dependent binaries to attempt to push garbage off buffer
+    - formatting issues in config files like regular expressions
 
 ## headline exploits
 - 2022 : dirty pipe
 - 2022 : pwnkit - polkit CVE
-
