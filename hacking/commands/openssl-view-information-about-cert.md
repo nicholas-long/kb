@@ -10,7 +10,7 @@ openssl pkey -in $FILE -pubout
 ssh-keygen -y -f $FILE
 ```
 
-# openssl p12 file PKCS12
+# openssl pfx p12 file PKCS12
 
 ## view information about certificate
 ```bash
@@ -20,4 +20,9 @@ openssl pkcs12 -info -in $FILE
 ## public key fingerprint
 ```bash
 openssl pkcs12 -info -in $FILE | openssl x509 -noout -fingerprint
+```
+
+## extract pfx private key
+```bash
+openssl pkcs12 -in certname.pfx -nocerts -out key.pem -nodes
 ```
