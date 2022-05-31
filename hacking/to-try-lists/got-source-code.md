@@ -1,0 +1,44 @@
+# got source code - analysis
+- secrets / creds
+- paths and filenames
+- grep vulnerable functions
+- security antipatterns
+- targets
+  - code execution
+  - file access
+- deserialization vulnerabilities
+- templates
+- vulnerable third party libraries
+- git repositories and history log
+- vulnerabilities common to the programming language
+  - PHP
+    - common antipatterns:
+      - including code based on user imput
+      - SQLi
+    - code execution
+    - eval
+    - assert
+    - regular expressions that execute code
+    - fuzzy equal
+      - type juggling http post data (JSON, XML, url encoded)
+    - laravel : SQLi with `whereRaw` for manipulating raw query
+  - python
+    - eval
+    - pickle
+    - jinja
+    - web servers running in debug mode
+  - ruby
+    - mass assignment
+  - javascript
+    - JSON object prototype pollution
+    - fuzzy equal
+  - golang
+    - user input to controllers -> `http.Request`
+    - shell exec -> `exec.Command`
+  - C
+    - buffer lengths
+    - pointers
+    - printf, fprintf, sprintf and other forms with user supplied format strings
+    - system()
+      - not full path to executable -> PATH injection
+    - loops and off by one `<` vs `<=`
