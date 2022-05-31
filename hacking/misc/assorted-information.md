@@ -22,9 +22,6 @@ md5 of `kittycat` is a hash that begins with 0e
 # default openssl message digest
 sha256
 
-# tomcat management console admin login
-`/manager/html`
-
 # log4j log4shell
 the latest version of pimps/JNDI-Exploit-Kit is broken, go back to old versions
 ```bash
