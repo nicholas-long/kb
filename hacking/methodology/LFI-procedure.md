@@ -20,3 +20,8 @@ fuzz with known extensions
 ### downloading with curl 
 #### prevent normalization of paths
 curl parameter `--path-as-is` to preserve any `../`
+
+## file wordlists
+### linux
+/usr/share/seclists/Discovery/Web-Content/LinuxFileList.txt
+/usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt
