@@ -34,3 +34,9 @@ wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -
 COOKIES="PHPSESSID=1234"
 wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -b "$COOKIES" --hc 404 "http://$IP/location.php?FUZZ=sensible_value"
 ```
+
+## host header pollution
+```bash
+wfuzz -c -u $URL -w /usr/share/seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ" --hc 403
+wfuzz -c -u $URL -w /usr/share/seclists/Discovery/DNS/fierce-hostlist.txt -H "Host: FUZZ" --hc 403
+```
