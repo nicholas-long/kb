@@ -65,3 +65,10 @@ complicated - refer to ippsec "conceal" video
 
 # solidity
 Solidity is an object-oriented, high-level language for implementing smart contracts
+
+# beacon object file BOF
+## run assemblies in memory to avoid detection
+run assemblies in memory within the c2 client process to avoid detection
+### cobalt strike .NET
+#### BOFNET
+build C assemblies as DLLs and run in memory on C2 client.
