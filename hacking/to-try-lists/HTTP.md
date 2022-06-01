@@ -51,6 +51,7 @@
     - sqli filtering
   - SSTI
   - authentication bypass
+    - wildcards
   - reset password
   - error message username enumeration
     - forgot password forms - applies as well
