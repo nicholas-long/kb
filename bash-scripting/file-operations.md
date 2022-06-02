@@ -4,3 +4,9 @@
 ```bash
 realpath $FILE
 ```
+
+## make temp directory
+```bash
+mktemp -d
+mktemp --directory
+```
