@@ -86,6 +86,19 @@ printedblank && !block && NR > line && /^#+ / && length($1) == h { pr = 0 }
 pr == 1 { print }
 ```
 
+## get column headings from first line of CSV
+~/kb/awk-scripting/get-columns.awk
+```awk
+#!/usr/bin/awk -f
+# get column headings from first line of CSV
+NR == 1 {
+  split($0, arr, ",")
+  for (i = 1; i < length(arr); i++) {
+    print i, arr[i]
+  }
+}
+```
+
 ## check output of grep and next line using awk "grep -A 1 -R '^# ' ."
 ~/kb/awk-scripting/file-grep-multi-lines.awk
 ```awk

@@ -1,14 +1,4 @@
 # python scripting
-## fuzz valid dates
-~/kb/hacking/python-fuzz-valid-dates.py
-```python
-from datetime import datetime, timedelta
-# fuzz valid dates
-dates = [(datetime.today() - timedelta(days=x)).strftime('%Y-%m-%d') for x in range(0, 365)]
-for d in dates:
-    print(d)
-```
-
 ## convert a GMSA managed password structure to a NTLM hash
 ~/kb/hacking/windows/convert-msds-managed-password-to-ntlm-hash.py
 ```python
@@ -73,5 +63,15 @@ hash.update (blob['CurrentPassword'][:-2])
 ntlm = binascii.hexlify(hash.digest()).decode("utf-8")
 print(ntlm)
 
+```
+
+## fuzz valid dates
+~/kb/hacking/tricks/python-fuzz-valid-dates.py
+```python
+from datetime import datetime, timedelta
+# fuzz valid dates
+dates = [(datetime.today() - timedelta(days=x)).strftime('%Y-%m-%d') for x in range(0, 365)]
+for d in dates:
+    print(d)
 ```
 
