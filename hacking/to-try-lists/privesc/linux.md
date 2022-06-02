@@ -22,6 +22,7 @@
   - bash history
     - passwords or secrets in commands
   - may contain accidental passwords in usernames in login failures
+  - dmesg command
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release` -> exploit db
 - root processes, especially
