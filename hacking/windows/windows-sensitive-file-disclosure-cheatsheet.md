@@ -75,3 +75,7 @@ C:/Program Files/Microsoft SQL Server/MSSQL13.SQLEXPRESS/Template Data/master.md
 C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/Template Data/master.mdf
 ```
 /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt
+
+## determine version
+C:\Windows\System32\license.rtf
+c:\windows\system32\eula.txt
