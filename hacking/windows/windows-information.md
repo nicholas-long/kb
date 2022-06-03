@@ -92,3 +92,17 @@ password policy might be different on local machine vs. domain.
 ## in remote desktop RDP or GUI
 - task manager > details > lsass.exe
 - create dump file
+
+# bypass UAC with administrators group
+need session in interactive process.
+
+## uacme bypass
+https://github.com/hfiref0x/UACME
+compilation required - many build steps
+
+## read files quickly using smb shares
+mount local fileshare to read administrator's files.
+authentication is different for localhost.
+```powershell
+net use Z: \\127.0.0.1\c$
+```
