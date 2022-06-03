@@ -5,6 +5,11 @@
 - scan UDP ( slow, few ports as possible )
 - scan services with scripts
 - retry enumeration with new credentials on discovery
+- look up versions
+  - exploitdb / searchsploit / "exploits" command alias
+  - google keyword exploit ( optional `inurl:github` )
+  - enumeration tools specific to service
+  - metasploit exploits and scanners - locate during enumeration, but wait to run on exam
 - OSINT
   - users and their potential passwords
     - likes/interests -> wikipedia -> cewl -> password list
