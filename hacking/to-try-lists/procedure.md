@@ -1,5 +1,4 @@
-Procedure
-====================================================================================================
+# procedure
 - scan ( full port )
 - paste in to try list for every service
 - scan with `--vuln`
