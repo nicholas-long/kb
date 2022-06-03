@@ -39,8 +39,10 @@ C:/Program Files (x86)/Apache Group/Apache/conf/access.log
 C:/Program Files (x86)/Apache Group/Apache/conf/error.log
 C:/Program Files (x86)/FileZilla Server/FileZilla Server.xml
 C:/Program Files (x86)/xampp/apache/conf/httpd.conf
-C:/WINDOWS/php.ini C:/WINDOWS/Repair/SAM
-C:/Windows/repair/system C:/Windows/repair/software
+C:/WINDOWS/php.ini
+C:/WINDOWS/Repair/SAM
+C:/Windows/repair/system
+C:/Windows/repair/software
 C:/Windows/repair/security
 C:/WINDOWS/System32/drivers/etc/hosts
 C:/Windows/win.ini
