@@ -81,6 +81,7 @@
     - SQLi
       - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
       - dump data and try everything from "got access to database" list
+      - ordering column parameter and order by injection -> nested query `limit (select ...)`
     - SSTI
     - LDAP injection
     - NoSQL injection
