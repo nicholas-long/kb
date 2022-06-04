@@ -7,7 +7,10 @@
 - retry enumeration with new credentials on discovery
 - look up versions
   - exploitdb / searchsploit / "exploits" command alias
-  - google keyword exploit ( optional `inurl:github` )
+  - google keywords
+    - "exploit"
+    - "ctf writeup"
+    - inurl:github
   - enumeration tools specific to service
   - metasploit exploits and scanners - locate during enumeration, but wait to run on exam
 - OSINT
