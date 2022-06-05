@@ -33,7 +33,7 @@
     - drupal / silverstripe -> droopescan
   - check plugin versions for vulns exploit-db AND google
   - compromised CMS -> everything from "compromised CMS login" list
-- API
+- API and POST endpoints
   - docs/openapi.json
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
@@ -56,6 +56,7 @@
   - error message username enumeration
     - forgot password forms - applies as well
     - create user form if there is an error when user ID already exists
+  - time based username enumeration - logic to check if user exists is very common + big hash algos
   - register account to find authenticated endpoints
   - brute forcing
   - xsrf
