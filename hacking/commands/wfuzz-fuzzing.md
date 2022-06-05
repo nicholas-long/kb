@@ -1,4 +1,4 @@
-# wfuzz
+# wfuzz fuzzing details
 
 ## "X-Forwarded-For" header with custom IPS
 ## fuzz multiple parameters
