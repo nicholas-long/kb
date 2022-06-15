@@ -20,6 +20,8 @@
   - clipboard
   - powershell history
   - credentials manager ( cmdkey )
+  - appdata
+    - browser data - dump with tools like SharpChromium
 - running processes
   - dump memory
 - headline exploits from privesc to try list

@@ -29,6 +29,10 @@
       - users - description, password last set, last login & timestamp
       - computers - OS
   - add dc hostname and machine name to hosts file if this can't authenticate
+  - command execution but no creds -> use privs granted by running on machine
+    - get NTLMv2 hash to crack
+    - run sharphound on target
+    - kerberoast from target ( mimikatz? )
 - CYCLE - reuse credentials, access services, abuse access, get more credentials
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
