@@ -39,3 +39,8 @@ proxychains -q nmap -sC -sV -sT -Pn -n -vvv $IP
 ```bash
 nmap -v -p- -sV -sT -A $IP
 ```
+
+## bruteforce HTTP authentication (including NTLM)
+```bash
+nmap --script http-brute -p 80 $IP
+```
