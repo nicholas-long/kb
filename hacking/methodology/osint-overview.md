@@ -78,10 +78,14 @@
   - haveibeenpwned - check which databases
   - dehashed - paid
     - search by username, email, name, address, phone, VIN
+    - gives you credentials
   - weleakinfo
   - leakcheck
   - snusbase
   - scylla.sh - free, not always as thorough as paid services
+
+### gives you the credentials
+- dehashed
 
 ## usernames and accounts OSINT
 - namechk.com - what usernames are available
@@ -181,10 +185,15 @@
   - recommmendations show associated people or coworkers
 - tiktok
 
-## github OSINT
-### organizations
+## organizations
+
+### github OSINT
 check people associated
 commit history
+
+### job postings
+- potential info on technology stack
+  - check security positions for info on endpoint protection and defense
 
 ## enumerate emails and username format for domain
 hunter.io
