@@ -69,3 +69,6 @@ Solidity is an object-oriented, high-level language for implementing smart contr
 # beacon object file BOF
 run assemblies in memory within the c2 client process to avoid detection.
 see section on ["run executable binary programs within process memory"](tricks/run-programs-in-memory.md)
+
+# PXE boot
+network storage provides ISO to boot
