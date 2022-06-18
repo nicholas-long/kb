@@ -123,6 +123,9 @@
 - mention github/source control -> go look it up, find source
   - organizations -> people and their projects / commits
   - check commit history for secrets / creds
+- cgi-bin
+  - chain with apache 2.4.49-specific directory traversal
+  - old servers -> shellshock - should find with nikto?
 - got source code -> everything from "got source code" list
 
 ## web to try list directory busting
@@ -174,9 +177,6 @@ for each path
   - content > add content > basic page
     - edit in source view and set text type at bottom to php code
 - wordpress -> edit plugins or themes to install web shell
-
-## old stuff for old servers
-- shellshock - should find with nikto?
 
 ## UNCOMMON HTTP ( hacktricks )
 - 2fa bypass
