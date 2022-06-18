@@ -44,3 +44,9 @@ nmap -v -p- -sV -sT -A $IP
 ```bash
 nmap --script http-brute -p 80 $IP
 ```
+
+## check for mountable NFS shares
+### test access
+```bash
+nmap --script "nfs-*" $IP
+```
