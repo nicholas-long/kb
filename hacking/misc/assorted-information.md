@@ -43,11 +43,6 @@ sudo apt install mingw-w64
 x86_64-w64-mingw32-g++ rev.c -o rev.dll -lws2_32 -shared
 ```
 
-# burpsuite add header to forwarded requests, like X-Forwarded-For
-- go to proxy tab -> options tab -> match and replace: click add
-- add header in "Replace" field in format `Header: value`
-- leave match condition field blank to add header instead of replacing one
-
 # linux capability `=ep`
 it grants all permissions.
 
@@ -83,3 +78,16 @@ the `--reload` flag for uvicorn means python files can be updated and the server
 # SMB
 ## fix `NT_STATUS_CONNECTION_DISCONNECTED` errors
 To fix NT_STATUS_CONNECTION_DISCONNECTED errors in new Kali installations add client min protocol = NT1 to your \etc\samba\smb.conf file.
+
+# burpsuite
+
+## set scope to limit request catching
+> "Target" panel
+> "Scope" sub-panel
+> add URL
+
+## add header to forwarded requests, like X-Forwarded-For
+- go to proxy tab -> options tab -> match and replace: click add
+- add header in "Replace" field in format `Header: value`
+- leave match condition field blank to add header instead of replacing one
+
