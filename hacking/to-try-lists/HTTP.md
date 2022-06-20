@@ -129,6 +129,7 @@
   - chain with apache 2.4.49-specific directory traversal
   - old servers -> shellshock - should find with nikto?
 - got source code -> everything from "got source code" list
+- generated file -> metadata / exiftool
 
 ## web to try list directory busting
 for each path
