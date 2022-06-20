@@ -108,6 +108,7 @@
   - change user agent
   - open redirect can bypass URL validation
   - unicode normalization (hacktricks)
+- weird HTTP response headers
 - JWT JSON web tokens
 - cookie deserialization
 - parameter pollution
