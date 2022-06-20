@@ -6,7 +6,7 @@ cp /usr/share/seclists/Miscellaneous/source-code/c-linux/root-shell.c .
 gcc -static -o root-shell root-shell.c
 ```
 
-## write binary with shared module object SO
+## write setuid bit to binary with SO shared module object
 /usr/share/seclists/Miscellaneous/source-code/c-linux/drop-shell.c
 ```bash
 cp /usr/share/seclists/Miscellaneous/source-code/c-linux/drop-shell.c .
