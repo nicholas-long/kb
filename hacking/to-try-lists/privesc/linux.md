@@ -25,6 +25,15 @@
   - dmesg command
 - su or brute force with common credentials i.e. `root:root`
 - OS version `uname -a && cat /etc/*-release` -> exploit db
+- docker
+  - from host
+    - scan port range to identify running services
+      - ssh -> reuse keys and creds found on host
+  - inside docker
+    - check mounted directories
+      - write suid binaries to be executed on host
+    - deepce
+  - image repository -> pull image, hunt for secrets
 - root processes, especially
   - databases
   - services exposed on local ports
