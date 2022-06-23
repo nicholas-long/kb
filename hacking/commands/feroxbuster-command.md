@@ -26,11 +26,26 @@ feroxbuster --url http://$IP/ -B -E -g -x php,html -e
 feroxbuster --url http://$IP/ -B -E -g -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt -e
 feroxbuster --url http://$IP/ -B -g -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt -e
 ```
+### fix recursion loop
+avoid infinite loop created by combining 
+```
+403 errors 
++ discover words
++ backups 
++ verbose httpd errors
+-----------------------
+= infinite loop
+```
 
-### look for notes and logs and add words to wordlist
-recursively add words
+### backups and extensions files command
 ```bash
-feroxbuster --url http://$IP/ -B -g -e -x txt,log
+feroxbuster --url $URL -x php -B -g
+```
+
+### small words to filenames plus extensions ignore 403 
+```bash
+feroxbuster --url http://$IP/ -B -g -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt -x php,txt,xml,json,config -C 403 -C 404 -e
+feroxbuster --url http://$IP/ -B -g -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt -x txt,log -C 403 -C 404 -e
 ```
 
 ### dynamic collection settings
