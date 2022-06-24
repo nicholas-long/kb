@@ -35,7 +35,7 @@
   - check plugin versions for vulns exploit-db AND google
   - compromised CMS -> everything from "compromised CMS login" list
 - API and POST endpoints
-  - docs/openapi.json
+  - ~/kb/wordlists/custom.dirbusting custom wordlist includes API endpoints words
   - enumerate resources and endpoints to interact with them
   - enumerate parameters for endpoints - arjun
   - restful methods GET POST PUT DELETE
