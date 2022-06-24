@@ -2,6 +2,10 @@
 
 # generate common passwords
 
+function awkuniq {
+  awk '!seen[$0]++ {print}'
+}
+
 function years {
   year=$(date -I | cut -d '-' -f 1)
   echo $year
@@ -23,29 +27,17 @@ function seasonyears {
 }
 
 function iterations {
-  while read -r line; do
-    echo "$line"
-    echo "$line!"
-    #echo "$line@"
-    #echo "$line#"
-    #echo "$line$"
-    #echo "$line%"
-    #echo "$line^"
-    #echo "$line&"
-    #echo "$line*"
-    #echo "$line("
-    #echo "$line)"
-    #echo "$line-"
-    #echo "$line="
-  done
+  awk '
+  {
+    print
+    print $0 "!"
+  }
+  '
 }
 
 function passwordlists {
-  cat /usr/share/wordlists/fasttrack.txt /usr/share/seclists/Passwords/Leaked-Databases/rockyou-05.txt | sort -u
+  cat /usr/share/wordlists/fasttrack.txt /usr/share/seclists/Passwords/Leaked-Databases/rockyou-05.txt | \
+    awk '!seen[$0]++ {print}' # print unique
 }
 
-function everything {
-  (passwordlists && seasonyears) | sort -u | iterations
-}
-
-everything
+( seasonyears | iterations ; passwordlists ) | awkuniq

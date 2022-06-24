@@ -127,6 +127,10 @@ sudo apt-get install sublime-text
 
 # generate common passwords
 
+function awkuniq {
+  awk '!seen[$0]++ {print}'
+}
+
 function years {
   year=$(date -I | cut -d '-' -f 1)
   echo $year
@@ -148,32 +152,20 @@ function seasonyears {
 }
 
 function iterations {
-  while read -r line; do
-    echo "$line"
-    echo "$line!"
-    #echo "$line@"
-    #echo "$line#"
-    #echo "$line$"
-    #echo "$line%"
-    #echo "$line^"
-    #echo "$line&"
-    #echo "$line*"
-    #echo "$line("
-    #echo "$line)"
-    #echo "$line-"
-    #echo "$line="
-  done
+  awk '
+  {
+    print
+    print $0 "!"
+  }
+  '
 }
 
 function passwordlists {
-  cat /usr/share/wordlists/fasttrack.txt /usr/share/seclists/Passwords/Leaked-Databases/rockyou-05.txt | sort -u
+  cat /usr/share/wordlists/fasttrack.txt /usr/share/seclists/Passwords/Leaked-Databases/rockyou-05.txt | \
+    awk '!seen[$0]++ {print}' # print unique
 }
 
-function everything {
-  (passwordlists && seasonyears) | sort -u | iterations
-}
-
-everything
+( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
 ## get words from file
@@ -309,9 +301,9 @@ tail -f /var/log/auth.log | \
 # search through tldr command descriptions with fzf and display file with bat
 
 find ~/.local/share/tldr/tldr/pages -type f -name '*.md' | \
-  xargs awk 'BEGIN { OFS="\t" } /^# / { h = $2 } /^- / { print FILENAME,FNR,h,$0 }' | \
+  xargs awk 'BEGIN { OFS="\t" } /^# / { h = $2 } /^- / || /^> / { print FILENAME,FNR,h,$0 }' | \
   fzf | \
-  awk '{system("bat " $1) }'
+  awk -F $'\t' '{system("bat " $1) }'
 ```
 
 ## get top N most common ports from nmap list pass argument
