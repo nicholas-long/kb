@@ -25,6 +25,7 @@ swagger
 __swagger__
 openapi
 openapi.json
+docs/openapi.json
 openapi.yaml
 .env
 note.txt
