@@ -91,3 +91,5 @@ To fix NT_STATUS_CONNECTION_DISCONNECTED errors in new Kali installations add cl
 - add header in "Replace" field in format `Header: value`
 - leave match condition field blank to add header instead of replacing one
 
+# copy docker binary to target
+can copy `docker` binary to target, but need to copy `com.docker.cli` as well
