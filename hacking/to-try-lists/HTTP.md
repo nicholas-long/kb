@@ -132,9 +132,10 @@
 - generated file -> metadata / exiftool
 
 ## web to try list directory busting
+~/kb/wordlists/custom.dirbusting
 for each path
   - feroxbuster medium dirs with extensions and `-e` extract links
-  - .git/ and .git/HEAD
+  - custom.dirbusting list
   - common
   - files
     - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
