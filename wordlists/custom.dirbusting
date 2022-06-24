@@ -1,5 +1,8 @@
+.ssh
+.ssh/id_rsa
 .git
 .git/HEAD
+cgi-bin/
 README
 CHANGELOG
 LICENSE
@@ -17,3 +20,13 @@ gql
 graphql
 graphiql
 graphql/console
+api
+swagger
+__swagger__
+openapi
+openapi.json
+openapi.yaml
+.env
+note.txt
+hint.txt
+todo.txt
