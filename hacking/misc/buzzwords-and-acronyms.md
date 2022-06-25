@@ -72,3 +72,6 @@ see section on ["run executable binary programs within process memory"](tricks/r
 
 # PXE boot
 network storage provides ISO to boot
+
+# httponly cookie option
+httponly keeps javascript from accessing / stealing the cookie
