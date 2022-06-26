@@ -54,6 +54,8 @@
   - authentication bypass
     - wildcards
   - reset password
+    - username parameter -> IDOR, account takeover
+    - leak reset tokens
   - error message username enumeration
     - forgot password forms - applies as well
     - create user form if there is an error when user ID already exists
