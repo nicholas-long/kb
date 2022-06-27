@@ -123,7 +123,8 @@
 - webdav
   - davtest unauth
   - davtest authenticated
-- username list -> fuzz home directories like `/~user`
+- have username list -> fuzz home directories like `/~user`
+- links with `target="_blank"` - tab nabbing client attack phishing redirect
 - mention github/source control -> go look it up, find source
   - organizations -> people and their projects / commits
   - check commit history for secrets / creds
