@@ -9,3 +9,6 @@
 - check if DBA
   - enable access to files / commands
 - see what other databases are accessable
+- CMS database looking for foothold -> possible extra enumeration
+  - installed plugins
+  - data -> hidden posts, secrets, creds in messages
