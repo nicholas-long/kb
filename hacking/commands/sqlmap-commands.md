@@ -4,6 +4,10 @@
 --level 5
 --risk 3
 
+## custom injection marker
+use an asterisk symbol to mark an injection point in a URL
+` http://target.box/vuln.php?a=1&b=* `
+
 ## search string response on site for successful injection
 --string "successful injection text here"
 
