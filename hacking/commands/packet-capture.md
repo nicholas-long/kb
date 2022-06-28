@@ -1,8 +1,14 @@
 # packet capture
 
-## log pcap data with tcpdump
+## with tcpdump
+### log data to pcap file
 ```bash
-sudo tcpdump -i eth0 -w $FILE
+sudo tcpdump -i tun0 -w $FILE
+```
+
+### watch traffic and print IP and port
+```bash
+sudo tcpdump -n -i tun0
 ```
 
 ## read pcap data with tshark
