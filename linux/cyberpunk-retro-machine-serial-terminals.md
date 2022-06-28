@@ -20,6 +20,11 @@ ExecStart=-/sbin/agetty --keep-baud 115200,38400,9600 %I $TERM
 ExecStart=-/sbin/agetty 9600 %I $TERM
 ```
 
+### restart service if terminal disconnected
+```bash
+systemctl restart serial-getty@ttyUSB0.service
+```
+
 ## Tandy TRS-80 Model 100 terminal
 must be connected to a computer through a null modem connection.
 
