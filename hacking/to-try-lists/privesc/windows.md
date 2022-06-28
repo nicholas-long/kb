@@ -23,7 +23,7 @@
   - appdata
     - browser data - dump with tools like SharpChromium
 - running processes
-  - dump memory
+  - dump memory with procdump from sysinternals
 - headline exploits from privesc to try list
 - enum tools to run
   - winpeas

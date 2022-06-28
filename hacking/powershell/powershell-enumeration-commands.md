@@ -39,3 +39,8 @@ if powershell gallery is not available on CTF boxes
 ```powershell
 gci -recurse . | select fullname
 ```
+
+## get processes
+```powershell
+Get-Process
+```
