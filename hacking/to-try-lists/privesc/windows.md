@@ -68,6 +68,7 @@
   - vulnerable services running as SYSTEM
 - java web -> find website code packaged into war file
   - secrets, config, hardcoded creds
+- no access to read webroot -> try appending known filenames to path to read
 
 ## headline exploits
 - 2021 - present : printnightmare local privesc ( powershell available )

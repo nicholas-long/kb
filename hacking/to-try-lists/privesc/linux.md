@@ -72,6 +72,7 @@
   - secrets, config, hardcoded creds
 - linpeas ( allowed on OSCP if no automatic exploitation )
 - meterpreter local suggester ( could use once on OSCP )
+- no access to read webroot -> try appending known filenames to path to read
 
 ## exploiting scripts on linux
 - injecting user commands
