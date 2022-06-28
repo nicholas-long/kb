@@ -32,3 +32,10 @@ Install-Module DSInternals -Force
 ```
 if powershell gallery is not available on CTF boxes
 ##### TODO: add steps to install from zip
+
+# general enumeration
+
+## get list of filepaths recursively
+```powershell
+gci -recurse . | select fullname
+```
