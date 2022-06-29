@@ -56,7 +56,7 @@ export TERM=td100-s
   - bash prompt still has some weird escape characters
 
 #### char mappings
-tandy sends 0d as enter.
+- tandy sends 0d as enter.
 - tandy expects CRLF as ordinary newline.
 ` stty onlcr `
 - in order to actually feed the line, the tandy requires ~ 0.7s delay between CR and LF (use 1 second to be safe).
@@ -74,3 +74,11 @@ check `man stty`, section "Output settings", it should be able to accomplish all
   - ixon enable XON/XOFF flow control
   - ixany let any character restart output, not only start character
   - inpck enable input parity checking
+
+### programs
+https://ftp.whtech.com/club100/com/
+can use dosbox to extract these self extracting archives
+
+### copying binary programs
+this is difficult and involves copying a loader written in BASIC and a data file.
+the BASIC program can load the data from the doc and install the `.co` program in RAM somewhere.
