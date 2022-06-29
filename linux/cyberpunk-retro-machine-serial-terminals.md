@@ -43,6 +43,10 @@ export TERM=td100-s
 
 ### hacks
 - using ex as an editor
-need significant hacks to remove color from `ex`.
+  - need significant hacks to remove color from `ex`.
+  - need to change CRLF sent from model 100 to get it to work
 - using ed as editor
-not possible to pipe lines into commands?
+  - not possible to pipe lines into commands?
+- bash
+  - disable colors everywhere in all bash aliases
+  - bash prompt still has some weird escape characters
