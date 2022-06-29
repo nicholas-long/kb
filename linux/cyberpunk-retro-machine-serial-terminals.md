@@ -54,3 +54,9 @@ export TERM=td100-s
 - bash
   - disable colors everywhere in all bash aliases
   - bash prompt still has some weird escape characters
+
+#### char mappings
+tandy sends 0d as enter
+tandy expects CRLF as response
+in order to actually feed the line, the tandy requires ~ 0.7s delay between CR and LF (use 1 second to be safe)
+form feed "\f" clears the screen
