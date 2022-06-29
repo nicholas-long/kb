@@ -28,6 +28,10 @@ systemctl restart serial-getty@ttyUSB0.service
 ## Tandy TRS-80 Model 100 terminal
 must be connected to a computer through a null modem connection.
 
+### serial codes
+- 9600 baud, usb terminal service default settings
+  ` 88N1E `
+
 ### terminfo and TERM variable
 ```bash
 git clone https://github.com/hackerb9/Tandy-Terminfo
