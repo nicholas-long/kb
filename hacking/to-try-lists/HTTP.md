@@ -12,6 +12,7 @@
 - manual inspection (view source)
   - see if the website content plainly discloses anything useful
 - LFI or dir traversal
+  - auth / config files for this & other installed services
   - jhaddix
   - graceful security
   - logs or writable files to poison for LFI
