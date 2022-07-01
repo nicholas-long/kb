@@ -1,16 +1,11 @@
 # wfuzz
 
-## recursive path discovery depth
--R depth                  : Recursive path discovery being depth the maximum recursion level (0 default)
-
-## dirbusting large directories wordlist
+## dirbusting
 ```bash
 wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt --hc 404 http://$IP/FUZZ/
-```
-
-## dirbusting large files wordlist
-```bash
 wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 http://$IP/FUZZ
+wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/common.txt --hc 404 http://$IP/FUZZ/
+wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/common.txt --hc 404 http://$IP/FUZZ
 ```
 
 ## dirbusting really really large directories wordlist
@@ -18,6 +13,9 @@ wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 
 ```bash
 wfuzz -c -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt --hc 404 http://$IP/FUZZ
 ```
+
+## recursive path discovery depth
+-R depth                  : Recursive path discovery being depth the maximum recursion level (0 default)
 
 ## fuzzing subdomains
 ```bash
