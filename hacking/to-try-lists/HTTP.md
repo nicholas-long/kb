@@ -1,5 +1,5 @@
 # HTTP
-- everything from the everything list (including web server version)
+- quick wfuzz dirbust / common.txt
 - robots.txt
 - nikto
 - busting
@@ -134,6 +134,7 @@
   - old servers -> shellshock - should find with nikto?
 - got source code -> everything from "got source code" list
 - generated file -> metadata / exiftool
+- everything from the everything list (including web server version)
 
 ## web to try list directory busting
 ~/kb/wordlists/custom.dirbusting
