@@ -13,6 +13,7 @@
   - see if the website content plainly discloses anything useful
 - LFI or dir traversal
   - auth / config files for this & other installed services
+  - ssh keys for usernames (linux and windows)
   - jhaddix
   - graceful security
   - logs or writable files to poison for LFI
@@ -20,7 +21,6 @@
   - everything from "LFI procedure"
   - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
-  - ssh keys for usernames (linux and windows)
   - sensitive files list
   - open directories as files - see if directory listing supported (rare?)
 - file upload
