@@ -22,3 +22,8 @@ The share name is TMP
 impacket-smbserver -smb2support -username user -password password123 TMP $(pwd)
 impacket-smbserver -smb2support TMP $(pwd)
 ```
+
+## dump registry and NTDS secrets from files with secretsdump
+```bash
+impacket-secretsdump -security SECURITY -system SYSTEM -ntds ntds.dit LOCAL
+```
