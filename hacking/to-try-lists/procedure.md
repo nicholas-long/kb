@@ -1,5 +1,6 @@
 # procedure
-- scan ( full port )
+- scan ( full port, service )
+  - unknown service - try `-A` flag
 - paste in to try list for every service
   - prioritize
     - dump data from anon shares before web
