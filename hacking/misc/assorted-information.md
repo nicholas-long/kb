@@ -114,3 +114,12 @@ date --date='@2147483647'
 date --date="@$(( 2 ** 31 ))"
 Tue Jan 19 03:14:08 UTC 2038
 ```
+
+# plus sign in ls output file ACL
+plus sign indicates presence of ACL for file
+seen on centos / redhat
+
+## reading ACLs
+```bash
+getfacl $FILE
+```
