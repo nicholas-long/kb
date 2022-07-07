@@ -1,5 +1,15 @@
 # wpscan
 
+## initial
+### vulnerable plugins
+### vulnerable themes
+### config backups
+### database exports
+### enumerate user id range
+```bash
+wpscan --url $URL -e vp,vt,cb,dbe,u1-10
+```
+
 ## enumerate users
 ```bash
 wpscan --url $URL -e u

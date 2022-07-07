@@ -98,7 +98,7 @@ To fix NT_STATUS_CONNECTION_DISCONNECTED errors in new Kali installations add cl
 # copy docker binary to target
 can copy `docker` binary to target, but need to copy `com.docker.cli` as well
 
-# modify date with touch
+# modify date with touch timestomping
 ## set destination file date the same as source file date
 ```bash
 touch -d "$(date -r $SRC_FILE)" $FILE
