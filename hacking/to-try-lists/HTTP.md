@@ -17,6 +17,7 @@
   - compromised CMS -> list: "compromised CMS login"
 - API and POST endpoints -> list: "API and POST endpoints"
 - found login form -> list: found login form
+  - compromised -> list: compromised login form
 - fuzz dynamic content for vulnerabilities -> list: vulnerability finding and fuzzing
 - generate cewl wordlist from site
   - use for login bruteforcing, busting directories, subdomains
@@ -40,10 +41,28 @@
   - organizations -> people and their projects / commits
   - check commit history for secrets / creds
 - cgi-bin old servers -> shellshock
-- got source code -> everything from "got source code" list
+- got source code -> list: "got source code"
 - generated file -> metadata / exiftool
 - list: everything list (including web server version)
 - list: specific HTTP server exploit possibilities
+
+## BUSTING directory busting to try list
+fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
+~/kb/wordlists/custom.dirbusting
+for each path
+- /
+  - feroxbuster medium dirs with extensions and `-e` extract links
+  - common
+  - custom.dirbusting list
+  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
+  - files
+    - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
+    - wfuzz large filename list - look at status and content length
+    - view source of files found
+  - directories
+    - feroxbuster recursive
+    - wfuzz large
+    - wfuzz dir list big
 
 ## specific HTTP server exploit possibilities
 - apache (old versions) - searchsploit plugins versions
@@ -51,7 +70,6 @@
 - tomcat
   - tomcat + apache httpd proxy route -> path traversal with `/..;/` `www.vulnerable.com/lalala/..;/manager/html` `http://www.vulnerable.com/;param=value/manager/html` (hacktricks)
 - nginx + another HTTP -> request smuggling
-
 
 ## found CMS
 - found CMS
@@ -62,6 +80,20 @@
       - bruteforce
     - drupal / silverstripe -> droopescan
   - check plugin versions for vulns exploit-db AND google
+
+## LFI or dir traversal
+- LFI or dir traversal
+  - auth / config files for this & other installed services
+  - ssh keys for usernames (linux and windows)
+  - jhaddix
+  - graceful security
+  - logs or writable files to poison for LFI
+  - check for Remote File Inclusion (rare)
+  - everything from "LFI procedure"
+  - list / enumerate running processes using proc pseudo files
+  - check user input just like injections (could be passed as filenames or to commands)
+  - sensitive files list
+  - open directories as files - see if directory listing supported (rare?)
 
 ## API and POST endpoints
 - API and POST endpoints
@@ -77,20 +109,6 @@
   - everything from "API enumeration and bug hunting workflow"
   - everything from "OWASP top 10 api bugs"
   - IDOR
-
-## LFI or dir traversal
-- LFI or dir traversal
-  - auth / config files for this & other installed services
-  - ssh keys for usernames (linux and windows)
-  - jhaddix
-  - graceful security
-  - logs or writable files to poison for LFI
-  - check for Remote File Inclusion (rare)
-  - everything from "LFI procedure"
-  - list / enumerate running processes using proc pseudo files
-  - check user input just like injections (could be passed as filenames or to commands)
-  - sensitive files list
-  - open directories as files - see if directory listing supported (rare?)
 
 ## bypassing restrictions
 - bypassing restrictions
@@ -159,24 +177,6 @@
   - JSON object prototype pollution
   - fuzz all parameters as get and post with get and post http methods
 
-## web to try list directory busting
-fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
-~/kb/wordlists/custom.dirbusting
-for each path
-- /
-  - feroxbuster medium dirs with extensions and `-e` extract links
-  - common
-  - custom.dirbusting list
-  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
-  - files
-    - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
-    - wfuzz large filename list - look at status and content length
-    - view source of files found
-  - directories
-    - feroxbuster recursive
-    - wfuzz large
-    - wfuzz dir list big
-
 ## compromised CMS login
 - service versions information -> exploit db
 - file uploads
@@ -237,7 +237,3 @@ for each path
 - xs search
 - xslt server side injection extensible stylesheet languaje transformations
 - xssi cross site script inclusion
-
-End of Web stuff
-====================================================================================================
-
