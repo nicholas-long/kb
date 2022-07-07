@@ -1,23 +1,13 @@
 # wpscan
 
 ## initial
-### vulnerable plugins
+### all plugins passive scan
 ### vulnerable themes
 ### config backups
 ### database exports
 ### enumerate user id range
 ```bash
-wpscan --url $URL -e vp,vt,cb,dbe,u1-10
-```
-
-## enumerate users
-```bash
-wpscan --url $URL -e u
-```
-
-## enumerate all plugins
-```bash
-wpscan --url $URL -e ap
+wpscan --url $URL -e ap,vt,cb,dbe,u1-10
 ```
 
 ### aggressive plugins-detection
@@ -28,4 +18,5 @@ wpscan --url $URL -e ap --plugins-detection aggressive
 ## brute force users file and password list
 ```bash
 wpscan --url $URL -U users -P /usr/share/seclists/Passwords/Leaked-Databases/rockyou-50.txt
+wpscan --url $URL -U users -P /usr/share/wordlists/rockyou.txt
 ```
