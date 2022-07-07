@@ -2,39 +2,68 @@
 - quick wfuzz dirbust / common.txt
 - robots.txt
 - nikto
-- busting
-  - copy up busting to try list, run through it for paths, add
+- busting -> copy up busting to try list to new paragraph, run through paths, add
   - even if you identify CMS and version, find exposed files
-  - view source of files found
-  - fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
-  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
   - try usernames as potential directories / files
-- manual inspection (view source)
-  - see if the website content plainly discloses anything useful
-- LFI or dir traversal
-  - auth / config files for this & other installed services
-  - ssh keys for usernames (linux and windows)
-  - jhaddix
-  - graceful security
-  - logs or writable files to poison for LFI
-  - check for Remote File Inclusion (rare)
-  - everything from "LFI procedure"
-  - list / enumerate running processes using proc pseudo files
-  - check user input just like injections (could be passed as filenames or to commands)
-  - sensitive files list
-  - open directories as files - see if directory listing supported (rare?)
+- manual inspection (view source) see if content discloses anything useful
+- LFI or dir traversal -> list: "LFI or dir traversal"
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
+- found CMS -> list: "found CMS"
+  - compromised CMS -> list: "compromised CMS login"
+- API and POST endpoints -> list: "API and POST endpoints"
+- found login form -> list: found login form
+- fuzz dynamic content for vulnerabilities -> list: vulnerability finding and fuzzing
+- generate cewl wordlist from site
+  - use for login bruteforcing, busting directories, subdomains
+- bypassing restrictions -> list: "bypassing restrictions"
+- weird HTTP response headers
+- JWT JSON web tokens
+- cookie deserialization
+- parameter pollution
+- SSRF server side request forgery
+- apache delete files -> delete .htaccess and possibly see php source
+- retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
+- what is different in HTTP vs. HTTPS?
+- 403 forbidden servers / vhosts -> target http config information & find out why
+- webdav
+  - davtest unauth
+  - davtest authenticated
+  - target file passwd.dav
+- have username list -> fuzz home directories like `/~user` `/user`
+- links with `target="_blank"` - tab nabbing client attack phishing redirect
+- mention github/source control -> go look it up, find source
+  - organizations -> people and their projects / commits
+  - check commit history for secrets / creds
+- cgi-bin old servers -> shellshock
+- got source code -> everything from "got source code" list
+- generated file -> metadata / exiftool
+- list: everything list (including web server version)
+- list: specific HTTP server exploit possibilities
+
+## specific HTTP server exploit possibilities
+- apache (old versions) - searchsploit plugins versions
+- cgi-bin + apache exactly 2.4.49 -> directory traversal
+- tomcat
+  - tomcat + apache httpd proxy route -> path traversal with `/..;/` `www.vulnerable.com/lalala/..;/manager/html` `http://www.vulnerable.com/;param=value/manager/html` (hacktricks)
+- nginx + another HTTP -> request smuggling
+
+
+## found CMS
 - found CMS
   - try all enumeration options for tools specific to web app
-    - wordpress -> wpscan initial, enumerate all plugins, bruteforce
+    - wordpress 
+      - wpscan initial
+      - enumerate all plugins ( aggressive )
+      - bruteforce
     - drupal / silverstripe -> droopescan
   - check plugin versions for vulns exploit-db AND google
-  - compromised CMS -> everything from "compromised CMS login" list
+
+## API and POST endpoints
 - API and POST endpoints
   - ~/kb/wordlists/custom.dirbusting custom wordlist includes API endpoints words
   - enumerate resources and endpoints to interact with them
@@ -47,6 +76,35 @@
   - parameter or URL REST endpoint parameter directory traversal
   - everything from "API enumeration and bug hunting workflow"
   - everything from "OWASP top 10 api bugs"
+  - IDOR
+
+## LFI or dir traversal
+- LFI or dir traversal
+  - auth / config files for this & other installed services
+  - ssh keys for usernames (linux and windows)
+  - jhaddix
+  - graceful security
+  - logs or writable files to poison for LFI
+  - check for Remote File Inclusion (rare)
+  - everything from "LFI procedure"
+  - list / enumerate running processes using proc pseudo files
+  - check user input just like injections (could be passed as filenames or to commands)
+  - sensitive files list
+  - open directories as files - see if directory listing supported (rare?)
+
+## bypassing restrictions
+- bypassing restrictions
+  - `X-Forwarded-For` header bypass
+    - bypass bad IP filter
+    - bypass scripts returning 403
+    - bypass rate limits
+  - check if validated on client side
+  - Host header pollution ( try localhost )
+  - change user agent
+  - open redirect can bypass URL validation
+  - unicode normalization (hacktricks)
+
+## found login form
 - found login form
   - default creds
   - sqli
@@ -68,6 +126,8 @@
   - session attacks
     - steal session id, maybe XSS
     - clickjacking (if no X frame options set )
+
+## vulnerability finding and fuzzing
 - fuzz all dynamic content
   - type juggling http post data
     - change content type to JSON and try different types for params
@@ -98,64 +158,24 @@
   - general POST message vulnerabilities
   - JSON object prototype pollution
   - fuzz all parameters as get and post with get and post http methods
-- generate cewl wordlist from site
-  - use for login bruteforcing, busting directories, subdomains
-- IDOR
-- bypassing restrictions
-  - `X-Forwarded-For` header bypass
-    - bypass bad IP filter
-    - bypass scripts returning 403
-    - bypass rate limits
-  - check if validated on client side
-  - Host header pollution ( try localhost )
-  - change user agent
-  - open redirect can bypass URL validation
-  - unicode normalization (hacktricks)
-- weird HTTP response headers
-- JWT JSON web tokens
-- cookie deserialization
-- parameter pollution
-- SSRF server side request forgery
-- apache delete files -> delete .htaccess and possibly see php source
-- retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
-- what is different in HTTP vs. HTTPS?
-- 403 forbidden servers / vhosts -> target http config information & find out why
-- apache (old versions) - searchsploit plugins versions
-- webdav
-  - davtest unauth
-  - davtest authenticated
-  - target file passwd.dav
-- have username list -> fuzz home directories like `/~user`
-- links with `target="_blank"` - tab nabbing client attack phishing redirect
-- mention github/source control -> go look it up, find source
-  - organizations -> people and their projects / commits
-  - check commit history for secrets / creds
-- cgi-bin
-  - chain with apache 2.4.49-specific directory traversal
-  - old servers -> shellshock - should find with nikto?
-- got source code -> everything from "got source code" list
-- generated file -> metadata / exiftool
-- everything from the everything list (including web server version)
 
 ## web to try list directory busting
+fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
 ~/kb/wordlists/custom.dirbusting
 for each path
+- /
   - feroxbuster medium dirs with extensions and `-e` extract links
-  - custom.dirbusting list
   - common
+  - custom.dirbusting list
+  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
   - files
     - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
     - wfuzz large filename list - look at status and content length
+    - view source of files found
   - directories
     - feroxbuster recursive
     - wfuzz large
     - wfuzz dir list big
-/
-
-## specific HTTP server exploit possibilities
-- tomcat
-  - tomcat + apache httpd proxy route -> path traversal with `/..;/` `www.vulnerable.com/lalala/..;/manager/html` `http://www.vulnerable.com/;param=value/manager/html` (hacktricks)
-- nginx + another HTTP -> request smuggling
 
 ## compromised CMS login
 - service versions information -> exploit db
