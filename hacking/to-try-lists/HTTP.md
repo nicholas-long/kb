@@ -6,21 +6,23 @@
   - even if you identify CMS and version, find exposed files
   - try usernames as potential directories / files
 - manual inspection (view source) see if content discloses anything useful
-- LFI or dir traversal -> list: "LFI or dir traversal"
-- file upload
-  - bypassing extension filtering
-    - php: php4, php5, php?, phps, phtml, phar
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
-- found CMS -> list: "found CMS"
-  - compromised CMS -> list: "compromised CMS login"
-- API and POST endpoints -> list: "API and POST endpoints"
 - found login form -> list: found login form
   - compromised -> list: compromised login form
+- found CMS -> list: "found CMS"
+  - compromised CMS -> list: "compromised CMS login"
+- LFI or dir traversal -> list: "LFI or dir traversal"
+  - common rabbit hole -> keep enumerating
+    - file read -> keep enumerating, find interesting configs, logs, code, creds to exfil
+    - LFI -> keep enumerating, find writable logs or files to execute
+- file upload
+  - bypassing extension filtering
+    - php: php4, php5, php?, phps, phtml, phar
+- API and POST endpoints -> list: "API and POST endpoints"
 - fuzz dynamic content for vulnerabilities -> list: vulnerability finding and fuzzing
-- generate cewl wordlist from site
-  - use for login bruteforcing, busting directories, subdomains
+- generate cewl wordlist for login bruteforcing, busting directories, subdomains
 - bypassing restrictions -> list: "bypassing restrictions"
 - weird HTTP response headers
 - JWT JSON web tokens
