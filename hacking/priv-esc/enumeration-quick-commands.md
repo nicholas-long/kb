@@ -110,3 +110,10 @@ the `gid` option specifies a group id that can read all processes.
 ```bash
 mount | grep hidepid
 ```
+
+## file transfer with cat herefiles
+```bash
+cat << EOF >> filename.sh
+# paste file contents here
+EOF
+```
