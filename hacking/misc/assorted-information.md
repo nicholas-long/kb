@@ -123,3 +123,9 @@ seen on centos / redhat
 ```bash
 getfacl $FILE
 ```
+
+### recursively
+```bash
+getfacl -R -s .
+getfacl -R -s /
+```

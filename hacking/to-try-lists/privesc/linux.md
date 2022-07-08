@@ -73,6 +73,7 @@
 - linpeas ( allowed on OSCP if no automatic exploitation )
 - meterpreter local suggester ( could use once on OSCP )
 - no access to read webroot -> try appending known filenames to path to read
+- centos / redhat -> check special file access permissions getfacl
 
 ## exploiting scripts on linux
 - injecting user commands

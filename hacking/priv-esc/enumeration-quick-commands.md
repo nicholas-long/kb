@@ -117,3 +117,9 @@ cat << EOF >> filename.sh
 # paste file contents here
 EOF
 ```
+
+# get facl recursively centos / redhat
+```bash
+getfacl -R -s .
+getfacl -R -s /
+```
