@@ -7,7 +7,7 @@ git clone https://github.com/fox-it/BloodHound.py
 cd BloodHound.py/
 docker build -t bloodhound .
 cd -
-docker run -v ${PWD}:/bloodhound-data -it bloodhound
+docker run --rm -v ${PWD}:/bloodhound-data -it bloodhound
 # run bloodhound-python command inside docker
 bloodhound-python -c All -u user -p password -dc 'FQDNMachineName.domain.local' -d 'domain.local' -ns $IP
 ```
