@@ -21,6 +21,12 @@ crackmapexec smb fqdn.domain.local -u User --kerberos
 ```
 
 # impacket kerberos commands
+
+## ticket environment variable KRB5CCNAME
+```bash
+export KRB5CCNAME=$(pwd)/Administrator.ccache
+```
+
 ## wmiexec
 ```bash
 export KRB5CCNAME=$(pwd)/Administrator.ccache
