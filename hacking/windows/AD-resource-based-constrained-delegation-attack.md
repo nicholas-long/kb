@@ -1,4 +1,4 @@
-# resource based constrained delegation attack
+# resource based constrained delegation S4U attack
 https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet#resource-based-constrained-delegation
 https://book.hacktricks.xyz/windows-hardening/active-directory-methodology/resource-based-constrained-delegation
 - transfer scripts and rubeus
