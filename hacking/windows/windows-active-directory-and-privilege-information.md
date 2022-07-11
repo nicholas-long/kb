@@ -7,7 +7,9 @@
 - change the password
 
 ### GenericAll
-- change password
+- permission over user -> change password
+- permission over computer -> resource based constrained delegation attack
+  https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet#resource-based-constrained-delegation
 
 ## NTLMv2 vs kerberos authentication on the network
 NTLMv2 authentication is still often enabled on company LAN.
