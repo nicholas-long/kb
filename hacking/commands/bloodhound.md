@@ -11,6 +11,12 @@ docker run -v ${PWD}:/bloodhound-data -it bloodhound
 # run bloodhound-python command inside docker
 bloodhound-python -c All -u user -p password -dc 'FQDNMachineName.domain.local' -d 'domain.local' -ns $IP
 ```
+paste in real target IP because the environment variable will not carry over into the docker
+
+### with NTLM hashes instead of creds
+```bash
+bloodhound-python -c All -u user --hashes abcd123abcd123abcd123abcd123abcd:abcd123abcd123abcd123abcd123abcd -dc 'FQDNMachineName.domain.local' -d 'domain.local' -ns $IP
+```
 
 ## stealthy collection method
 DCOnly
