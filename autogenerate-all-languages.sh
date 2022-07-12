@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/kb
+#cd ~/kb
 
 bash-scripting/autogenerate.sh "python scripting" "py" "python" > auto-python.md
 bash-scripting/autogenerate.sh "bash scripting" "sh" "bash" > auto-bash.md
