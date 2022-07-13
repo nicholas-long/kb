@@ -3,7 +3,7 @@
   - `LD_PRELOAD`
   - specific permissions to binaries / scripts
     - writable
-    - [exploiting linux scripts](#exploiting linux scripts)
+    - [exploiting scripts on linux](linux.md#exploiting-scripts-on-linux)
   - vulnerable versions of allowed commands
 - SUID binaries
   - gtfobins
