@@ -11,21 +11,21 @@
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
-- found login form -> list: found login form
-  - compromised -> list: compromised login form
-- found CMS -> list: "found CMS"
-  - compromised CMS -> list: "compromised CMS login"
-- LFI or dir traversal -> list: "LFI or dir traversal"
+- found login form -> [found login form](HTTP.md#found-login-form)
+  - compromised -> [compromised CMS login](HTTP.md#compromised-cms-login)
+- found CMS -> [found CMS](HTTP.md#found-cms)
+  - compromised CMS -> [compromised CMS login](HTTP.md#compromised-cms-login)
+- LFI or dir traversal -> [LFI or dir traversal](HTTP.md#lfi-or-dir-traversal)
   - common rabbit hole -> keep enumerating
     - file read -> keep enumerating, find interesting configs, logs, code, creds to exfil
     - LFI -> keep enumerating, find writable logs or files to execute
 - file upload
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
-- API and POST endpoints -> list: "API and POST endpoints"
-- fuzz dynamic content for vulnerabilities -> list: vulnerability finding and fuzzing
+- API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
+- fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
 - generate cewl wordlist for login bruteforcing, busting directories, subdomains
-- bypassing restrictions -> list: "bypassing restrictions"
+- bypassing restrictions -> [bypassing restrictions](HTTP.md#bypassing-restrictions)
 - weird HTTP response headers
 - JWT JSON web tokens
 - cookie deserialization
@@ -45,10 +45,10 @@
   - organizations -> people and their projects / commits
   - check commit history for secrets / creds
 - cgi-bin old servers -> shellshock
-- got source code -> list: "got source code" [link](got-source-code.md#got-source-code---analysis)
+- got source code -> [got source code - analysis](got-source-code.md#got-source-code---analysis)
 - generated file -> metadata / exiftool
-- list: everything list (including web server version)
-- list: specific HTTP server exploit possibilities
+- everything list (including web server version) [EVERYTHING](EVERYTHING.md#everything)
+- [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
 
 ## BUSTING directory busting to try list
 fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
