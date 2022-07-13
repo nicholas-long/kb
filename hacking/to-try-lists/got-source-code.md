@@ -35,6 +35,8 @@
   - golang
     - user input to controllers -> `http.Request`
     - shell exec -> `exec.Command`
+    - os.Open - read files
+    - `filepath.Clean` with no leading / -> no filtering of `../`
   - C
     - buffer lengths
     - pointers
