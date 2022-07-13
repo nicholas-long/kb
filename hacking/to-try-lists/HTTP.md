@@ -45,7 +45,7 @@
   - organizations -> people and their projects / commits
   - check commit history for secrets / creds
 - cgi-bin old servers -> shellshock
-- got source code -> list: "got source code"
+- got source code -> list: "got source code" [got source code - analysis](hacking/to-try-lists/got-source-code.md#got-source-code---analysis)
 - generated file -> metadata / exiftool
 - list: everything list (including web server version)
 - list: specific HTTP server exploit possibilities
