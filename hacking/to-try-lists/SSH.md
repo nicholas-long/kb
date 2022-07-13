@@ -5,6 +5,7 @@
   - crackmapexec
 - restricted shell -> attempt to execute command on ssh login with argument
 - password spraying
+- default credentials
 - last resorts
   - in absence of website and cewl list, make wordlist with keywords
     - hostname
