@@ -10,7 +10,7 @@
   - vulnerable versions
 - /opt
 - custom interesting binaries or scripts running as other users or root
-  - everything from "got source code" list
+  - everything from [got source code - analysis](../got-source-code.md#got-source-code---analysis)
   - dependent binaries
 - getcap capabilities
 - enumerate all readable files
@@ -88,7 +88,7 @@
     - formatting issues in config files like regular expressions
 - wildcards turning into command parameters
 - exec
-- python scripts: everything from to try list for "got source code"
+- python scripts: everything from [got source code - analysis](../got-source-code.md#got-source-code---analysis)
 - dependent libraries of scripts (ex: tar, zip -> overwrite files / zip slip)
 
 ## headline exploits

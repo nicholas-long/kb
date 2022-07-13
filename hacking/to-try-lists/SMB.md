@@ -1,5 +1,4 @@
 # SMB
-- everything from the everything list
 - guest access to shares
   - null auth
   - guest access with only username required
@@ -35,6 +34,9 @@
 - relay?
 - catch NTLM hashes from windows clients that automatically authenticate
 - include AD list if machine is connected to AD
+- everything from everything list [EVERYTHING](EVERYTHING.md#everything)
+- old -> [old SMB exploits](SMB.md#old-smb-exploits)
+
 ## old SMB exploits
 - Samba smbd CVE-2010-0926 before 3.3.11, 3.4.x before 3.4.6, and 3.5.x before 3.5.0rc3 default config -> symlink dir traversal
 - Samba smbd CVE-2017-7494 versions 3.5.0 to 4.4.14, 4.5.10, and 4.6.4 - is_known_pipename

@@ -93,7 +93,7 @@ for each path
   - graceful security
   - logs or writable files to poison for LFI
   - check for Remote File Inclusion (rare)
-  - everything from "LFI procedure"
+  - everything from "LFI procedure" [LFI or directory traversal procedures](../methodology/LFI-procedure.md#lfi-or-directory-traversal-procedures)
   - list / enumerate running processes using proc pseudo files
   - check user input just like injections (could be passed as filenames or to commands)
   - sensitive files list
@@ -110,8 +110,9 @@ for each path
     - including extra parameters
     - type juggling
   - parameter or URL REST endpoint parameter directory traversal
-  - everything from "API enumeration and bug hunting workflow"
-  - everything from "OWASP top 10 api bugs"
+  - graphql -> [GraphQL APIs](../methodology/API-enumeration.md#graphql-apis)
+  - everything from [bug hunting workflow](../methodology/API-enumeration.md#bug-hunting-workflow)
+  - everything from [OWASP top 10 api bugs](../methodology/owasp-top-10-api-bugs.md#owasp-top-10-api-bugs)
   - IDOR
 
 ## bypassing restrictions
@@ -167,7 +168,7 @@ for each path
   - injection #injection
     - SQLi
       - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
-      - dump data and try everything from "got access to database" list
+      - dump data and try everything from list [got access to databases - general SQL](got-access-to-databases-general-SQL.md#got-access-to-databases---general-sql)
       - ordering column parameter and order by injection -> nested query `limit (select ...)`
     - SSTI
     - LDAP injection
