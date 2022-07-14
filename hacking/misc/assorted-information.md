@@ -130,7 +130,7 @@ getfacl -R -s .
 getfacl -R -s /
 ```
 
-# fixing go module errors
+# fixing golang module errors
 
 ## cannot install module
 ## go get fails
