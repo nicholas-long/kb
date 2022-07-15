@@ -160,3 +160,8 @@ https://github.com/djhohnstein/SharpChromium
 transfer folder ` C:\Users\username\AppData\Roaming\Mozilla\Firefox\Profiles `
 crack with john
 decrypt with https://github.com/unode/firefox_decrypt
+
+# convert DLL to shellcode with sRDI
+https://github.com/monoxgas/sRDI
+sRDI allows for the conversion of DLL files to position independent shellcode.
+It attempts to be a fully functional PE loader supporting proper section permissions
