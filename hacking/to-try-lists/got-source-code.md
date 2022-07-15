@@ -15,6 +15,8 @@
     - common antipatterns:
       - including code based on user imput
       - SQLi
+        - mysqli_multi_query -> stacked ; queries
+          - update
     - code execution
     - eval
     - assert
