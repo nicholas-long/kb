@@ -165,3 +165,7 @@ decrypt with https://github.com/unode/firefox_decrypt
 https://github.com/monoxgas/sRDI
 sRDI allows for the conversion of DLL files to position independent shellcode.
 It attempts to be a fully functional PE loader supporting proper section permissions
+
+# windows fully interactive pty with ConPtyShell
+https://github.com/antonioCoco/ConPtyShell
+requires obfuscation of comments and function name to bypass defender signatures

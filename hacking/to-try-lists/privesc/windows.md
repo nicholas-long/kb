@@ -43,6 +43,9 @@
   - restart services by restarting machine
 - vulnerable printer drivers
   - users can install vulnerable drivers by adding a printer type
+- active user session ->
+  - clipboard
+  - screenshot / meterpreter screenshare
 - migrate to interactive process
 - systeminfo
 - check hotfixes
