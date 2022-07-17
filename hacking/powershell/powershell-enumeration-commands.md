@@ -44,3 +44,8 @@ gci -recurse . | select fullname
 ```powershell
 Get-Process
 ```
+
+## what commands are available
+```powershell
+Get-Command
+```

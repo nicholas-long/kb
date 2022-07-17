@@ -1,4 +1,4 @@
-# dos
+# dos commands
 
 ## see running service processes
 tasklist /SVC
@@ -24,7 +24,7 @@ ac.exe /accepteula -uwcqv "Authenticated Users" *
 ## services sc
 
 ### enable service
-### set to auto start
+set to auto start
 sc config SVC_NAME start= auto
 
 ### set binary path
@@ -35,3 +35,13 @@ net start SVC_NAME
 
 ## kill process by id
 taskkill /f /pid 1234
+
+## admin / system
+### dump registry secretsdump hashes
+reg save HKLM\sam sam
+reg save HKLM\system system
+
+## net
+
+### add user to domain group
+net group GroupName UserName /domain /add
