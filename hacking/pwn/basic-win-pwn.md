@@ -7,6 +7,11 @@ nasm > jmp esp
 00000000  FFE4              jmp esp
 ```
 
+### find with ROPgadget
+```bash
+ROPgadget --binary VulnApp1.exe | grep 'jmp esp'
+```
+
 ## python exploit scripts
 
 ### import pwntools
