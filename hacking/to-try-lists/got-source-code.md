@@ -3,6 +3,7 @@
 - paths and filenames
 - grep vulnerable functions
 - security antipatterns
+- third party lib exploits -> test code locally / vm / container
 - targets
   - code execution
   - file access
@@ -33,6 +34,7 @@
     - mass assignment
   - javascript
     - JSON object prototype pollution
+      - `__proto__` and `__proto__.__proto__`
     - fuzzy equal
   - golang
     - user input to controllers -> `http.Request`
