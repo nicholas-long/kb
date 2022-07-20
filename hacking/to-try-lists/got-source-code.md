@@ -3,7 +3,8 @@
 - paths and filenames
 - grep vulnerable functions
 - security antipatterns
-- third party lib exploits -> test code locally / vm / container
+- test code locally / vm / container
+  - custom code and vulnerable third party lib exploits
 - targets
   - code execution
   - file access
@@ -34,6 +35,7 @@
     - mass assignment
   - javascript
     - JSON object prototype pollution
+      - recommend local testing - potentially destructive to server - revert
       - `__proto__` and `__proto__.__proto__`
     - fuzzy equal
   - golang
