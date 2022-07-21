@@ -89,6 +89,25 @@ echo "$1" | ~/kb/awk-scripting/space-invader.awk | while read line; do
 done | grep '^[A-Za-z0-9]*$'
 ```
 
+## query nmap ports and service description definitions
+~/kb/awk-scripting/nmap-ports.sh
+```bash
+#!/bin/bash
+# query nmap ports and service description definitions
+
+awk '
+BEGIN { OFS = "\t" }
+/^#/ { next }
+$1 == "unknown" { next }
+{
+  split($2,arr,"/")
+  port=arr[1]
+  proto=arr[2]
+  print port, proto, $1
+}
+' /usr/share/nmap/nmap-services
+```
+
 ## print the md5 hashes of all lines in a wordlist file
 ~/kb/hacking/scripts/print-all-md5s.sh
 ```bash
