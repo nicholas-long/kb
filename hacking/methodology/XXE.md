@@ -1,4 +1,4 @@
-# XXE
+# XXE xml external entity
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md
 https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
 
