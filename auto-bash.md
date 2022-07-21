@@ -203,18 +203,6 @@ function passwordlists {
 ( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
-## get words from file
-~/kb/bash-scripting/get-words.sh
-```bash
-#!/bin/bash
-# get words from file
-while read line; do
-  for word in $line; do
-    echo $word
-  done
-done
-```
-
 ## run strings on memory dumps for every readable process
 ~/kb/hacking/priv-esc/strings-all-memory.sh
 ```bash
