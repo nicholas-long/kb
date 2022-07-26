@@ -23,6 +23,8 @@ graphql/console
 api
 swagger
 __swagger__
+api/swagger
+swagger.v1.json
 openapi
 openapi.json
 docs/openapi.json
