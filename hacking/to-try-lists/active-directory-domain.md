@@ -33,6 +33,15 @@
     - get NTLMv2 hash to crack
     - run sharphound on target
     - kerberoast from target ( mimikatz? )
+- derivitive local admins on workstations / servers
+- enumerate sessions with powerview
+- enumerate tickets
+  - klist
+  - other users tickets as admin with mimikatz
+- got NTLM hash
+  - pass the hash
+  - NTLM -> run process as user with mimikatz `sekurlsa::pth`
+    - `net use \\dchostname`, then get cached kerberos tickets
 - CYCLE - reuse credentials, access services, abuse access, get more credentials
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
