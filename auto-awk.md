@@ -138,6 +138,26 @@ NR == lastpart + 2 && $0 ~ /-$/ {
 }
 ```
 
+## constrict line widths of input text stream
+~/kb/awk-scripting/line-lengths.awk
+```awk
+#!/usr/bin/awk -f
+# constrict line widths of input text stream
+BEGIN {
+  linemax = 50
+}
+{
+  output = output $0
+  while (length(output) > linemax) {
+    print substr(output,1,linemax)
+    output = substr(output,linemax+1)
+  }
+}
+END {
+  print output
+}
+```
+
 ## print all variations of upper and lower case for given lowercase string
 ~/kb/awk-scripting/toggle-case-combinatoric.awk
 ```awk
