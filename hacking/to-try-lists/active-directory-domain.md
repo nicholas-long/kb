@@ -40,7 +40,7 @@
   - other users tickets as admin with mimikatz
 - got NTLM hash
   - pass the hash
-  - NTLM -> run process as user with mimikatz `sekurlsa::pth`
+  - NTLM -> run process as user with mimikatz `sekurlsa::pth` "over pass the hash"
     - `net use \\dchostname`, then get cached kerberos tickets
 - CYCLE - reuse credentials, access services, abuse access, get more credentials
 - target users who might have simple passwords ( bloodhound data, ldap? )
@@ -51,7 +51,9 @@
     - 2021 - nopac attack `sam the admin` on github, then psexec
     - 2020 - zerologon
   - ticket attacks
+    - silver ticket to domain admin CVE-2014-6324
   - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
+- have local admin and office installed on machines -> DCOM lateral movement - excel remote macro
 - endgame dump hashes
   - impacket secretsdump
   - mimikatz on machine or kiwi module in msf
