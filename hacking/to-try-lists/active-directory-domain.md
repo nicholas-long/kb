@@ -53,7 +53,7 @@
   - ticket attacks
     - silver ticket to domain admin CVE-2014-6324
   - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
-- have local admin and office installed on machines -> DCOM lateral movement - excel remote macro
+- have local admin and office installed and remote ports 135,445 -> DCOM lateral movement excel remote macro
 - endgame dump hashes
   - impacket secretsdump
   - mimikatz on machine or kiwi module in msf
