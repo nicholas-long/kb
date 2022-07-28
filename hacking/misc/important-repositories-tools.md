@@ -169,3 +169,12 @@ It attempts to be a fully functional PE loader supporting proper section permiss
 # windows fully interactive pty with ConPtyShell
 https://github.com/antonioCoco/ConPtyShell
 requires obfuscation of comments and function name to bypass defender signatures
+
+# portable TCP port scanner
+## bash only
+### spookyscan
+https://github.com/Sq00ky/Bash-Port-Scanner
+- scan ports 1-1000
+```bash
+./spookyscan.sh -i $IP -p 1000
+```
