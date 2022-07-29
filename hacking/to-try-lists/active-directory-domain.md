@@ -50,6 +50,7 @@
   - headline exploits
     - 2021 - nopac attack `sam the admin` on github, then psexec
     - 2020 - zerologon
+    - 2022 relay DC attack CVE-2022-26925 variation of petitpotam
   - ticket attacks
     - silver ticket to domain admin CVE-2014-6324
   - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
