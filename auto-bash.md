@@ -203,6 +203,15 @@ function passwordlists {
 ( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
+## convert string to hex with no newlines
+~/kb/bash-scripting/string-to-hex.sh
+```bash
+#!/bin/bash
+
+# convert string to hex with no newlines
+xxd -p -c 9999999999999
+```
+
 ## run strings on memory dumps for every readable process
 ~/kb/hacking/priv-esc/strings-all-memory.sh
 ```bash
