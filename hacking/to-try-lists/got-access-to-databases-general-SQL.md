@@ -6,9 +6,10 @@
   - write config backups with web shells embedded in data
   - edit user hashes authenticate for auth RCE
   - mysql -> UDF
+    - mysql GRANT OPTION -> grant file permissions
 - read files
-- check if DBA
-  - enable access to files / commands
+- check if DBA -> enable access to files / commands
+- target DBA or privileged user for file write or RCE
 - see what other databases are accessable
 - CMS database looking for foothold -> possible extra enumeration
   - installed plugins
