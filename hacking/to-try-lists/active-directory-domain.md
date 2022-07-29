@@ -34,7 +34,7 @@
     - run sharphound on target
     - kerberoast from target ( mimikatz? )
   - list and impersonate tokens on compromised hosts ( meterpreter incognito )
-    - reuse sessions `New-PSSession -Computer ComputerHostname` to other hosts / DC
+    - reuse sessions with `New-PSSession` and `Invoke-Command` to other hosts / DC
 - derivitive local admins on workstations / servers
 - enumerate sessions with powerview
 - enumerate tickets
