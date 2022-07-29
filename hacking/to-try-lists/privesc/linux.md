@@ -12,8 +12,10 @@
 - custom interesting binaries or scripts running as other users or root
   - everything from [got source code - analysis](../got-source-code.md#got-source-code---analysis)
   - dependent binaries
+- linpeas ( allowed on OSCP if no automatic exploitation )
 - getcap capabilities
 - enumerate all readable files
+- check mounts in /etc/fstab
 - sensitive config files
   - htpasswd
   - database configs
@@ -49,7 +51,7 @@
 - local ports
 - git or other repositories - check history
 - enumerate all writable files and directories
-- restricted shell
+- restricted shell?
   - attempt to execute command on ssh login with argument
   - restricted bash breakouts
   - python script shell breakouts
@@ -58,7 +60,7 @@
   - directories `systemctl show-environment`
 - headline exploits from privesc to try list
 - linux exploit suggester or `les2.pl`
-- linenum ( is it allowed on OSCP? )
+- linenum
 - search files by modification date with `find` to see what creators added
 - directory permissions that let you move files you can't access
 - processes with readable memory
@@ -70,7 +72,6 @@
   - vulnerable services running as root
 - java web -> find website code packaged into war file
   - secrets, config, hardcoded creds
-- linpeas ( allowed on OSCP if no automatic exploitation )
 - meterpreter local suggester ( could use once on OSCP )
 - no access to read webroot -> try appending known filenames to path to read
 - centos / redhat -> check special file access permissions getfacl
