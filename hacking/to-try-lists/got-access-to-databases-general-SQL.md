@@ -5,6 +5,7 @@
   - code execution built into database or with modules
   - write config backups with web shells embedded in data
   - edit user hashes authenticate for auth RCE
+  - mysql -> UDF
 - read files
 - check if DBA
   - enable access to files / commands
