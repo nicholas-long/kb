@@ -14,6 +14,15 @@ curl http://archive.ubuntu.com/ubuntu/dists/ 2>/dev/null | \
   awk 'BEGIN { FS="\t"} { print $2}'
 ```
 
+## get library dependency versions from composer.lock json file
+~/kb/hacking/tricks/get-versions-from-composer-lock-json.sh
+```bash
+#!/bin/bash
+
+# get library dependency versions from composer.lock json file
+cat composer.lock | jq -r '.packages[] | .name,.version' | paste - -
+```
+
 ## get random hex unique ID bash
 ~/kb/bash-scripting/get-random-unique-id.sh
 ```bash
