@@ -24,6 +24,7 @@
     - php: php4, php5, php?, phps, phtml, phar
 - API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
 - fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
+  - SSTI polyglot payload
 - generate cewl wordlist for login bruteforcing, busting directories, subdomains
 - bypassing restrictions -> [bypassing restrictions](HTTP.md#bypassing-restrictions)
 - weird HTTP response headers
@@ -166,11 +167,11 @@ for each path
     - payload tests
   - generated content like reports, emails, or logs
   - injection #injection
+    - SSTI polyglot payload
     - SQLi
       - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
       - dump data and try everything from list [got access to databases - general SQL](got-access-to-databases-general-SQL.md#got-access-to-databases---general-sql)
       - ordering column parameter and order by injection -> nested query `limit (select ...)`
-    - SSTI
     - LDAP injection
     - NoSQL injection
     - XML
