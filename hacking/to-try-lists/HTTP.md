@@ -25,6 +25,7 @@
 - API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
 - fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
   - SSTI polyglot payload
+  - seclists fuzzing special chars
 - generate cewl wordlist for login bruteforcing, busting directories, subdomains
 - bypassing restrictions -> [bypassing restrictions](HTTP.md#bypassing-restrictions)
 - weird HTTP response headers
