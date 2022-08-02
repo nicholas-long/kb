@@ -75,3 +75,6 @@ network storage provides ISO to boot
 
 # httponly cookie option
 httponly keeps javascript from accessing / stealing the cookie
+
+# diffie-hellman key exchange
+allows client and server to derive the same key.
