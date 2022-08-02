@@ -64,7 +64,7 @@ argentina, austria, belgium, canada, china, denmark, france, germany, hungary, i
 italy, luxembourg, netherlands, newzealand, norway, poland, serbia, slovenia, spain, sweden
 Other: Facebook - uses the Facebook top 10,000 names - don't run this with all formats
 
-## bopscrk custom wordlists specific to people
+## bopscrk people OSINT custom wordlists specific to person
 https://github.com/r3nt0n/bopscrk
 ```bash
 pip install bopscrk
