@@ -1,6 +1,7 @@
 # procedure
 - scan ( full port, service )
   - unknown service - try `-A` flag
+- keep list of clues / hints as a wordlist
 - paste in to try list for every service
   - prioritize
     - dump data from anon shares before web
