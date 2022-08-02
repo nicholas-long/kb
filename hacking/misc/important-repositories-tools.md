@@ -39,20 +39,23 @@ https://github.com/klezVirus/chameleon
 # HTML preview report input list of HTTP(s) sites attack surface with aquatone
 https://github.com/michenriksen/aquatone
 
-# generate automatic username wordlist from country and localization
-# generate username wordlist from list of names in text file with username anarchy
-https://github.com/urbanadventurer/username-anarchy
-list formats with `-l`.
-
-## simple
+# generate wordlists
+## namemash - simple
 github gist superkojiman/namemash.py
 https://gist.github.com/superkojiman/11076951
 
-## output all formats by omitting format parameter
+## username anarchy, generate from lists of names, from country and locale
+https://github.com/urbanadventurer/username-anarchy
+list formats with `-l`.
+
+### output all formats
+by omitting format parameter
 ```bash
 ./username-anarchy -i test-names.txt
 ```
-## generate common usernames for country or top 10k names from facebook
+
+#### top 10k names from facebook
+#### generate common usernames for country and localization 
 ```bash
 ./username-anarchy -a -c us
 ```
@@ -60,6 +63,15 @@ COUNTRY can be one of the following datasets: switzerland, uk, us,
 argentina, austria, belgium, canada, china, denmark, france, germany, hungary, india, ireland,
 italy, luxembourg, netherlands, newzealand, norway, poland, serbia, slovenia, spain, sweden
 Other: Facebook - uses the Facebook top 10,000 names - don't run this with all formats
+
+## bopscrk custom wordlists specific to people
+https://github.com/r3nt0n/bopscrk
+```bash
+pip install bopscrk
+# run in interactive mode
+bopscrk -i
+```
+
 
 # zip slip evilarc.py
 https://github.com/ptoomey3/evilarc
