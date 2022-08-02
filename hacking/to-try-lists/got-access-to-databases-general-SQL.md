@@ -7,6 +7,7 @@
   - edit user hashes authenticate for auth RCE
   - mysql -> UDF
     - mysql GRANT OPTION -> grant file permissions
+  - Postgres 9.3+ auth RCE -> msf `multi/postgres/postgres_copy_from_program_cmd_exec`
 - read files
 - check if DBA -> enable access to files / commands
 - target DBA or privileged user for file write or RCE
