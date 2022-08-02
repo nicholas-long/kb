@@ -221,6 +221,16 @@ function passwordlists {
 xxd -p -c 9999999999999
 ```
 
+## shortcut to start tmux session in a working directory with alacritty
+~/kb/linux/alacritty-run-tmux.sh
+```bash
+#!/bin/bash
+
+# shortcut to start tmux session in a working directory with alacritty
+
+cd ~/kb && /home/coyote/.cargo/bin/alacritty -e tmux
+```
+
 ## run strings on memory dumps for every readable process
 ~/kb/hacking/priv-esc/strings-all-memory.sh
 ```bash
