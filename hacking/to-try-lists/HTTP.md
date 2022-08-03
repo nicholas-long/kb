@@ -90,6 +90,7 @@ for each path
 ## LFI or dir traversal
 - LFI or dir traversal
   - auth / config files for this & other installed services
+  - php + LFI + filters -> iconv attack RCE with python script https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters
   - ssh keys for usernames (linux and windows)
   - /usr/share/seclists/Discovery/Web-Content/LinuxFileList.txt
   - /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt
