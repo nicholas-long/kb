@@ -15,6 +15,9 @@
 - linpeas ( allowed on OSCP if no automatic exploitation )
 - getcap capabilities
 - enumerate all readable files
+- writable files
+  - user
+  - group
 - check mounts in /etc/fstab
 - sensitive config files
   - htpasswd
