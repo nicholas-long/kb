@@ -190,3 +190,6 @@ https://github.com/Sq00ky/Bash-Port-Scanner
 ```bash
 ./spookyscan.sh -i $IP -p 1000
 ```
+
+# connect to minecraft server and send chat messages
+https://github.com/TechSupportJosh/example-mc-chat
