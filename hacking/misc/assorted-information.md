@@ -159,7 +159,8 @@ it is not possible to disable key exchange in TLS1.3
 ```bash
 git clone https://github.com/joe-akeem/minecraft-plugin-template
 cd minecraft-plugin-template
-# edit code
+# edit code, add command exec to file
+# /src/main/java/de/joeakeem/spigotmc/plugin/template/commands/EnrichCommand.java
 # build
 mvn package
 # build output jar is in target/
