@@ -154,3 +154,13 @@ node-modules/        created at runtime
 should see diffie-hellman key exchange.
 if it is not present, that means key exchange is not in use and it can be decrypted with the server's private key.
 it is not possible to disable key exchange in TLS1.3
+
+# build java minecraft plugin with maven
+```bash
+git clone https://github.com/joe-akeem/minecraft-plugin-template
+cd minecraft-plugin-template
+# edit code
+# build
+mvn package
+# build output jar is in target/
+```
