@@ -39,3 +39,4 @@ webdav
 passwd.dav
 index.js
 Dockerfile
+knockd.conf
