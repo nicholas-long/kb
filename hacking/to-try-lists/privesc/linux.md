@@ -86,6 +86,7 @@
 - filesystem access
   - read and write sensitive files
   - surprise symlinks
+    - read root rsa key for root file read -> code exec
 - file write
   - newline injection
   - with garbage to remove
