@@ -79,6 +79,7 @@
 - meterpreter local suggester ( could use once on OSCP )
 - no access to read webroot -> try appending known filenames to path to read
 - centos / redhat -> check special file access permissions getfacl
+- read / write files as root -> [got read or write access to filesystem](hacking/to-try-lists/got-read-or-write-access-to-filesystem.md#got-read-or-write-access-to-filesystem)
 
 ## exploiting scripts on linux
 - injecting user commands

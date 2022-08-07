@@ -3,6 +3,7 @@
   - enum users
   - general targets
     - home dirs
+    - ssh keys
     - source code
     - configuration locations
     - log files - usernames, passwords in username field, paths
@@ -10,7 +11,6 @@
     - etc
       - config for other services
       - users
-      - port knocking config `knockd.conf` (not in wordlists)
   - windows targets
     - registry backups
     - xampp
