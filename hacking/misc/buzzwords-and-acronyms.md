@@ -78,3 +78,10 @@ httponly keeps javascript from accessing / stealing the cookie
 
 # diffie-hellman key exchange
 allows client and server to derive the same key.
+
+# Apache guacamole RDP VNC SSH in web browser
+https://guacamole.apache.org/
+- client - html5 web app
+- server - connects to remote sessions
+## default creds
+guacadmin:guacadmin
