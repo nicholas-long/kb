@@ -22,6 +22,9 @@
   - credentials manager ( cmdkey )
   - appdata
     - browser data - dump with tools like SharpChromium
+    - sticky notes
+    - sqlite3 databases
+    - specific applications - investigate each
 - running processes
   - dump memory with procdump from sysinternals
 - headline exploits from privesc to try list
