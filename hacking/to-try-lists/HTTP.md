@@ -7,6 +7,9 @@
 - busting -> copy up busting to try list to new paragraph, run through paths, add
   - even if you identify CMS and version, find exposed files
   - try usernames as potential directories / files
+  - don't ignore status codes
+    - don't ignore 302 or you miss redirect pages with content
+    - don't ignore 403 except dotfiles
 - manual inspection (view source) see if content discloses anything useful
 - vhost enumeration
   - hostnames from nmap output
