@@ -9,6 +9,9 @@
 - enum users and groups
 - service account with low privileges -> recover default privileges
 - horizontal escalation - service users may have privileges
+- website
+  - check code, creds, config, secrets
+  - writable webroot -> webshell, web server user
 - common general enumeration stuff
   - enumerate installed applications and configs 
     - hunt for creds ( appdata, lazagne )
