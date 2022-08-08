@@ -5,6 +5,8 @@
 - paste in to try list for every service
   - prioritize
     - dump data from anon shares before web
+- try name of service, software, company / site name, computer name, usernames as passwords
+- cewl wordlist
 - scan with `--vuln`
 - scan UDP ( slow, few ports as possible )
 - scan services with scripts
