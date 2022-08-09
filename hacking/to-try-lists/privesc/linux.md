@@ -1,10 +1,11 @@
 # linux privilege escalation
 - `sudo -l`
-  - `LD_PRELOAD`
   - specific permissions to binaries / scripts
     - writable
     - [exploiting scripts on linux](linux.md#exploiting-scripts-on-linux)
   - vulnerable versions of allowed commands
+  - `LD_PRELOAD`
+  - broken -> SSH / valid TTY and retry
 - SUID binaries
   - gtfobins
   - vulnerable versions
