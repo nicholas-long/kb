@@ -88,6 +88,15 @@ for p in ${places[@]}; do
 done
 ```
 
+## find all the git repositories in a directory and remove .git from the name
+~/kb/bash-scripting/enum-git-repos-in-directory.sh
+```bash
+#!/bin/bash
+
+# find all the git repositories in a directory and remove .git from the name
+find "$1" -name .git -type d | awk 'BEGIN {FS = OFS = "/" } { NF--;print }'
+```
+
 ## find alphanumeric base64 using awk script
 ~/kb/bash-scripting/find-alphanum-base64.sh
 ```bash
