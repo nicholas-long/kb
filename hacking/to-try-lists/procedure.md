@@ -6,6 +6,7 @@
   - prioritize
     - dump data from anon shares before web
 - try name of service, software, company / site name, computer name, usernames as passwords or usernames
+- what is different between similar web servers or HTTP vs. HTTPS
 - cewl wordlist
 - scan with `--vuln`
 - scan UDP ( slow, few ports as possible )

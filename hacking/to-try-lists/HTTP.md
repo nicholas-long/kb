@@ -38,7 +38,6 @@
 - SSRF server side request forgery
 - apache delete files -> delete .htaccess and possibly see php source
 - retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
-- what is different in HTTP vs. HTTPS?
 - 403 forbidden servers / vhosts -> target http config information & find out why
 - webdav
   - davtest unauth
@@ -55,6 +54,20 @@
 - web app with secrets / 2fa -> test default secrets
 - everything list (including web server version) [EVERYTHING](EVERYTHING.md#everything)
 - [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
+- injection tests
+  - SSTI polyglot payload
+  - SQLi
+    - [got access to databases - general SQL](got-access-to-databases-general-SQL.md#got-access-to-databases---general-sql)
+    - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
+    - dump data 
+    - ordering column parameter and order by injection -> nested query `limit (select ...)`
+  - XML
+    - XXE xml external entity
+    - XPath injection
+  - NoSQL injection
+  - LDAP injection
+  - XSS - dalfox
+  - log4j log4shell injection - test every field, parameter, and http header with jndi payload (especially Java stack)
 
 ## BUSTING directory busting to try list
 fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
@@ -173,19 +186,6 @@ for each path
     - fuzz special chars
     - payload tests
   - generated content like reports, emails, or logs
-  - injection #injection
-    - SSTI polyglot payload
-    - SQLi
-      - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
-      - dump data and try everything from list [got access to databases - general SQL](got-access-to-databases-general-SQL.md#got-access-to-databases---general-sql)
-      - ordering column parameter and order by injection -> nested query `limit (select ...)`
-    - LDAP injection
-    - NoSQL injection
-    - XML
-      - XXE xml external entity
-      - XPath injection
-    - XSS - dalfox
-    - log4j log4shell injection - test every field, parameter, and http header with payload (especially Java stack)
   - general POST message vulnerabilities
   - JSON object prototype pollution
   - fuzz all parameters as get and post with get and post http methods
