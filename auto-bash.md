@@ -88,12 +88,14 @@ for p in ${places[@]}; do
 done
 ```
 
-## find all the git repositories in a directory and remove .git from the name
+## find all git repositories in a directory
+## remove git from directory name
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh
 ```bash
 #!/bin/bash
 
-# find all the git repositories in a directory and remove .git from the name
+# find all git repositories in a directory
+# remove git from directory name
 find "$1" -name .git -type d | awk 'BEGIN {FS = OFS = "/" } { NF--;print }'
 ```
 
