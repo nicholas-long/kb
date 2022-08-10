@@ -1,6 +1,7 @@
 # overview
 - ports
   - summary
+- paths and files
 
 # Machine Info
 ## IP
