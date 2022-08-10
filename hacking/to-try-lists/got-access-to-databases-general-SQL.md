@@ -1,5 +1,6 @@
 # got access to databases - general SQL
 - dump creds / hashes
+- dump hashes of database users `mysql.users`
 - command execution
   - write web shell directly into outfile - may return SQL error but still write file
   - code execution built into database or with modules
