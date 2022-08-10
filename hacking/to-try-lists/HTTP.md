@@ -52,7 +52,7 @@
 - cgi-bin old servers -> shellshock
 - got source code -> [got source code - analysis](got-source-code.md#got-source-code---analysis)
 - generated file -> metadata / exiftool
-- web app with secrets -> test default secrets
+- web app with secrets / 2fa -> test default secrets
 - everything list (including web server version) [EVERYTHING](EVERYTHING.md#everything)
 - [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
 
