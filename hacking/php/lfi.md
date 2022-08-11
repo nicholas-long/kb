@@ -1,6 +1,7 @@
 # php LFI
 
 ## include PHP filter URL
+`php://filter` case insensitive
 
 ### base 64 encode
 ```
