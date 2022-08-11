@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 # combine lines from two files combinatorically with symbol between
 BEGIN {
-  if (!symbol) symbol = " "
+  if (!symbol) symbol = "\t"
 }
 ARGIND == 1 {
   lines[$0] = 1
