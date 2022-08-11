@@ -1,0 +1,14 @@
+# Stuck to try list
+- update notes -> relax
+  - summarize machine into page: files, services, summary details
+  - update steps to keep track of things you did
+  - reprioritize / cleanup to try list
+- eat
+- try to find obscure article / writeup / bug report / bounty mentioning combination of services / vendors
+- check relevant chapters in book / hacktricks
+- check payloadsallthethings for payload chain ideas
+- things that suspiciously don't work -> can be a finding
+- search on sites for related keywords to get ideas
+  - ippsec.rocks
+  - github issues
+  - fuzzing around with google search criteria
