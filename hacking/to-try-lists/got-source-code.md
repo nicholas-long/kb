@@ -21,7 +21,7 @@
           - update
     - code execution
     - eval
-    - assert
+    - assert - php code injection
     - regular expressions that execute code
     - fuzzy equal
       - type juggling http post data (JSON, XML, url encoded)
