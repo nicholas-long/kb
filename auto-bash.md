@@ -459,3 +459,12 @@ sudo apt update
 sudo apt install code # or code-insiders
 ```
 
+## sort words by length
+~/kb/bash-scripting/sort-words-by-length.sh
+```bash
+#!/bin/bash
+
+# sort words by length
+awk '{print length(), $0}' filters.lst | sort -n | awk '{print $2}'
+```
+
