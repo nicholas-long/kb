@@ -6,6 +6,13 @@
 - permissions
   - applications that run as SYSTEM
   - write permissions
+- list services
+  - unquoted service paths
+  - writable executable
+  - modify service
+  - restart services by restarting machine
+  - registry modification permissions
+- systeminfo
 - enum users and groups
 - service account with low privileges -> recover default privileges
 - horizontal escalation - service users may have privileges
@@ -39,21 +46,13 @@
 - dll injection
 - always install elevated
 - unattended XML
-- list services
-  - modify executable
-  - modify service
-  - registry modification permissions
-  - unquoted service paths
-- restart perms
-  - run at startup with different user
-  - restart services by restarting machine
-- vulnerable printer drivers
-  - users can install vulnerable drivers by adding a printer type
 - active user session ->
   - clipboard
   - screenshot / meterpreter screenshare
+- restart perms run at startup with different user
+- vulnerable printer drivers
+  - users can install vulnerable drivers by adding a printer type
 - migrate to interactive process
-- systeminfo
 - check hotfixes
 - wdigest ( plain text pass in registry )
 - SAM & SYSTEM backups
