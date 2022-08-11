@@ -6,6 +6,7 @@
 - restricted shell -> attempt to execute command on ssh login with argument
 - password spraying
 - default credentials
+- problems connecting -> connect with `-vvv` to see issues
 - last resorts
   - in absence of website and cewl list, make wordlist with keywords
     - hostname
