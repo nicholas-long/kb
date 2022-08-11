@@ -48,6 +48,7 @@
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
   - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`
+- AD CS -> 7 scenarios of misconfigured certificate templates and access
 - common exploits
   - headline exploits
     - 2021 - nopac attack `sam the admin` on github, then psexec
