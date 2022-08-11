@@ -121,6 +121,24 @@ NR == 1 {
 }
 ```
 
+## combine lines from two files combinatorically with symbol between
+~/kb/awk-scripting/combine-files.awk
+```awk
+#!/usr/bin/awk -f
+# combine lines from two files combinatorically with symbol between
+BEGIN {
+  if (!symbol) symbol = " "
+}
+ARGIND == 1 {
+  lines[$0] = 1
+}
+ARGIND == 2 {
+  for (c in lines) {
+    printf "%s%s%s\n", c, symbol, $0
+  }
+}
+```
+
 ## check output of grep and next line using awk "grep -A 1 -R '^# ' ."
 ~/kb/awk-scripting/file-grep-multi-lines.awk
 ```awk
