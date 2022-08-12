@@ -139,6 +139,18 @@ ARGIND == 2 {
 }
 ```
 
+## filter the CVE list for potentially valid, relevant vulnerabilities
+~/kb/hacking/cve/relevant.awk
+```awk
+#!/usr/bin/awk -f
+# filter the CVE list for potentially valid, relevant vulnerabilities
+BEGIN { OFS = FS = "\t" }
+$3 ~ /^\*\* RESERVED/ { next }
+$3 ~ /^\*\* REJECT/ { next }
+#$3 ~ /^\*\* DISPUTED/ { next }
+{ print }
+```
+
 ## check output of grep and next line using awk "grep -A 1 -R '^# ' ."
 ~/kb/awk-scripting/file-grep-multi-lines.awk
 ```awk
