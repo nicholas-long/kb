@@ -87,3 +87,7 @@ password policy might be different on local machine vs. domain.
 ## in remote desktop RDP or GUI
 - task manager > details > lsass.exe
 - create dump file
+
+# program files ruxim directory
+# program files UNP directory
+used for windows update

@@ -5,6 +5,8 @@
   - reprioritize / cleanup to try list
 - eat
 - try to find obscure article / writeup / bug report / bounty mentioning combination of services / vendors
+- try thinking of ways to combine the information I have in a new way
+  - i.e. usernames and dirbusting wordlists
 - check relevant chapters in book / hacktricks
 - check payloadsallthethings for payload chain ideas
 - things that suspiciously don't work -> can be a finding
