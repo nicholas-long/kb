@@ -24,20 +24,6 @@ BEGIN {
 { print }
 ```
 
-## start printing after ,,,, line
-~/kb/hacking/cve/trim.awk
-```awk
-#!/usr/bin/awk -f
-BEGIN {
-  FS = ","
-}
-pr && NR >= pr {
-  print
-}
-# start printing after ,,,, line
-$1 == "" { pr = NR + 1 }
-```
-
 ## attempt to reuse credentials using hydra and keep track of usernames and passwords tried
 ## read and write a separated value file as a database
 ~/kb/awk-scripting/hydra-bruteforce-with-database.awk
