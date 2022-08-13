@@ -55,6 +55,17 @@ cat composer.lock | jq -r '.packages[] | .name,.version' | paste - -
 cat /dev/urandom | head -c 6 | xxd -p
 ```
 
+## build and run enum4linux-ng docker
+~/kb/hacking/dockers/enum4linux-ng.sh
+```bash
+#!/bin/bash
+
+# build and run enum4linux-ng docker
+repo="https://github.com/cddmp/enum4linux-ng"
+
+source ./build-github-repo-docker-image.sh
+```
+
 ## use awk to print only unique lines as a stream processor
 ~/kb/bash-scripting/awk-print-unique-lines.sh
 ```bash
@@ -247,6 +258,24 @@ function passwordlists {
 ( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
+## clone github repository and build docker image with its name
+~/kb/hacking/dockers/build-github-repo-docker-image.sh
+```bash
+#!/bin/bash
+
+# clone github repository and build docker image with its name
+name=$(echo $repo | awk -F/ '{print $NF}')
+imagename=$(echo $name | tr A-Z a-z)
+echo "Building $name as $imagename"
+git clone $repo
+cd $name/
+docker build . -t $imagename
+cd -
+rm -rf $name
+
+docker run --rm $imagename --help
+```
+
 ## convert string to hex with no newlines
 ~/kb/bash-scripting/string-to-hex.sh
 ```bash
@@ -349,6 +378,28 @@ fi
 [ -z "$KB_DIR" ] && echo "Missing parameter" && exit 1
 
 exit 0
+```
+
+## build and run impacket docker
+~/kb/hacking/dockers/impacket.sh
+```bash
+#!/bin/bash
+
+# build and run impacket docker
+repo="https://github.com/SecureAuthCorp/impacket"
+
+source ./build-github-repo-docker-image.sh
+```
+
+## build and run CrackMapExec docker
+~/kb/hacking/dockers/crackmapexec.sh
+```bash
+#!/bin/bash
+
+# build and run CrackMapExec docker
+repo="https://github.com/Porchetta-Industries/CrackMapExec"
+
+source ./build-github-repo-docker-image.sh
 ```
 
 ## watch failed ssh login attempts as a live stream
