@@ -91,3 +91,6 @@ password policy might be different on local machine vs. domain.
 # program files ruxim directory
 # program files UNP directory
 used for windows update
+
+# hidden shares
+shares with a `$` at the end of the name are hidden by default on windows
