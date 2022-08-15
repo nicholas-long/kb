@@ -81,6 +81,7 @@
 - no access to read webroot -> try appending known filenames to path to read
 - centos / redhat -> check special file access permissions getfacl
 - read / write files as root -> [got read or write access to filesystem](hacking/to-try-lists/got-read-or-write-access-to-filesystem.md#got-read-or-write-access-to-filesystem)
+- generate password list for each/all users and sucrack
 
 ## exploiting scripts on linux
 - injecting user commands
