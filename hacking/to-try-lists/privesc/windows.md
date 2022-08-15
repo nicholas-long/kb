@@ -83,6 +83,7 @@
 - 2021 - present : printnightmare local privesc ( powershell available )
 - ever - present : rogue potato ( SEImpersonatePrivilege )
 - 2021 : hivenightmare
+- 2020 : smbghost
 
 ## AD headline exploits
 - 2021 - nopac attack `sam the admin` on github, then psexec
