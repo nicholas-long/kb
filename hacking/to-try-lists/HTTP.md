@@ -15,6 +15,7 @@
   - hostnames from nmap output
   - brute force vhost subdomains
 - found login form -> [found login form](HTTP.md#found-login-form)
+  - try service name as username / password / both
   - compromised -> [compromised CMS login](HTTP.md#compromised-cms-login)
 - found CMS -> [found CMS](HTTP.md#found-cms)
   - compromised CMS -> [compromised CMS login](HTTP.md#compromised-cms-login)
