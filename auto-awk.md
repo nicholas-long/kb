@@ -24,6 +24,17 @@ BEGIN {
 { print }
 ```
 
+## base64 encode lines individually
+~/kb/awk-scripting/base64-every-line.awk
+```awk
+#!/usr/bin/awk -f
+# base64 encode lines individually
+{
+  printf("%s", $0) | "base64"
+  close("base64")
+}
+```
+
 ## attempt to reuse credentials using hydra and keep track of usernames and passwords tried
 ## read and write a separated value file as a database
 ~/kb/awk-scripting/hydra-bruteforce-with-database.awk
