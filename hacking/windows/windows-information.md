@@ -94,3 +94,7 @@ used for windows update
 
 # hidden shares
 shares with a `$` at the end of the name are hidden by default on windows
+
+# applocker limit allowed executables and allowed paths
+## bypass executable blocking
+`C:\Windows\Tasks` is usually world writable and bypasses default restrictions on executables running from `C:\Windows`

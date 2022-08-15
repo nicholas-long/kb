@@ -26,6 +26,7 @@
   - bypassing extension filtering
     - php: php4, php5, php?, phps, phtml, phar
 - API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
+  - 302 redirect page -> check for content
 - fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
   - SSTI polyglot payload
   - seclists fuzzing special chars
