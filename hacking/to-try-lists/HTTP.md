@@ -76,6 +76,7 @@ fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
 ~/kb/wordlists/custom.dirbusting
 for each path
 - /
+  - try cewl wordlist for filenames
   - feroxbuster medium dirs with extensions and `-e` extract links
   - common
   - custom.dirbusting list
