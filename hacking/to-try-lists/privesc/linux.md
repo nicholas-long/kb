@@ -36,6 +36,7 @@
   - from host
     - scan port range to identify running services
       - ssh -> reuse keys and creds found on host
+      - exploit known services
   - inside docker
     - check mounted directories
       - write suid binaries to be executed on host
