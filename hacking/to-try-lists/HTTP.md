@@ -11,6 +11,7 @@
     - don't ignore 302 or you miss redirect pages with content
     - don't ignore 403 except dotfiles
 - manual inspection (view source) see if content discloses anything useful
+  - find forms
 - vhost enumeration
   - hostnames from nmap output
   - brute force vhost subdomains
