@@ -3,6 +3,7 @@
 ## TRY
 - quick wfuzz dirbust / common.txt
 - robots.txt
+- web enumeration quick commands
 - nikto
 - busting -> copy up busting to try list to new paragraph, run through paths, add
   - even if you identify CMS and version, find exposed files
