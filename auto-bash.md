@@ -554,3 +554,15 @@ sudo apt install code # or code-insiders
 awk '{print length(), $0}' filters.lst | sort -n | awk '{print $2}'
 ```
 
+## run exiftool on all of the images within a directory
+~/kb/bash-scripting/exif-all-images.sh
+```bash
+#!/bin/bash
+# run exiftool on all of the images within a directory
+{ find . -type f -name '*.png'
+find . -type f -name '*.jpg'
+find . -type f -name '*.jpeg'
+find . -type f -name '*.gif'
+} | xargs exiftool
+```
+
