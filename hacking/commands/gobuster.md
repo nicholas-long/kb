@@ -9,14 +9,19 @@ gobuster dir -e -t 50 -u http://$IP -w /usr/share/wordlists/dirbuster/directory-
 gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt
 gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
 
+gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
+
 gobuster dir -e -t 50 -u http://$IP -w ~/kb/wordlists/custom.dirbusting
 gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
 ## scan files and discover backups
+exclude error pages with `--exclude-length 321` instead of by status code
 ```bash
 gobuster dir -t 20 -d -e -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt -x php,txt,html,cgi,sh,bak,aspx
 gobuster dir -t 20 -d -e -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt
+gobuster dir -e -t 20 -x php,txt,html -d -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
+gobuster dir -e -t 20 -x php,txt,html -d -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-small-words-lowercase.txt
 ```
 
 ## Fast Scan (Small List)

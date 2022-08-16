@@ -200,3 +200,7 @@ The application exited
 # apache 2fa default key
 https://github.com/itemir/apache_2fa
 has default google authenticator key in setup instructions
+
+# Potentially risky HTTP methods: TRACE
+if the request is going through a http load balancing proxy,
+then we can use TRACE to echo back any extra headers it appends
