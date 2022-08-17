@@ -11,6 +11,7 @@
   - WinRM
   - MSSQL
   - other services exposed
+- https://wadcoms.github.io/#
 - unauthenticated ASREP roast with usernames list
 - retry credentials for every service
 - discover common temporary password -> spray
@@ -35,6 +36,9 @@
     - kerberoast from target ( mimikatz? )
   - list and impersonate tokens on compromised hosts ( meterpreter incognito )
     - reuse sessions with `New-PSSession` and `Invoke-Command` to other hosts / DC
+- shell + no creds -> rubeus
+  - kerberoast
+  - asreproast
 - derivitive local admins on workstations / servers
 - enumerate sessions with powerview
 - enumerate tickets
