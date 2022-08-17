@@ -30,15 +30,14 @@
       - users - description, password last set, last login & timestamp
       - computers - OS
   - add dc hostname and machine name to hosts file if this can't authenticate
-  - command execution but no creds -> use privs granted by running on machine
-    - get NTLMv2 hash to crack
-    - run sharphound on target
-    - kerberoast from target ( mimikatz? )
   - list and impersonate tokens on compromised hosts ( meterpreter incognito )
     - reuse sessions with `New-PSSession` and `Invoke-Command` to other hosts / DC
-- shell + no creds -> rubeus
-  - kerberoast
-  - asreproast
+- got shell + no creds
+  - rubeus
+    - run sharphound on target
+    - kerberoast
+    - asreproast
+  - get NTLMv2 hash to crack
 - derivitive local admins on workstations / servers
 - enumerate sessions with powerview
 - enumerate tickets
@@ -52,15 +51,15 @@
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
   - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`
-- AD CS -> 7 scenarios of misconfigured certificate templates and access
+- check for AD CS `Get-WindowsFeature *ad-certificate*, *adcs*`
+  - AD CS -> 7 scenarios of misconfigured certificate templates and access
+  - 2022 relay DC attack CVE-2022-26925 variation of petitpotam
 - common exploits
   - headline exploits
     - 2021 - nopac attack `sam the admin` on github, then psexec
     - 2020 - zerologon
-    - 2022 relay DC attack CVE-2022-26925 variation of petitpotam
   - ticket attacks
     - silver ticket to domain admin CVE-2014-6324
-  - cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
 - have local admin and office installed and remote ports 135,445 -> DCOM lateral movement excel remote macro
 - endgame dump hashes
   - impacket secretsdump
@@ -69,3 +68,6 @@
 ## powershell web access
 - try logins manually - find tool?
 - "not authorized" -> try changing computer name because error msg should say "sign-in failed"
+
+## old
+- cached GPP KB2928120 (see MS14-025), some Group Policy Prefs configured with account in XML
