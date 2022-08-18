@@ -1,8 +1,11 @@
 # windows privilege escalation
 - check for local ports
-- whoami /all
-  - SeImpersonate -> rogue potato
-  - backup permissions
+- `whoami /all` vulnerable privs - exploits can enable if disabled
+    - SeImpersonatePrivilege
+    - SeManageVolumePrivilege
+    - SeRestorePrivilege
+    SeAssignPrimaryPrivilege, SeTcbPrivilege, SeBackupPrivilege, SeCreateTokenPrivilege, SeLoadDriverPrivilege, SeTakeOwnershipPrivilege, SeDebugPrivilege
+- https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation
 - permissions
   - applications that run as SYSTEM
   - write permissions

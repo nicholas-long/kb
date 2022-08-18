@@ -33,15 +33,16 @@
   - add dc hostname and machine name to hosts file if this can't authenticate
   - list and impersonate tokens on compromised hosts ( meterpreter incognito )
     - reuse sessions with `New-PSSession` and `Invoke-Command` to other hosts / DC
+- shell + switch user `Invoke-RunasCs.ps1`
+- shell -> windows local privesc list [windows privilege escalation](privesc/windows.md#windows-privilege-escalation)
+  - PowerView - AD specific powershell enum
+    - `Get-netuser` investigate users
 - got shell + no creds
   - rubeus
     - kerberoast
     - asreproast
   - run sharphound on target
   - get NTLMv2 hash to crack
-- switch user `Invoke-RunasCs.ps1`
-- shell -> PowerView
-  - `Get-netuser` investigate users
 - derivitive local admins on workstations / servers
 - enumerate sessions with powerview
 - enumerate tickets
