@@ -9,6 +9,7 @@
 - SUID binaries
   - gtfobins
   - vulnerable versions
+  - distinguish default binaries from custom https://github.com/Anon-Exploiter/SUID3NUM
 - /opt
 - custom interesting binaries or scripts running as other users or root
   - everything from [got source code - analysis](../got-source-code.md#got-source-code---analysis)
