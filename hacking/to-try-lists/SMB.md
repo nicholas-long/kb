@@ -11,6 +11,7 @@
   - authenticated enumeration of domains and groups
 - read registry impacket reg.py
 - authenticated
+  - crackmapexec with `--shares` - enumerate read/write access
   - access to read `IPC$`
     - user and group enum with crackmapexec with `--rid-brute`
   - crackmapexec with `--users`

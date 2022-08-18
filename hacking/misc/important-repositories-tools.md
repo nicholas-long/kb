@@ -199,3 +199,6 @@ https://github.com/TechSupportJosh/example-mc-chat
 https://github.com/antonioCoco/RunasCs
 available as a powershell script or a C# program in the releases.
 The C# program works even if windows remote management is disabled.
+
+# jxplorer connect to LDAP GUI access
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-ldap#jxplorer
