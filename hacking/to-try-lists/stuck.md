@@ -10,6 +10,8 @@
 - check relevant chapters in book / hacktricks
 - check payloadsallthethings for payload chain ideas
 - things that suspiciously don't work -> can be a finding
+- start over from nmap
+- cluttered todo lists -> reset
 - search on sites for related keywords to get ideas
   - ippsec.rocks
   - github issues
