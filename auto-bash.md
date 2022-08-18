@@ -225,6 +225,14 @@ curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
 grep -A 1 -h -R '^```bash' . | grep -v '^```\|^--'
 ```
 
+## run docker image with current directory mounted as working directory
+~/kb/bash-scripting/docker-current-directory.sh
+```bash
+#!/bin/bash
+# run docker image with current directory mounted as working directory
+sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
+```
+
 ## install sublimetext
 ~/kb/linux/install_sublime.sh
 ```bash
