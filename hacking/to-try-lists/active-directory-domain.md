@@ -25,6 +25,7 @@
     - impacket-findDelegation (bloodhound checks this too)
   - bloodhound
     - run python version bloodhound.py in docker
+    - sharphound all
     - paths in bloodhound
     - queries on json data
       - users - description, password last set, last login & timestamp
@@ -34,10 +35,13 @@
     - reuse sessions with `New-PSSession` and `Invoke-Command` to other hosts / DC
 - got shell + no creds
   - rubeus
-    - run sharphound on target
     - kerberoast
     - asreproast
+  - run sharphound on target
   - get NTLMv2 hash to crack
+- switch user `Invoke-RunasCs.ps1`
+- shell -> PowerView
+  - `Get-netuser` investigate users
 - derivitive local admins on workstations / servers
 - enumerate sessions with powerview
 - enumerate tickets

