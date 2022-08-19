@@ -45,7 +45,7 @@
 - got source code -> [got source code - analysis](got-source-code.md#got-source-code---analysis)
 - uncommon ideas [uncommon ideas list](HTTP.md#uncommon-ideas-list)
 
-### uncommon ideas list
+## uncommon ideas list
 - [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
 - mention github/source control -> go look it up, find source
   - organizations -> people and their projects / commits
