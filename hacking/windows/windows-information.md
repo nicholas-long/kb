@@ -102,5 +102,5 @@ shares with a `$` at the end of the name are hidden by default on windows
 # fix downloading file with evil-winrm
 use absolute path to file
 
-# windows shell manipulate and privesc with process tokens
+# windows manipulate, enable and privesc with process tokens
 https://github.com/0xbadjuju/Tokenvator
