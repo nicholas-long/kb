@@ -202,3 +202,6 @@ The C# program works even if windows remote management is disabled.
 
 # jxplorer connect to LDAP GUI access
 https://book.hacktricks.xyz/network-services-pentesting/pentesting-ldap#jxplorer
+
+# create malicious ODT file payload to leak NTLMv2 hashes with badodf
+https://github.com/rmdavy/badodf
