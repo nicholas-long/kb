@@ -25,6 +25,7 @@
 - common general enumeration stuff
   - enumerate installed applications and configs 
     - hunt for creds ( appdata, lazagne )
+    - web browsers -> https://github.com/djhohnstein/SharpWeb
     - saved RDP and and credential manager
     - saved SSH keys on filesystem and in regsitry
     - IIS web configs
