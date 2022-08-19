@@ -4,15 +4,15 @@
   - update steps to keep track of things you did
   - reprioritize / cleanup to try list
 - eat
-- try to find obscure article / writeup / bug report / bounty mentioning combination of services / vendors
-- try thinking of ways to combine the information I have in a new way
-  - i.e. usernames and dirbusting wordlists
-- check relevant chapters in book / hacktricks
-- check payloadsallthethings for payload chain ideas
-- things that suspiciously don't work -> can be a finding
-- start over from nmap
-- cluttered todo lists -> reset
 - search on sites for related keywords to get ideas
+  - fuzzing around with google search criteria
   - ippsec.rocks
   - github issues
-  - fuzzing around with google search criteria
+- start over from nmap
+- try thinking of ways to combine the information I have in a new way
+  - i.e. usernames and dirbusting wordlists
+- things that suspiciously don't work -> can be a finding
+- cluttered todo lists -> reset
+- check relevant chapters in book / hacktricks
+- check payloadsallthethings for other payload specific ideas
+- does it look like a puzzle? try to find obscure article / writeup / bug report / bounty mentioning combination of services / vendors

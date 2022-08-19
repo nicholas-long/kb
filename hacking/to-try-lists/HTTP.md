@@ -13,10 +13,8 @@
     - don't ignore 403 except dotfiles
 - manual inspection (view source) see if content discloses anything useful
   - find forms
-- vhost enumeration
-  - hostnames from nmap output
-  - brute force vhost subdomains
 - found login form -> [found login form](HTTP.md#found-login-form)
+  - google / seclists default creds for service
   - try service name as username / password / both
   - compromised -> [compromised CMS login](HTTP.md#compromised-cms-login)
 - found CMS -> [found CMS](HTTP.md#found-cms)
@@ -26,71 +24,80 @@
     - file read -> keep enumerating, find interesting configs, logs, code, creds to exfil
     - LFI -> keep enumerating, find writable logs or files to execute
 - file upload
-  - bypassing extension filtering
-    - php: php4, php5, php?, phps, phtml, phar
 - API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
   - 302 redirect page -> check for content
 - fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
   - SSTI polyglot payload
   - seclists fuzzing special chars
-- generate cewl wordlist for login bruteforcing, busting directories, subdomains
-- bypassing restrictions -> [bypassing restrictions](HTTP.md#bypassing-restrictions)
-- weird HTTP response headers
-- JWT JSON web tokens
-- cookie deserialization
-- parameter pollution
-- SSRF server side request forgery
-- apache delete files -> delete .htaccess and possibly see php source
-- retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
-- 403 forbidden servers / vhosts -> target http config information & find out why
-- webdav
-  - davtest unauth
-  - davtest authenticated
-  - target file passwd.dav
-- have username list -> fuzz home directories like `/~user` `/user`
-- links with `target="_blank"` - tab nabbing client attack phishing redirect
-- mention github/source control -> go look it up, find source
-  - organizations -> people and their projects / commits
-  - check commit history for secrets / creds
-- cgi-bin old servers -> shellshock
-- got source code -> [got source code - analysis](got-source-code.md#got-source-code---analysis)
-- generated file -> metadata / exiftool
-- web app with secrets / 2fa -> test default secrets
-- everything list (including web server version) [EVERYTHING](EVERYTHING.md#everything)
-- [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
-- injection tests
-  - SSTI polyglot payload
+- likely injection tests
   - SQLi
     - [got access to databases - general SQL](got-access-to-databases-general-SQL.md#got-access-to-databases---general-sql)
     - no sqlmap -> wfuzz with wordlists in /usr/share/seclists/Fuzzing/SQLi/
-    - dump data 
+    - dump data
     - ordering column parameter and order by injection -> nested query `limit (select ...)`
+  - SSTI polyglot payload
   - XML
     - XXE xml external entity
     - XPath injection
+- vhost enumeration
+  - hostnames from nmap output
+  - brute force vhost subdomains
+- got source code -> [got source code - analysis](got-source-code.md#got-source-code---analysis)
+- uncommon ideas [uncommon ideas list](HTTP.md#uncommon-ideas-list)
+
+### uncommon ideas list
+- [specific HTTP server exploit possibilities](HTTP.md#specific-http-server-exploit-possibilities)
+- mention github/source control -> go look it up, find source
+  - organizations -> people and their projects / commits
+  - check commit history for secrets / creds
+- have username list -> fuzz home directories like `/~user` `/user`
+- generate cewl wordlist for login bruteforcing, busting directories, subdomains
+- generated file -> metadata / exiftool
+- web app with secrets / 2fa -> test default secrets
+- bypassing restrictions -> [bypassing restrictions](HTTP.md#bypassing-restrictions)
+- upload -> bypassing extension filtering ( search "web server executable extensions" php in kb )
+- unlikely injection tests
   - NoSQL injection
   - LDAP injection
   - XSS - dalfox
   - log4j log4shell injection - test every field, parameter, and http header with jndi payload (especially Java stack)
+- weird HTTP response headers
+- JWT JSON web tokens
+- cookie deserialization
+- parameter pollution
+- webdav - old protocol
+  - davtest unauth
+  - davtest authenticated
+  - target file passwd.dav
+- SSRF server side request forgery
+- apache delete files -> delete .htaccess and possibly see php source
+- retry dirbusting with response sizes instead of hiding 404 to find weird 404 endpoints
+- 403 forbidden servers / vhosts -> target http config information & find out why
+- links with `target="_blank"` - tab nabbing client attack phishing redirect
+- cgi-bin old servers -> shellshock
+- everything list (including web server version) [EVERYTHING](EVERYTHING.md#everything)
 
 ## BUSTING directory busting to try list
 fuzz files found for backups https://github.com/olemoudi/backup-fuzzer
 ~/kb/wordlists/custom.dirbusting
 for each path
 - /
-  - try cewl wordlist for filenames
-  - feroxbuster medium dirs with extensions and `-e` extract links
-  - common
-  - custom.dirbusting list
-  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
+  - gobuster common
+  - gobuster custom.dirbusting list
+  - feroxbuster with extensions ( medium dirs list ) - does some directories and files
   - files
-    - feroxbuster with extensions -> raft-large-words and discover backups `-B` option
-    - wfuzz large filename list - look at status and content length
+    - gobuster with extensions -> raft-small-words and discover backups `-d` option
+    - gobuster raft large files
+    - wfuzz difference - look at status and content length
     - view source of files found
   - directories
-    - feroxbuster recursive
-    - wfuzz large
-    - wfuzz dir list big
+    - gobuster raft medium directories
+    - gobuster raft large directories
+    - gobuster directory list 2.3 medium
+    - wfuzz difference - look at status and content length
+    - gobuster dir list big
+  - db backups /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
+  - cewl wordlist
 
 ## specific HTTP server exploit possibilities
 - apache (old versions) - searchsploit plugins versions

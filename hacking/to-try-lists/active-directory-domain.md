@@ -12,6 +12,7 @@
   - MSSQL
   - other services exposed
 - https://wadcoms.github.io/#
+- adPEAS
 - unauthenticated ASREP roast with usernames list
 - retry credentials for every service
 - discover common temporary password -> spray
