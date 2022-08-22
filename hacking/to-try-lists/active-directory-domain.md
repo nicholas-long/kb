@@ -1,6 +1,7 @@
 # active directory domain
-- create username list with different formats to identify usernames
 - sensitive content in file shares
+- anonymous ldap enumeration - nmap scripts
+- create username list with different formats to identify usernames
 - kerbrute
   - user enum
   - password spray
@@ -11,6 +12,10 @@
   - WinRM
   - MSSQL
   - other services exposed
+- CYCLE -> reuse credentials, access services, abuse access, get more credentials
+  - RDP
+  - SMB shares and PsExec ( crackmapexec )
+  - WinRM
 - https://wadcoms.github.io/#
 - adPEAS
 - unauthenticated ASREP roast with usernames list
@@ -24,6 +29,7 @@
     - get AD users - any authenticated user
       - check notes/description of LDAP data for leaked passwords
     - impacket-findDelegation (bloodhound checks this too)
+  - ldap enumeration - ldapdomaindump, bloodhound
   - bloodhound
     - run python version bloodhound.py in docker
     - sharphound all
@@ -53,7 +59,6 @@
   - pass the hash
   - NTLM -> run process as user with mimikatz `sekurlsa::pth` "over pass the hash"
     - `net use \\dchostname`, then get cached kerberos tickets
-- CYCLE - reuse credentials, access services, abuse access, get more credentials
 - target users who might have simple passwords ( bloodhound data, ldap? )
   - users that have not logged in `.lastlogontimestamp == -1`
   - users who had password changed and have not logged in since `.pwdlastset > .lastlogontimestamp`
