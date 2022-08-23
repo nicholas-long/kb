@@ -205,3 +205,6 @@ https://book.hacktricks.xyz/network-services-pentesting/pentesting-ldap#jxplorer
 
 # create malicious ODT file payload to leak NTLMv2 hashes with badodf
 https://github.com/rmdavy/badodf
+
+# linux and windows privilege escalation mind maps OSCP
+https://github.com/C0nd4/OSCP-Priv-Esc
