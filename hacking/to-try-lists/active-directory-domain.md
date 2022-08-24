@@ -21,7 +21,9 @@
 - unauthenticated ASREP roast with usernames list
 - retry credentials for every service
 - discover common temporary password -> spray
-- relay NTLMv2 hashes to other machines that have no SMB signing
+- got access to dump data from LDAP
+  - grep `sAMAccountName`
+  - grep `CN=`
 - authenticated ( probably ) lateral movement
   - impacket
     - roasting SPN service accounts
@@ -73,6 +75,7 @@
   - ticket attacks
     - silver ticket to domain admin CVE-2014-6324
 - have local admin and office installed and remote ports 135,445 -> DCOM lateral movement excel remote macro
+- relay NTLMv2 hashes to other machines that have no SMB signing
 - endgame dump hashes
   - impacket secretsdump
   - mimikatz on machine or kiwi module in msf
