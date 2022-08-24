@@ -32,8 +32,9 @@
   - ldap enumeration - ldapdomaindump, bloodhound
   - bloodhound
     - run python version bloodhound.py in docker
+    - check outbound object control of every owned user
+    - shortest paths from owned
     - sharphound all
-    - paths in bloodhound
     - queries on json data
       - users - description, password last set, last login & timestamp
       - computers - OS
