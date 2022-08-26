@@ -50,3 +50,7 @@
     - system()
       - not full path to executable -> PATH injection
     - loops and off by one `<` vs `<=`
+  - C#
+    - config XML and XSLT - connection strings, secrets
+    - `Deserialize` `JsonConvert` `DeserializeJson` `DeserializeObject`
+    - XML, `XDocument` - XXE
