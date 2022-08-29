@@ -208,3 +208,7 @@ https://github.com/rmdavy/badodf
 
 # linux and windows privilege escalation mind maps OSCP
 https://github.com/C0nd4/OSCP-Priv-Esc
+
+# .NET decompiler reverse engineering C# managed EXE DLL binaries
+## modify rebuild and recompile .NET assemblies
+https://github.com/dnSpy/dnSpy

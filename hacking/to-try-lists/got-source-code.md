@@ -52,5 +52,6 @@
     - loops and off by one `<` vs `<=`
   - C#
     - config XML and XSLT - connection strings, secrets
-    - `Deserialize` `JsonConvert` `DeserializeJson` `DeserializeObject`
+    - `Deserialize` `JsonConvert` `DeserializeJson` `DeserializeObject` `BinaryFormatter`
+    - `System.Diagnostics.Process` `Process.Start` `Process`
     - XML, `XDocument` - XXE
