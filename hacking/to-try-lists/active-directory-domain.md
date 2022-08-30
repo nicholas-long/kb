@@ -8,6 +8,7 @@
     - sync time before password spray! `ntpdate`; VM -> stop time sync with host or spray with CME
   - brute force
 - crackmapexec
+  - usernames as passwords
   - SMB
   - WinRM
   - MSSQL
@@ -21,6 +22,7 @@
 - unauthenticated ASREP roast with usernames list
 - retry credentials for every service
 - discover common temporary password -> spray
+- unauthenticated RPC enum ` rpcclient --no-pass -U '' $IP `
 - got access to dump data from LDAP
   - grep `sAMAccountName`
   - grep `CN=`
