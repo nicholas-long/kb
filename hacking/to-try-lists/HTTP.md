@@ -192,6 +192,7 @@ for each path
   - parameters
   - REST APIs -> get params and url params
   - IDs -> IDOR
+  - object / JSON / session token -> break or abruptly terminate input
   - fuzz hidden parameters, wordlist seclists/Discovery/Web-Content/burp-parameter-names.txt
   - fuzz with different HTTP methods (ex: POST might work and accept GET params)
   - fuzz headers and cookies if their values appear on page

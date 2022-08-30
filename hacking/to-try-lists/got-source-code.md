@@ -38,6 +38,7 @@
       - recommend local testing - potentially destructive to server - revert
       - `__proto__` and `__proto__.__proto__`
     - fuzzy equal
+    - `node-serialize` `unserialize`
   - golang
     - user input to controllers -> `http.Request`
     - shell exec -> `exec.Command`
