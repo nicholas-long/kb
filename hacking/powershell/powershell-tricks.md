@@ -55,3 +55,8 @@ can also change the powershell "directory" to the registry like "cd HKLM:\"
 ```powershell
 cd HKLM:\SYSTEM\CurrentControlSet\Services\
 ```
+
+## convert guid to string
+```powershell
+[System.guid]::New($strMyGuid)
+```
