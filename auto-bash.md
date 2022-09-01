@@ -399,12 +399,12 @@ fi
 exit 0
 ```
 
-## update all the git repos in home direcotry and prompt with lazygit
+## pull all the git repos in home directory
 ~/kb/bash-scripting/pull-all-git-repos.sh
 ```bash
 #!/bin/bash
 
-# update all the git repos in home direcotry and prompt with lazygit
+# pull all the git repos in home directory
 
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh $HOME |\
   awk -F / 'NF == 4 {print}' |\
@@ -464,12 +464,12 @@ tail -f /var/log/auth.log | \
   }'
 ```
 
-## update all the git repos in home direcotry and prompt with lazygit
+## update all the git repos in home directory and prompt with lazygit
 ~/kb/bash-scripting/update-all-git-repos.sh
 ```bash
 #!/bin/bash
 
-# update all the git repos in home direcotry and prompt with lazygit
+# update all the git repos in home directory and prompt with lazygit
 
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh $HOME |\
   awk -F / 'NF == 4 {print}' |\
