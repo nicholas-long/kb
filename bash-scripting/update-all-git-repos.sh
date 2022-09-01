@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# update all the git repos in home direcotry and prompt with lazygit
+# update all the git repos in home directory and prompt with lazygit
 
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh $HOME |\
   awk -F / 'NF == 4 {print}' |\
