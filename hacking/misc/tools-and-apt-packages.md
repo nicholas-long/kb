@@ -32,3 +32,9 @@ sudo apt install -y padbuster
 kpcli
 navigate around like a file system iwth cd and ls.
 `show -f 0` to show item named 0 without term color highlights.
+
+# poppler utils PDF parsing
+## pdftotext pdftohtml pdfinfo pdfimages
+```bash
+sudo apt install -y poppler-utils
+```
