@@ -123,6 +123,20 @@ for p in ${places[@]}; do
 done
 ```
 
+## generate ISO format dates wordlists for the last few years
+~/kb/bash-scripting/generate-dates.sh
+```bash
+#!/bin/bash
+
+# generate ISO format dates wordlists for the last few years
+
+for d in $(seq 2000);
+do
+  date --date "$d days ago" '+%Y-%m-%d'
+done | awk ' BEGIN { FS="-" }
+{ print > "days-" $1 } '
+```
+
 ## find all git repositories in a directory
 ## remove git from directory name
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh
