@@ -224,7 +224,9 @@ find /usr/lib -name pam_unix.so 2>/dev/null
 dpkg -l | grep pam
 ### centos / redhat / RHEL
 rpm -qa | grep pam
-
+```
+run on host
+```bash
 docker run --rm -v "$(pwd):/host" -it kalilinux/kali-rolling
 
 apt update
