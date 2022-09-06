@@ -212,3 +212,6 @@ https://github.com/C0nd4/OSCP-Priv-Esc
 # .NET decompiler reverse engineering C# managed EXE DLL binaries
 ## modify rebuild and recompile .NET assemblies
 https://github.com/dnSpy/dnSpy
+
+# linux PAM module backdoor password build script
+https://github.com/zephrax/linux-pam-backdoor
