@@ -120,7 +120,7 @@ cat /proc/$pid/status | grep CapEff
 cat /proc/*/status | awk '/CapEff/ && $2 !~ /^0*$/ { print name, pid, uid, $2 } /^Pid/ { pid = $2 } /^Uid/ { uid = $2 } /^Name/ { name = $2 }'
 ```
 
-#### decode on host machine with capsh
+### decode on host machine with capsh
 ```bash
 capsh --decode=000001ffffffffff
 ```
