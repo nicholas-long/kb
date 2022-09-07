@@ -23,3 +23,8 @@ must have `GRANT OPTION` permission
 GRANT FILE ON *.* TO 'uname'@'localhost' with grant option;
 grant all privileges on dbname.* to 'yourusername'@'%' with grant option;
 ```
+
+## find plugin directory
+```SQL
+show variables like '%plugin%';
+```
