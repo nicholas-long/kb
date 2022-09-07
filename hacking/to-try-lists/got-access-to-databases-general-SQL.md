@@ -6,7 +6,8 @@
   - code execution built into database or with modules
   - write config backups with web shells embedded in data
   - edit user hashes authenticate for auth RCE
-  - mysql -> UDF
+  - servers running as root
+  - mysql -> raptor udf2 command exec
     - mysql GRANT OPTION -> grant file permissions
   - mssql -> enable `xp_commandshell`
   - Postgres 9.3+ auth RCE -> msf `multi/postgres/postgres_copy_from_program_cmd_exec`
