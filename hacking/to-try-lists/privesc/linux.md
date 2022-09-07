@@ -81,6 +81,7 @@
   - secrets, config, hardcoded creds
 - meterpreter local suggester ( could use once on OSCP )
 - no access to read webroot -> try appending known filenames to path to read
+- fail2ban -> default config `iptables-multiport.conf` `actionban`
 - centos / redhat -> check special file access permissions getfacl
 - read / write files as root -> [got read or write access to filesystem](hacking/to-try-lists/got-read-or-write-access-to-filesystem.md#got-read-or-write-access-to-filesystem)
 - generate password list for each/all users and sucrack
