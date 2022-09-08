@@ -31,6 +31,9 @@
     - pickle
     - jinja
     - web servers running in debug mode
+    - flask `send_file` - dir traversal
+    - os.path.join
+      - double slashes bypass `../` dir traversal filters `/path/to/whatever//root/.ssh/id_rsa`
   - ruby
     - mass assignment
   - javascript
