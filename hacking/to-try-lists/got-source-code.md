@@ -11,7 +11,9 @@
 - deserialization vulnerabilities
 - templates
 - vulnerable third party libraries
-- git repositories and history log
+- git repositories
+  - history log
+  - branches
 - vulnerabilities common to the programming language
   - PHP
     - common antipatterns:
