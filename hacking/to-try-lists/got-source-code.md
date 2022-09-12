@@ -36,6 +36,7 @@
     - flask `send_file` - dir traversal
     - os.path.join
       - double slashes bypass `../` dir traversal filters `/path/to/whatever//root/.ssh/id_rsa`
+    - python2 + input - evaluates code
   - ruby
     - mass assignment
   - javascript
