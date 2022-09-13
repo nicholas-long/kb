@@ -55,6 +55,7 @@
     - writable things used by script
   - [exploiting linux scripts](#exploiting linux scripts)
   - writable or exploitable timers
+  - executable payloads or includes -> chmod 777
 - local ports
 - git or other repositories - check history
 - enumerate all writable files and directories
