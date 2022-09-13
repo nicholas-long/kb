@@ -62,3 +62,9 @@
     - `Deserialize` `JsonConvert` `DeserializeJson` `DeserializeObject` `BinaryFormatter`
     - `System.Diagnostics.Process` `Process.Start` `Process`
     - XML, `XDocument` - XXE
+  - Java
+    - XML
+    - serialization
+      - `ObjectInputStream` `readUnshared` `readObject`
+      - bytes AC ED hex rO0AB base64 -> serialization
+    - `Runtime.getRuntime().exec` run commands
