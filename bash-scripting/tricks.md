@@ -8,3 +8,10 @@ make a pretend tty for them and log the output with `script` instead.
 ```bash
 script -q output -c "shodan host 43.225.54.207" &
 ```
+
+## check if current directory is writable
+```bash
+if [ -w "$(pwd)" ]; then
+  echo "writing here"
+fi
+```
