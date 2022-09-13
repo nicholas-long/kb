@@ -194,7 +194,7 @@ https://github.com/Sq00ky/Bash-Port-Scanner
 # connect to minecraft server and send chat messages
 https://github.com/TechSupportJosh/example-mc-chat
 
-# windows run commnads as other user with credentials
+# windows run commands as other user with credentials
 ## switch users on windows host with RunasCs with no WinRM remote management access
 https://github.com/antonioCoco/RunasCs
 available as a powershell script or a C# program in the releases.
