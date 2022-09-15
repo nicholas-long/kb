@@ -4,7 +4,14 @@ NMAP Scan
 ```
 ```
 
-Enumeration
+Share Enumeration
+===============
+
+Anonymous Shares / FTP
+```
+```
+
+Web Enumeration
 ===============
 
 Directories
@@ -12,5 +19,13 @@ Directories
 ```
 
 Files
+```
+```
+
+Subdomains / vhosts
+```
+```
+
+nikto
 ```
 ```
