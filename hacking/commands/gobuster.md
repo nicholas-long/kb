@@ -2,17 +2,17 @@
 
 ## dirbusting
 ```bash
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/wordlists/dirb/big.txt
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/wordlists/dirb/big.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
 
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
+gobuster dir -e -t 50 -u $URL -w /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt
 
-gobuster dir -e -t 50 -u http://$IP -w ~/kb/wordlists/custom.dirbusting
-gobuster dir -e -t 50 -u http://$IP -w /usr/share/seclists/Discovery/Web-Content/common.txt
+gobuster dir -e -t 50 -u $URL -w ~/kb/wordlists/custom.dirbusting
+gobuster dir -e -t 50 -u $URL -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
 ## scan files and discover backups
@@ -28,18 +28,18 @@ gobuster dir -e -t 50 -x php,txt,html -d -u $URL -w cewl_wordlist
 
 ## Fast Scan (Small List)
 ```bash
-gobuster dir -e -u http://$IP -w /usr/share/wordlists/dirb/big.txt -t 20
+gobuster dir -e -u $URL -w /usr/share/wordlists/dirb/big.txt -t 20
 ```
 
 ## Fast Scan (Big List)
 ```bash
-gobuster dir -e -u http://$IP -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 20
+gobuster dir -e -u $URL -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 20
 ```
 
 ## Slow Scan (Check File Extensions)
 
 ```bash
-gobuster dir -e -u http://$IP -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt,html,cgi,sh,bak,aspx -t 20
+gobuster dir -e -u $URL -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt,html,cgi,sh,bak,aspx -t 20
 ```
 
 ## fix HTTPS cert errors
