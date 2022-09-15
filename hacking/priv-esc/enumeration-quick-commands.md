@@ -149,3 +149,8 @@ EOF
 getfacl -R -s .
 getfacl -R -s /
 ```
+
+# get all root process IDs
+```bash
+ps -ef | awk '/^root/ && !/\]$/ { print $2 }'
+```
