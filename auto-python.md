@@ -8,6 +8,22 @@ import csv, sys
 csv.writer(sys.stdout, dialect='excel-tab').writerows(csv.reader(sys.stdin))
 ```
 
+## urlencode every input line
+## read and process lines of input
+~/kb/python/urlencode.py
+```python
+#!/usr/bin/python3
+from urllib.parse import quote
+
+# urlencode every input line
+
+# read and process lines of input
+import fileinput
+for rawline in fileinput.input():
+    line = rawline.rstrip("\n")
+    print(quote(line))
+```
+
 ## convert a GMSA managed password structure to a NTLM hash
 ~/kb/hacking/windows/convert-msds-managed-password-to-ntlm-hash.py
 ```python
