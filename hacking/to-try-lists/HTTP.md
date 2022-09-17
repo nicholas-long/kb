@@ -64,6 +64,8 @@
   - log4j log4shell injection - test every field, parameter, and http header with jndi payload (especially Java stack)
 - weird HTTP response headers
 - JWT JSON web tokens
+  - HS variety -> crack secret with hashcat
+  - got secret / key -> target cookie data for injection
 - cookie deserialization
 - parameter pollution
 - webdav - old protocol
