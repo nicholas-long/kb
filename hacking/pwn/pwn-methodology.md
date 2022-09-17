@@ -1,0 +1,36 @@
+# pwn methodology / to try list
+- strings
+- system commands
+  - injection
+  - no path for shell commands -> privesc
+- buffer overflow
+  - executable stack -> find `jmp esp` or equivalent
+  - NX -> ropchain
+    - ropgadget
+- format string
+  - arbitrary read with `%s` refering to attacker controlled argument
+  - index arguments with 
+  - pwntools FmtStr
+  - everything from arbitrary write -> ...
+  - overwrite return address
+  - write rop chain to get execution
+- memory access
+  - arbitrary write
+    - overwrite function addresses in the global offset table
+      - control argument -> point to system, easy RCE
+    - write malloc hook in libc if program uses dynamic memory allocation
+    - shellcode
+    - libc hooks on close
+    - function table
+  - arbitrary read
+    - leak libc addresses -> lookup in libc database
+    - leak stack address with environ symbol in libc - points to enviornment vars which are at top of stack
+- heap overflow
+  - write function / vtable pointers to dynamically allocated objects right afterwards in memory
+  - corrupt data or strings used elsewhere
+- heap corruption - hard
+  - identify correct type of house
+  - patch to older libc version
+    - heap exploit houses can get fixed in newer libc versions
+- canaries enabled with overflow on a forking server -> brute force canaries
+
