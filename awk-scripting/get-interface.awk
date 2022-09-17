@@ -4,6 +4,7 @@ level > 2 && $2 ~ /^wlan/ { iface=$2 ; level=2 }
 level > 3 && $2 ~ /^eth/ { iface=$2 ; level=3 }
 END {
   gsub(/:$/,"",iface)
+  gsub(/@.*/,"",iface)
   if (level < 10) {
     print iface
   }
