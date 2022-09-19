@@ -14,20 +14,14 @@ check individual users and passwords and/or files the same way
 crackmapexec smb $IP -u users -p passwords
 ```
 
-## test valid user and password combinations 
+## test combine valid user and password combinations
 ```
 --no-bruteforce           No spray when using file for username and password (user1 => password1, user2 => password2
 --continue-on-success     continues authentication attempts even after successes
 ```
 
-### for command execution permissions RCE
-#### PsExec
 ```bash
 crackmapexec smb $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
-```
-
-#### WinRM
-```bash
 crackmapexec winrm $IP -u valid_users -p valid_passwords --no-bruteforce --continue-on-success
 ```
 
