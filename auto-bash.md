@@ -652,12 +652,12 @@ if [ $method == "POST" ]; then
 
     cat << PYTHON
 postdata = $postdata
-r = requests.post(url, data=postdata, cookies=cookies)
+r = requests.post(url, data=postdata, headers=headers, cookies=cookies)
 PYTHON
   fi
 elif [ $method == "GET" ]; then
     cat << PYTHON
-r = requests.get(url, params=getparams, cookies=cookies)
+r = requests.get(url, params=getparams, headers=headers, cookies=cookies)
 PYTHON
 fi
 
