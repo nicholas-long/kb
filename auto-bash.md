@@ -587,13 +587,12 @@ source ~/kb/docker/build-github-repo-docker-image.sh
 ```bash
 #!/bin/bash
 
-xpup="$HOME/go/bin/xpup"
-#go install github.com/ericchiang/xpup@latest
+xpup="go run github.com/ericchiang/xpup@latest"
 file="$1"
 http_request=$(mktemp)
 
 # parse burpsuite saved request file and convert to python requests script for copying
-cat login.req | ~/go/bin/xpup '//request' | base64 -d > $http_request
+cat $file | $xpup '//request' | base64 -d > $http_request
 dos2unix $http_request 2>/dev/null
 
 url=$(cat $file | $xpup //url)
