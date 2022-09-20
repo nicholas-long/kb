@@ -1,4 +1,4 @@
-# xml parsing
+# bash parse xml cli
 
 ## with xpath using xpup
 ```bash
