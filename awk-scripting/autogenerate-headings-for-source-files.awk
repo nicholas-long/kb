@@ -14,5 +14,6 @@ END {
     system("cat " file)
     print "```"
     print ""
+    print "~/kb/" file
   }
 }
