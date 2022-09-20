@@ -60,6 +60,10 @@ postdata = $postdata
 r = requests.post(url, data=postdata, cookies=cookies)
 PYTHON
   fi
+elif [ $method == "GET" ]; then
+    cat << PYTHON
+r = requests.get(url, params=getparams, cookies=cookies)
+PYTHON
 fi
 
 cat << FOOTER
