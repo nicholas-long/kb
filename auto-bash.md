@@ -172,14 +172,6 @@ function passwordlists {
 ( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
-## run docker image with current directory mounted as working directory
-~/kb/bash-scripting/docker-current-directory.sh
-```bash
-#!/bin/bash
-# run docker image with current directory mounted as working directory
-sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
-```
-
 ## mount shared folders on VM
 ~/kb/linux/mount-shared-folders-in-vm.sh
 ```bash
@@ -188,6 +180,14 @@ sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
 # mount shared folders on VM
 /usr/bin/vmhgfs-fuse .host:/ /home/kali/shares -o subtype=vmhgfs-fuse,allow_other
 
+```
+
+## run docker image with current directory mounted as working directory
+~/kb/bash-scripting/docker-current-directory.sh
+```bash
+#!/bin/bash
+# run docker image with current directory mounted as working directory
+sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
 ```
 
 ## pull all the git repos in home directory
@@ -311,6 +311,15 @@ find . -type f -name '*.jpg'
 find . -type f -name '*.jpeg'
 find . -type f -name '*.gif'
 } | xargs exiftool
+```
+
+## get the current user's github api key
+~/kb/bash-scripting/get-github-api-key.sh
+```bash
+#!/bin/bash
+
+# get the current user's github api key
+cat $HOME/.git-credentials | awk -F '[/:@]' '/github/ {print $5}'
 ```
 
 ## watch failed ssh login attempts as a live stream
