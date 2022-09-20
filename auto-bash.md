@@ -437,6 +437,15 @@ cd ~/kb && /home/coyote/.cargo/bin/alacritty -e tmux
 ```
 
 ~/kb/linux/alacritty-run-tmux.sh
+## decorate XML with colors for tags, attributes, and content
+~/kb/bash-scripting/decorate-xml.sh
+```bash
+#!/bin/bash
+# decorate XML with colors for tags, attributes, and content
+~/kb/bash-scripting/colorize.sh -g '>[^<]+<' -c '\[[^]]+' -r CDATA -y '<[^>]+ [^>]*>'
+```
+
+~/kb/bash-scripting/decorate-xml.sh
 ## extract PDF embedded file stream for use with PDF file attach exploits like mpdf
 ## prepend gzip magic bytes
 ## extract zlib stream between PDF stream and endstream with quick and dirty awk
