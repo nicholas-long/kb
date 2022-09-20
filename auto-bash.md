@@ -10,6 +10,7 @@ awk ' {
 } ' "$1" | sed 's/=/%3D/g'
 ```
 
+~/kb/bash-scripting/urlencode-base64-every-line.sh
 ## use awk to print only unique lines as a stream processor
 ~/kb/bash-scripting/awk-print-unique-lines.sh
 ```bash
@@ -17,6 +18,7 @@ awk ' {
 awk '!seen[$0]++ { print }'
 ```
 
+~/kb/bash-scripting/awk-print-unique-lines.sh
 ## find all git repositories in a directory
 ## remove git from directory name
 ~/kb/bash-scripting/enum-git-repos-in-directory.sh
@@ -28,6 +30,7 @@ awk '!seen[$0]++ { print }'
 find "$1" -name .git -type d | awk 'BEGIN {FS = OFS = "/" } { NF--;print }'
 ```
 
+~/kb/bash-scripting/enum-git-repos-in-directory.sh
 ## return the most recently updated ubuntu distro
 ~/kb/bash-scripting/get-current-ubuntu-distro.sh
 ```bash
@@ -43,6 +46,7 @@ curl http://archive.ubuntu.com/ubuntu/dists/ 2>/dev/null | \
   awk 'BEGIN { FS="\t"} { print $2}'
 ```
 
+~/kb/bash-scripting/get-current-ubuntu-distro.sh
 ## parse args with case statement
 ## exit if parameter is missing
 ~/kb/bash-scripting/template.sh
@@ -91,6 +95,7 @@ fi
 exit 0
 ```
 
+~/kb/bash-scripting/template.sh
 ## query nmap ports and service description definitions
 ~/kb/awk-scripting/nmap-ports.sh
 ```bash
@@ -110,6 +115,7 @@ $1 == "unknown" { next }
 ' /usr/share/nmap/nmap-services
 ```
 
+~/kb/awk-scripting/nmap-ports.sh
 ## print the md5 hashes of all lines in a wordlist file
 ~/kb/hacking/scripts/print-all-md5s.sh
 ```bash
@@ -124,6 +130,7 @@ function hashing {
 cat $1 | hashing
 ```
 
+~/kb/hacking/scripts/print-all-md5s.sh
 ## generate common passwords
 ~/kb/hacking/passwords/generate-common-passwords.sh
 ```bash
@@ -172,6 +179,7 @@ function passwordlists {
 ( seasonyears | iterations ; passwordlists ) | awkuniq
 ```
 
+~/kb/hacking/passwords/generate-common-passwords.sh
 ## colorize words from stdin with regular expressions
 ~/kb/bash-scripting/colorize.sh
 ```bash
@@ -258,6 +266,7 @@ spc -R -c "$CFGFILE" "$@"
 rm -f "$CFGFILE"
 ```
 
+~/kb/bash-scripting/colorize.sh
 ## mount shared folders on VM
 ~/kb/linux/mount-shared-folders-in-vm.sh
 ```bash
@@ -268,6 +277,7 @@ rm -f "$CFGFILE"
 
 ```
 
+~/kb/linux/mount-shared-folders-in-vm.sh
 ## run docker image with current directory mounted as working directory
 ~/kb/bash-scripting/docker-current-directory.sh
 ```bash
@@ -276,6 +286,7 @@ rm -f "$CFGFILE"
 sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
 ```
 
+~/kb/bash-scripting/docker-current-directory.sh
 ## get raw HTTP request data from burp saved request
 ~/kb/hacking/scripts/get-burp-http-saved-request.sh
 ```bash
@@ -284,6 +295,7 @@ sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
 cat $1 | go run github.com/ericchiang/xpup@latest //request | base64 -d
 ```
 
+~/kb/hacking/scripts/get-burp-http-saved-request.sh
 ## get the current user's github colon separated credentials
 ~/kb/bash-scripting/get-github-credentials.sh
 ```bash
@@ -293,6 +305,7 @@ cat $1 | go run github.com/ericchiang/xpup@latest //request | base64 -d
 cat $HOME/.git-credentials | awk -F '[/@]' '/github/ {print $3}' | sed s/%40/@/g
 ```
 
+~/kb/bash-scripting/get-github-credentials.sh
 ## parse burpsuite saved request file and convert to python requests script for copying
 ~/kb/hacking/scripts/copy-burp-request-as-python-script.sh
 ```bash
@@ -371,6 +384,7 @@ FOOTER
 rm $http_request
 ```
 
+~/kb/hacking/scripts/copy-burp-request-as-python-script.sh
 ## pull all the git repos in home directory
 ~/kb/bash-scripting/pull-all-git-repos.sh
 ```bash
@@ -386,6 +400,7 @@ rm $http_request
   done
 ```
 
+~/kb/bash-scripting/pull-all-git-repos.sh
 ## download the current CVE list get as Tab Separated Values
 ~/kb/hacking/cve/get-tsv.sh
 ```bash
@@ -410,6 +425,7 @@ zcat <( curl https://cve.mitre.org/data/downloads/allitems.csv.gz ) | \
     { print } '
 ```
 
+~/kb/hacking/cve/get-tsv.sh
 ## shortcut to start tmux session in a working directory with alacritty
 ~/kb/linux/alacritty-run-tmux.sh
 ```bash
@@ -420,6 +436,7 @@ zcat <( curl https://cve.mitre.org/data/downloads/allitems.csv.gz ) | \
 cd ~/kb && /home/coyote/.cargo/bin/alacritty -e tmux
 ```
 
+~/kb/linux/alacritty-run-tmux.sh
 ## extract PDF embedded file stream for use with PDF file attach exploits like mpdf
 ## prepend gzip magic bytes
 ## extract zlib stream between PDF stream and endstream with quick and dirty awk
@@ -444,6 +461,7 @@ i == streamindex && pr { print }
 cat $TF | gzip -d 2>/dev/null
 ```
 
+~/kb/hacking/tricks/extract-pdf-embedded-file-stream.sh
 ## update all the git repos in home directory and prompt with lazygit
 ~/kb/bash-scripting/update-all-git-repos.sh
 ```bash
@@ -460,6 +478,7 @@ cat $TF | gzip -d 2>/dev/null
   done
 ```
 
+~/kb/bash-scripting/update-all-git-repos.sh
 ## find alphanumeric base64 using awk script
 ~/kb/bash-scripting/find-alphanum-base64.sh
 ```bash
@@ -471,6 +490,7 @@ echo "$1" | ~/kb/awk-scripting/space-invader.awk | while read line; do
 done | grep '^[A-Za-z0-9]*$'
 ```
 
+~/kb/bash-scripting/find-alphanum-base64.sh
 ## build and run impacket docker
 ~/kb/hacking/dockers/impacket.sh
 ```bash
@@ -482,6 +502,7 @@ repo="https://github.com/SecureAuthCorp/impacket"
 source ~/kb/docker/build-github-repo-docker-image.sh
 ```
 
+~/kb/hacking/dockers/impacket.sh
 ## run exiftool on all of the images within a directory
 ~/kb/bash-scripting/exif-all-images.sh
 ```bash
@@ -494,6 +515,7 @@ find . -type f -name '*.gif'
 } | xargs exiftool
 ```
 
+~/kb/bash-scripting/exif-all-images.sh
 ## get the current user's github api key
 ~/kb/bash-scripting/get-github-api-key.sh
 ```bash
@@ -503,6 +525,7 @@ find . -type f -name '*.gif'
 cat $HOME/.git-credentials | awk -F '[/:@]' '/github/ {print $5}'
 ```
 
+~/kb/bash-scripting/get-github-api-key.sh
 ## watch failed ssh login attempts as a live stream
 ## lookup unique hosts with shodan api
 ~/kb/bash-scripting/watch-failed-ssh-logins-live-check-shodan.sh
@@ -531,6 +554,7 @@ tail -f /var/log/auth.log | \
   }'
 ```
 
+~/kb/bash-scripting/watch-failed-ssh-logins-live-check-shodan.sh
 ## launch ubuntu build environment docker with current directory mounted as working directory
 ~/kb/bash-scripting/ubuntu-docker-build-environment.sh
 ```bash
@@ -545,6 +569,7 @@ sudo docker build . -t ubuntubuildenv
 sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" ubuntubuildenv
 ```
 
+~/kb/bash-scripting/ubuntu-docker-build-environment.sh
 ## clone github repository and build docker image with its name
 ~/kb/docker/build-github-repo-docker-image.sh
 ```bash
@@ -563,6 +588,7 @@ rm -rf $name
 docker run --rm $imagename --help
 ```
 
+~/kb/docker/build-github-repo-docker-image.sh
 ## get headings from wikipedia page
 ~/kb/bash-scripting/get-wikipedia-info.sh
 ```bash
@@ -572,6 +598,7 @@ docker run --rm $imagename --help
 curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
 ```
 
+~/kb/bash-scripting/get-wikipedia-info.sh
 ## search through tldr command descriptions with fzf and display file with bat
 ~/kb/bash-scripting/search-tldr-commands-text.sh
 ```bash
@@ -585,6 +612,7 @@ find ~/.local/share/tldr/tldr/pages -type f -name '*.md' | \
   awk -F $'\t' '{system("bat " $1) }'
 ```
 
+~/kb/bash-scripting/search-tldr-commands-text.sh
 ## generate ISO format dates wordlists for the last few years
 ~/kb/bash-scripting/generate-dates.sh
 ```bash
@@ -599,6 +627,7 @@ done | awk ' BEGIN { FS="-" }
 { print > "days-" $1 } '
 ```
 
+~/kb/bash-scripting/generate-dates.sh
 ## define bash array
 ## loop over bash array
 ~/kb/bash-scripting/loop-array-pull-git-repositories.sh
@@ -619,6 +648,7 @@ for p in ${places[@]}; do
 done
 ```
 
+~/kb/bash-scripting/loop-array-pull-git-repositories.sh
 ## clone repo into temp dir
 ## get all tags and start walking their commits
 ## take only unique git hashes and do md5 hashes of those files
@@ -667,6 +697,7 @@ cat /tmp/hash_list | awk -F "\t" '{print $1}' | sort -u | \
 rm -rf $tf
 ```
 
+~/kb/bash-scripting/hash-git-repository.sh
 ## get random hex unique ID bash
 ~/kb/bash-scripting/get-random-unique-id.sh
 ```bash
@@ -675,6 +706,7 @@ rm -rf $tf
 cat /dev/urandom | head -c 6 | xxd -p
 ```
 
+~/kb/bash-scripting/get-random-unique-id.sh
 ## run neo4j in a docker
 ## mount host neo4j data into docker
 ~/kb/linux/runneo4j.sh
@@ -695,6 +727,7 @@ docker run --rm \
 ##    -v $HOME/neo4j/plugins:/plugins \
 ```
 
+~/kb/linux/runneo4j.sh
 ## build and run enum4linux-ng docker
 ~/kb/hacking/dockers/enum4linux-ng.sh
 ```bash
@@ -706,6 +739,7 @@ repo="https://github.com/cddmp/enum4linux-ng"
 source ~/kb/docker/build-github-repo-docker-image.sh
 ```
 
+~/kb/hacking/dockers/enum4linux-ng.sh
 ## run strings on memory dumps for every readable process
 ~/kb/hacking/priv-esc/strings-all-memory.sh
 ```bash
@@ -743,6 +777,7 @@ rm -rf $tf
 
 ```
 
+~/kb/hacking/priv-esc/strings-all-memory.sh
 ## build and run CrackMapExec docker
 ~/kb/hacking/dockers/crackmapexec.sh
 ```bash
@@ -754,6 +789,7 @@ repo="https://github.com/Porchetta-Industries/CrackMapExec"
 source ~/kb/docker/build-github-repo-docker-image.sh
 ```
 
+~/kb/hacking/dockers/crackmapexec.sh
 ## sort words by length
 ~/kb/bash-scripting/sort-words-by-length.sh
 ```bash
@@ -763,6 +799,7 @@ source ~/kb/docker/build-github-repo-docker-image.sh
 awk '{print length(), $0}' filters.lst | sort -n | awk '{print $2}'
 ```
 
+~/kb/bash-scripting/sort-words-by-length.sh
 ## convert string to hex with no newlines
 ~/kb/bash-scripting/string-to-hex.sh
 ```bash
@@ -772,6 +809,7 @@ awk '{print length(), $0}' filters.lst | sort -n | awk '{print $2}'
 xxd -p -c 9999999999999
 ```
 
+~/kb/bash-scripting/string-to-hex.sh
 ## get library dependency versions from composer.lock json file
 ~/kb/hacking/tricks/get-versions-from-composer-lock-json.sh
 ```bash
@@ -781,6 +819,7 @@ xxd -p -c 9999999999999
 cat composer.lock | jq -r '.packages[] | .name,.version' | paste - -
 ```
 
+~/kb/hacking/tricks/get-versions-from-composer-lock-json.sh
 ## install sublimetext
 ~/kb/linux/install_sublime.sh
 ```bash
@@ -795,6 +834,7 @@ sudo apt-get install sublime-text
 
 ```
 
+~/kb/linux/install_sublime.sh
 ## get top N most common ports from nmap list pass argument
 ~/kb/bash-scripting/nmap-get-top-ports.sh
 ```bash
@@ -823,6 +863,7 @@ $2 { # print range
 '
 ```
 
+~/kb/bash-scripting/nmap-get-top-ports.sh
 ## list public github repositories for user
 ~/kb/bash-scripting/list-github-repos.sh
 ```bash
@@ -837,6 +878,7 @@ fi
 curl "https://api.github.com/users/$u/repos?visibility=private" | jq -r '.[].html_url'
 ```
 
+~/kb/bash-scripting/list-github-repos.sh
 ## install vscode
 ~/kb/linux/install_vscode.sh
 ```bash
@@ -852,6 +894,7 @@ sudo apt update
 sudo apt install code # or code-insiders
 ```
 
+~/kb/linux/install_vscode.sh
 ## urlencode a line of text from stdin
 ~/kb/bash-scripting/urlencode.sh
 ```bash
@@ -862,6 +905,7 @@ sudo apt install code # or code-insiders
 python3 -c 'from urllib.parse import quote;print(quote(input()))'
 ```
 
+~/kb/bash-scripting/urlencode.sh
 ## get bash lines from kb snippets
 ~/kb/bash-scripting/get-bash-lines-from-kb-snippets.sh
 ```bash
@@ -871,3 +915,4 @@ python3 -c 'from urllib.parse import quote;print(quote(input()))'
 grep -A 1 -h -R '^```bash' . | grep -v '^```\|^--'
 ```
 
+~/kb/bash-scripting/get-bash-lines-from-kb-snippets.sh

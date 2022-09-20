@@ -35,6 +35,7 @@ RET_OFFSET = 40
 POP_RDI = 0x00000000004011d3 # for ropchains, find addresses of pop RDI, RSI, r9 as needed for params
 ```
 
+~/kb/hacking/pwn/boilerplate-pwn-script.py
 ## convert CSV to TSV
 ~/kb/python/convert-csv-to-tsv.py
 ```python
@@ -44,6 +45,7 @@ import csv, sys
 csv.writer(sys.stdout, dialect='excel-tab').writerows(csv.reader(sys.stdin))
 ```
 
+~/kb/python/convert-csv-to-tsv.py
 ## parse a cookie from every line on standard input
 ~/kb/python/decode-cookies.py
 ```python
@@ -63,6 +65,7 @@ for rawline in fileinput.input():
 print(repr(params))
 ```
 
+~/kb/python/decode-cookies.py
 ## parse all get parameters from a url
 ~/kb/python/get-url-params.py
 ```python
@@ -87,6 +90,7 @@ if len(urlelems) > 1:
 print(repr(params))
 ```
 
+~/kb/python/get-url-params.py
 ## urlencode every input line
 ## read and process lines of input
 ~/kb/python/urlencode.py
@@ -103,6 +107,7 @@ for rawline in fileinput.input():
     print(quote(line))
 ```
 
+~/kb/python/urlencode.py
 ## convert a GMSA managed password structure to a NTLM hash
 ~/kb/hacking/windows/convert-msds-managed-password-to-ntlm-hash.py
 ```python
@@ -169,6 +174,7 @@ print(ntlm)
 
 ```
 
+~/kb/hacking/windows/convert-msds-managed-password-to-ntlm-hash.py
 ## fuzz valid dates
 ~/kb/hacking/tricks/python-fuzz-valid-dates.py
 ```python
@@ -179,6 +185,7 @@ for d in dates:
     print(d)
 ```
 
+~/kb/hacking/tricks/python-fuzz-valid-dates.py
 ## convert tsv with key and value fields to python dictionary
 ~/kb/python/tsv-to-python-dict.py
 ```python
@@ -198,6 +205,7 @@ for rawline in fileinput.input():
 print(repr(params))
 ```
 
+~/kb/python/tsv-to-python-dict.py
 ## parse all post params from post content given on standard input
 ~/kb/python/decode-post-params.py
 ```python
@@ -216,3 +224,4 @@ for p in s.split('&'):
 print(repr(params))
 ```
 
+~/kb/python/decode-post-params.py

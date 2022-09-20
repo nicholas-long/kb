@@ -24,6 +24,7 @@ BEGIN {
 { print }
 ```
 
+~/kb/awk-scripting/colorize.awk
 ## base64 encode lines individually
 ~/kb/awk-scripting/base64-every-line.awk
 ```awk
@@ -35,6 +36,7 @@ BEGIN {
 }
 ```
 
+~/kb/awk-scripting/base64-every-line.awk
 ## attempt to reuse credentials using hydra and keep track of usernames and passwords tried
 ## read and write a separated value file as a database
 ~/kb/awk-scripting/hydra-bruteforce-with-database.awk
@@ -81,6 +83,7 @@ END {
 }
 ```
 
+~/kb/awk-scripting/hydra-bruteforce-with-database.awk
 ## print all variations of spaces between tokens
 ~/kb/awk-scripting/space-invader.awk
 ```awk
@@ -102,6 +105,7 @@ function expand_rec(str, pos) {
 }
 ```
 
+~/kb/awk-scripting/space-invader.awk
 ## print nested markdown content within headings
 ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk
 ```awk
@@ -122,6 +126,7 @@ printedblank && !block && NR > line && /^#+ / && length($1) == h { pr = 0 }
 pr == 1 { print }
 ```
 
+~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk
 ## get column headings from first line of CSV
 ~/kb/awk-scripting/get-columns.awk
 ```awk
@@ -132,6 +137,7 @@ NR == 1 {
 }
 ```
 
+~/kb/awk-scripting/get-columns.awk
 ## combine lines from two files combinatorically with symbol between
 ~/kb/awk-scripting/combine-files.awk
 ```awk
@@ -150,6 +156,7 @@ ARGIND == 2 {
 }
 ```
 
+~/kb/awk-scripting/combine-files.awk
 ## filter the CVE list for potentially valid, relevant vulnerabilities
 ~/kb/hacking/cve/relevant.awk
 ```awk
@@ -162,6 +169,7 @@ $3 ~ /^\*\* REJECT/ { next }
 { print }
 ```
 
+~/kb/hacking/cve/relevant.awk
 ## check output of grep and next line using awk "grep -A 1 -R '^# ' ."
 ~/kb/awk-scripting/file-grep-multi-lines.awk
 ```awk
@@ -179,6 +187,7 @@ NR == lastpart + 2 && $0 ~ /-$/ {
 }
 ```
 
+~/kb/awk-scripting/file-grep-multi-lines.awk
 ## constrict line widths of input text stream
 ~/kb/awk-scripting/line-lengths.awk
 ```awk
@@ -199,6 +208,7 @@ END {
 }
 ```
 
+~/kb/awk-scripting/line-lengths.awk
 ## print all variations of upper and lower case for given lowercase string
 ~/kb/awk-scripting/toggle-case-combinatoric.awk
 ```awk
@@ -220,6 +230,7 @@ function toggle_rec(str, arr, pos) {
 }
 ```
 
+~/kb/awk-scripting/toggle-case-combinatoric.awk
 ## autogenerate headings for source files
 ~/kb/awk-scripting/autogenerate-headings-for-source-files.awk
 ```awk
@@ -239,10 +250,12 @@ END {
     system("cat " file)
     print "```"
     print ""
+    print "~/kb/" file
   }
 }
 ```
 
+~/kb/awk-scripting/autogenerate-headings-for-source-files.awk
 ## awk print markdown snippet text between backtick lines
 ~/kb/awk-scripting/snippet.awk
 ```awk
@@ -258,6 +271,7 @@ printing == 1 && $0 !~ /^```/ {print}
 }
 ```
 
+~/kb/awk-scripting/snippet.awk
 ## combine lines with all previous lines combinatorically
 ~/kb/awk-scripting/live-combine.awk
 ```awk
@@ -271,6 +285,7 @@ printing == 1 && $0 !~ /^```/ {print}
 }
 ```
 
+~/kb/awk-scripting/live-combine.awk
 ## get HTTP POST content from HTTP request stream
 ~/kb/awk-scripting/get-http-post-content.awk
 ```awk
@@ -282,3 +297,4 @@ content { print }
 /^$/ { content=1 }
 ```
 
+~/kb/awk-scripting/get-http-post-content.awk
