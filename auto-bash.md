@@ -503,6 +503,15 @@ source ~/kb/docker/build-github-repo-docker-image.sh
 ```
 
 ~/kb/hacking/dockers/impacket.sh
+## decorate and colorize a passwd file piped from stdin
+~/kb/bash-scripting/decorate-passwd-file.sh
+```bash
+#!/bin/bash
+# decorate and colorize a passwd file piped from stdin
+~/kb/bash-scripting/colorize.sh -y '^.*sh$' -c '^[^:]+' -r root -g '[^:/]+$' -b 'false|nologin'
+```
+
+~/kb/bash-scripting/decorate-passwd-file.sh
 ## run exiftool on all of the images within a directory
 ~/kb/bash-scripting/exif-all-images.sh
 ```bash
