@@ -44,6 +44,30 @@ import csv, sys
 csv.writer(sys.stdout, dialect='excel-tab').writerows(csv.reader(sys.stdin))
 ```
 
+## parse all get parameters from a url
+~/kb/python/get-url-params.py
+```python
+#!/usr/bin/python3
+
+# parse all get parameters from a url
+
+from urllib.parse import unquote
+params = {}
+s = input()
+urlelems = s.split('?')
+if len(urlelems) > 1:
+    s = urlelems[1]
+    for p in s.split('&'):
+        elems = p.split('=')
+        k = elems[0]
+        if len(elems) > 1:
+            v = elems[1]
+            params[k] = unquote(v)
+        else:
+            params[k] = ''
+print(repr(params))
+```
+
 ## urlencode every input line
 ## read and process lines of input
 ~/kb/python/urlencode.py
@@ -134,5 +158,23 @@ from datetime import datetime, timedelta
 dates = [(datetime.today() - timedelta(days=x)).strftime('%Y-%m-%d') for x in range(0, 365)]
 for d in dates:
     print(d)
+```
+
+## parse all post params from post content given on standard input
+~/kb/python/decode-post-params.py
+```python
+#!/usr/bin/python3
+
+# parse all post params from post content given on standard input
+
+from urllib.parse import unquote
+params = {}
+s = input()
+for p in s.split('&'):
+    elems = p.split('=')
+    k = elems[0]
+    v = elems[1]
+    params[k] = unquote(v)
+print(repr(params))
 ```
 
