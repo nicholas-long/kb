@@ -190,6 +190,15 @@ function passwordlists {
 sudo docker run --rm -it -v "$(pwd):$(pwd)" -w "$(pwd)" $1
 ```
 
+## get the current user's github colon separated credentials
+~/kb/bash-scripting/get-github-credentials.sh
+```bash
+#!/bin/bash
+
+# get the current user's github colon separated credentials
+cat $HOME/.git-credentials | awk -F '[/@]' '/github/ {print $3}' | sed s/%40/@/g
+```
+
 ## pull all the git repos in home directory
 ~/kb/bash-scripting/pull-all-git-repos.sh
 ```bash
