@@ -238,3 +238,6 @@ cd linux-pam-backdoor
 cp pam_unix.so /host
 exit
 ```
+
+# fake set change system time for command
+faketime ( tldr page )
