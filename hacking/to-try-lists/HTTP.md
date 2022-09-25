@@ -24,6 +24,7 @@
     - file read -> keep enumerating, find interesting configs, logs, code, creds to exfil
     - LFI -> keep enumerating, find writable logs or files to execute
 - file upload
+  - apache -> .htaccess
 - API and POST endpoints -> [API and POST endpoints](HTTP.md#api-and-post-endpoints)
   - 302 redirect page -> check for content
 - fuzz dynamic content for vulnerabilities -> [vulnerability finding and fuzzing](HTTP.md#vulnerability-finding-and-fuzzing)
