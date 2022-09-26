@@ -103,6 +103,7 @@
 - exec
 - python scripts: everything from [got source code - analysis](../got-source-code.md#got-source-code---analysis)
 - dependent libraries of scripts (ex: tar, zip -> overwrite files / zip slip)
+- Ubuntu versions pre 19 -> sudo `$HOME` path is not changed ( specific to ubuntu )
 
 ## headline exploits
 - 2022 : dirty pipe
