@@ -617,6 +617,24 @@ curl https://en.wikipedia.org/wiki/Block_cipher | html2text | grep '^*'
 ```
 
 ~/kb/bash-scripting/get-wikipedia-info.sh
+## copy and read text from PNG image URL arg print with tesseract OCR
+~/kb/bash-scripting/copy-text-from-image-url.sh
+```bash
+#!/bin/bash
+# copy and read text from PNG image URL arg print with tesseract OCR
+
+tf=$(mktemp -d)
+cd $tf
+wget $1
+filename=$(ls)
+tesseract "$filename" output
+ls
+cat output.txt
+cd - >/dev/null
+rm -rf $tf
+```
+
+~/kb/bash-scripting/copy-text-from-image-url.sh
 ## search through tldr command descriptions with fzf and display file with bat
 ~/kb/bash-scripting/search-tldr-commands-text.sh
 ```bash
