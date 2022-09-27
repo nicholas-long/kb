@@ -1,5 +1,8 @@
 # sqlmap
 
+## result output data file location
+~/.local/share/sqlmap/output
+
 ## level and risk options
 --level 5
 --risk 3
