@@ -47,9 +47,6 @@ sudo apt install mingw-w64
 x86_64-w64-mingw32-g++ rev.c -o rev.dll -lws2_32 -shared
 ```
 
-# linux capability `=ep`
-it grants all permissions.
-
 # bloodhound sharphound fix import errors - incompatible versions
 new version of bloodhound has to work with new version of sharphound (4).
 ensure version of bloodhound is compatible with ingester.
