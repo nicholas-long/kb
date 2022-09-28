@@ -151,6 +151,7 @@ for each path
   - everything from [bug hunting workflow](../methodology/API-enumeration.md#bug-hunting-workflow)
   - everything from [OWASP top 10 api bugs](../methodology/owasp-top-10-api-bugs.md#owasp-top-10-api-bugs)
   - IDOR
+  - kiterunner tool and wordlists
 
 ## bypassing restrictions
 - bypassing restrictions
