@@ -776,6 +776,20 @@ source ~/kb/docker/build-github-repo-docker-image.sh
 ```
 
 ~/kb/hacking/dockers/enum4linux-ng.sh
+## find the largest N files
+## get argument value or default
+~/kb/bash-scripting/find-largest-files.sh
+```bash
+#!/bin/bash
+# find the largest N files
+# get argument value or default
+find . -type f -ls 2>/dev/null |\
+  awk '{print $7, $0}' |\
+  sort -nr |\
+  head -n ${1:-10} # default 10
+```
+
+~/kb/bash-scripting/find-largest-files.sh
 ## run strings on memory dumps for every readable process
 ~/kb/hacking/priv-esc/strings-all-memory.sh
 ```bash
