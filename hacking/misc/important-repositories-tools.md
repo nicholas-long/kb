@@ -241,3 +241,6 @@ exit
 
 # fake set change system time for command
 faketime ( tldr page )
+
+# pack windows payload in ISO to avoid MOTW
+https://github.com/mgeeky/PackMyPayload

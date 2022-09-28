@@ -73,6 +73,12 @@ dir /r
 echo <YOUR DATA> > filename.txt:streamname.txt
 ```
 
+## displaying content with powershell
+display `Zone.Identifier` stream
+```powershell
+Get-Content -Stream Zone.Identifier $filename
+```
+
 # exploiting SeRestorePrivilege
 https://github.com/xct/SeRestoreAbuse
 Executes a command as SYSTEM when SeRestorePrivilege is assigned.
