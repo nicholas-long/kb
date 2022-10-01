@@ -6,5 +6,6 @@
   awk -F / 'NF == 4 {print}' |\
   while read dir; do
     cd $dir
+    echo "pulling $dir"
     git pull
   done
